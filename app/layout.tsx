@@ -7,6 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'OZ SMART HOME',
   description: 'Elevate your lifestyle with our smart home solutions – convenience, security, and energy efficiency at your fingertips.',
+
 }
 
 export default function RootLayout({
@@ -30,6 +31,7 @@ export default function RootLayout({
         <meta property="og:type" content="website" />
         <meta property="og:title" content="OZ SMART HOME" />
         <meta property="og:description" content="Elevate your lifestyle with our smart home solutions - convenience, security, and energy efficiency at your fingertips." />
+        <meta property="og:image" content="https://ozsmarthome.com.au/opengraph-image.jpg" />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
