@@ -30,7 +30,6 @@ export default function RootLayout({
         <meta property="og:type" content="website" />
         <meta property="og:title" content="OZ SMART HOME" />
         <meta property="og:description" content="Elevate your lifestyle with our smart home solutions - convenience, security, and energy efficiency at your fingertips." />
-        <meta property="og:image" content="/oz-smart-home-og-image-100.jpg" />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
