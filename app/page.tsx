@@ -14,7 +14,7 @@ export default function Home() {
           height={37}
           priority
         />
-        B!e!bgCO3;zG
+ 
         <p >
          <span className="text-gray-500 after:inline-block after:w-2 after:h-2 after:content-[''] after:bg-[#E9C31E] after:mx-2 after:rounded-full">Affordable</span>
          <span className="text-gray-500 after:inline-block after:w-2 after:h-2 after:content-[''] after:bg-[#E9C31E] after:mx-2 after:rounded-full">Reliable</span>
