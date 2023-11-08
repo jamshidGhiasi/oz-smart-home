@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'OZ SMART HOME',
-  description: 'Affordable, reliable, secure and fast smart home solutions for everyone.',
+  description: 'Elevate your lifestyle with our smart home solutions – convenience, security, and energy efficiency at your fingertips.',
 }
 
 export default function RootLayout({
@@ -26,6 +26,11 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta property="og:url" content="ozsmarthome.com.au" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="OZ SMART HOME" />
+        <meta property="og:description" content="Elevate your lifestyle with our smart home solutions - convenience, security, and energy efficiency at your fingertips." />
+        <meta property="og:image" content="/oz-smart-home-og-image-100.jpg" />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
