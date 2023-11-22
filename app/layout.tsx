@@ -1,8 +1,15 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
+import { Inter as FontSans } from "next/font/google"
+import SharedNavigation from '@/components/shared/navigation/navigation-component'
+import { cn } from "@/lib/utils"
+import { ThemeProvider } from "@/components/theme-provider"
+import SiteHeader from '@/components/shared/navigation/site-header'
 
-const inter = Inter({ subsets: ['latin'] })
+export const fontSans = FontSans({ 
+  subsets: ['latin'],
+  variable: "--font-sans" 
+})
 
 export const metadata: Metadata = {
   title: 'OZ SMART HOME',
@@ -33,7 +40,23 @@ export default function RootLayout({
         <meta property="og:description" content="Elevate your lifestyle with our smart home solutions - convenience, security, and energy efficiency at your fingertips." />
         <meta property="og:image" content="https://ozsmarthome.com.au/opengraph-image.jpg" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.variable
+        )}
+      >
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+
+        <SiteHeader />
+        {children}
+          </ThemeProvider>
+      </body>
     </html>
   )
 }
