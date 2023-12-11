@@ -6,9 +6,9 @@ import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/components/theme-provider"
 import SiteHeader from '@/components/shared/navigation/site-header'
 
-export const fontSans = FontSans({ 
+export const fontSans = FontSans({
   subsets: ['latin'],
-  variable: "--font-sans" 
+  variable: "--font-sans"
 })
 
 export const metadata: Metadata = {
@@ -46,16 +46,16 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
-          >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
 
-        <SiteHeader />
-        {children}
-          </ThemeProvider>
+          <SiteHeader />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )
