@@ -55,18 +55,12 @@ const SharedNavigation = async ({
             aria-label="Global"
             {...props}
         >
-            <ul className="w-full list-none flex  items-center space-x-1 lg:space-x-1 ">
-                <li className="">
-                    <Link href={'/'} 
-                    
-                        className="rounded-md  py-2 px-2  hover:bg-slate-100 dark:hover:bg-slate-800 dark:text-slate-300 dark:hover:text-primary   ring-offset-white  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 flex flex-col items-center justify-center      ">
-                        <Image src={'/oz-smart-home-icon.svg'} alt="OS SMART HOME LOGO" width={30} height={30} />
-                    </Link>
-                </li>
+            <ul className="w-full list-none flex  items-center  ">
+
                 {navigationItems.sort((a, b) => a.order - b.order).map((navItem) => (
                     <li key={navItem.name} className={`${navItem.visibility ? 'inline-flex' : 'hidden'}`}>
                         <Link href={navItem.href} aria-label={navItem.name}
-                            className="text-md rounded-md font-medium transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 dark:text-slate-300 dark:hover:text-primary  py-2 px-4  ring-offset-white  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300">
+                            className="text-md rounded-md font-medium transition-colors hover:bg-slate-100 dark:hover:bg-slate-800  dark:hover:text-primary  py-2 px-4  ring-offset-white  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 text-white hover:text-slate-900">
                             {navItem.name}
                         </Link>
                     </li>

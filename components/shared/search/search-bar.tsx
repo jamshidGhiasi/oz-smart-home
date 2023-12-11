@@ -11,7 +11,7 @@ const SearchBar : React.FC<SearchBarProps>  = ({
     ...props
 }) => {
     return(
-        <Button variant="outline" size="icon" className={cn("border-none", className)}>
+        <Button variant="outline" size="icon" className={cn("border-none  ", className)}>
             <Search className="h-[1.2rem] w-[1.2rem]" />
             <span className="sr-only">Search ozsmarthome.com.au</span>
         </Button>
