@@ -1,18 +1,21 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { Inter as FontSans } from "next/font/google"
 import SharedNavigation from '@/components/shared/navigation/navigation-component'
 import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/components/theme-provider"
 import SiteHeader from '@/components/shared/navigation/site-header'
+import { Red_Hat_Display } from 'next/font/google'
 
-export const fontSans = FontSans({
+
+
+const red_hat_display = Red_Hat_Display({ 
+  weight: ['300', '400', '500', '700', '900'],
   subsets: ['latin'],
-  variable: "--font-sans"
+  variable: '--font-rhd',
 })
 
 export const metadata: Metadata = {
-  title: 'OZ SMART HOME',
+  title: 'Transform Your Home With Smart Home Solutions | OZ SMART HOME',
   description: 'Elevate your lifestyle with our smart home solutions – convenience, security, and energy efficiency at your fingertips.',
 
 }
@@ -23,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" >
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -43,7 +46,7 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
+          red_hat_display.variable
         )}
       >
         <ThemeProvider

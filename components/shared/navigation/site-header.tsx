@@ -8,7 +8,7 @@ import OSHBrand from "./brand";
 import MobileNavigation from "./mobile-navigation";
 const SiteHeader = async () => {
     return (
-        <div className="border-b bg-slate-900 mb-4 px-2 md:px-2">
+        <div className="border-b bg-slate-900 px-2 md:px-2 sticky top-0 z-10">
             <header className="flex justify-between items-center w-full h-[64px]">
                 <ContentWrapper className="w-full max-w-6xl mx-auto  flex justify-between items-center">
                     <OSHBrand />

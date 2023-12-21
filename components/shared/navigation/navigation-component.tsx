@@ -9,37 +9,27 @@ const navigationItems = [
     {
         name: 'About',
         href: '/about',
-        order: 5,
+        order: 1,
         visibility: true
     },
     {
         name: 'Projects',
         href: '/projects',
-        order: 2,
-        visibility: true
-    },
-    {
-        name: 'Packages',
-        href: '/packages',
         order: 3,
         visibility: true
     },
+
     {
         name: 'Services',
         href: '/services',
-        order: 4,
+        order: 2,
         visibility: true
     },
-    {
-        name: 'Reviews',
-        href: '/reviews',
-        order: 6,
-        visibility: false
-    },
+
     {
         name: 'Contact',
         href: '/contact',
-        order: 7,
+        order: 4,
         visibility: true
     },
 ]
