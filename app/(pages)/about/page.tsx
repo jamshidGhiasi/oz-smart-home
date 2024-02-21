@@ -2,8 +2,8 @@ import ContentWrapper from "@/components/shared/layout/content-wrapper";
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'About Us - OZ SMART HOME | Pioneering Smart Home and Automation Solutions',
-  description: `Discover the vision behind OZ SMART HOME - Your trusted partner in smart home and automation solutions. Learn about our passion for innovation, commitment to quality, and how we're shaping the future of intelligent living. Join us on the journey to redefine home experiences.`,
+  title: 'About Oz Smart Home - Elevating Your Living Experience',
+  description: `Learn about Oz Smart Home - pioneers in smart living solutions. Discover how we combine security, privacy, and energy efficiency to enhance your lifestyle.`,
 }
 
 const AboutPage = async () => {

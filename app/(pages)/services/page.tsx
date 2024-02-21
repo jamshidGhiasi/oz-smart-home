@@ -2,8 +2,8 @@ import ContentWrapper from "@/components/shared/layout/content-wrapper";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Smart Home Services by OZ SMART HOME | Lighting, Blinds, Security, and More',
-  description: 'Explore cutting-edge smart home services at OZ SMART HOME. Elevate your living experience with intelligent solutions, including smart lighting, automated blinds, climate control, secure door locks, intercom systems, garage and gate automation, security cameras, and more. Discover how our services can transform your home into a connected haven.',
+  title: 'Services - Smart Home Solutions by Oz Smart Home',
+  description: `Explore Oz Smart Home's range of services for smart living. From security systems to energy efficiency solutions, we enhance your home with innovation.`,
 
 }
 

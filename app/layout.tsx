@@ -15,8 +15,8 @@ const red_hat_display = Red_Hat_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'Transform Your Home With Smart Home Solutions | OZ SMART HOME',
-  description: 'Elevate your lifestyle with our smart home solutions – convenience, security, and energy efficiency at your fingertips.',
+  title: 'Pioneering Smart Living Solutions | OZ SMART HOME',
+  description: 'Elevate your lifestyle with our smart home solutions – convenience, security, privacy and energy efficiency at your fingertips.',
 
 }
 

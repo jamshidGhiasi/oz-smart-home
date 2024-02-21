@@ -2,8 +2,8 @@ import ContentWrapper from "@/components/shared/layout/content-wrapper";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Smart Home Projects in Sydney by OZ SMART HOME | Innovative Solutions for Modern Living',
-  description: `Discover our showcase of cutting-edge smart home projects in Sydney. At OZ SMART HOME, we bring innovation to life with bespoke solutions for smart lighting, blinds, air conditioning, door locks, intercom systems, garage and gates, security cameras, and more. Explore how we're shaping the future of modern living in Sydney through our exceptional projects.`,
+  title: `Projects - See Oz Smart Home's Smart Living Solutions in Action`,
+  description: `Explore Oz Smart Home's projects and see our smart living solutions in action. Discover how we transform homes with security, privacy, and efficiency.`,
 }
 
 const ProjectsPage = async () => {

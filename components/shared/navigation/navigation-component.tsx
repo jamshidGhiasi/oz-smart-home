@@ -29,6 +29,19 @@ const navigationItems = [
     {
         name: 'Contact',
         href: '/contact',
+        order: 6,
+        visibility: true
+    },
+
+    {
+        name: 'Knowledge Hub',
+        href: '/knowledge-hub',
+        order: 5,
+        visibility: true
+    },
+    {
+        name: 'Reviews',
+        href: '/reviews',
         order: 4,
         visibility: true
     },
