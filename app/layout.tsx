@@ -1,10 +1,13 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import SharedNavigation from '@/components/shared/navigation/navigation-component'
 import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/components/theme-provider"
-import SiteHeader from '@/components/shared/navigation/site-header'
 import { Red_Hat_Display } from 'next/font/google'
+import HeaderDesktop from '@/components/shared/navigation/header-desktop'
+import HeaderMobile from '@/components/shared/navigation/header-mobile'
+import SideNav from '@/components/shared/navigation/side-nav'
+import MarginWidthWrapper from '@/components/shared/layout/margin-width-wrapper'
+import PageWrapper from '@/components/shared/layout/page-wrapper'
 
 
 
@@ -45,20 +48,22 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen bg-background font-sans antialiased  bg-[#09090b]",
           red_hat_display.variable
         )}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-
-          <SiteHeader />
-          {children}
-        </ThemeProvider>
+        
+                  <div className="flex">
+          <SideNav />
+          <main className="flex-1">
+            <MarginWidthWrapper>
+              {/* <HeaderDesktop /> */}
+              <HeaderMobile />
+              <PageWrapper>{children}</PageWrapper>
+            </MarginWidthWrapper>
+          </main>
+        </div>
+    
       </body>
     </html>
   )
