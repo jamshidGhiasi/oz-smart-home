@@ -12,7 +12,7 @@ import OSHBrand from './brand';
 const TopNav = () => {
  
   return (
-    <div className=" sticky top-0 w-full bg-[hsl(240,3.7%,15.9%)] hidden lg:block   z-40">
+    <div className=" sticky top-0 w-full bg-[hsl(240,3.7%,15.9%)]/45 hidden lg:block  backdrop-blur-lg   z-40">
       <div className="flex items-center justify-center  w-full">
         <div className='flex items-center  h-[64px]'>
           <Link

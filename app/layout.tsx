@@ -44,7 +44,7 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased  bg-[#09090b]",
+          "min-h-screen bg-background font-sans antialiased  bg-[#171718]",
           red_hat_display.variable
         )}
       >

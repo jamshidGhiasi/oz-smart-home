@@ -73,6 +73,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
+        rhd: ["var(--font-rhd)"]
       },
 
     },
