@@ -5,24 +5,19 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Red_Hat_Display } from 'next/font/google'
 import HeaderDesktop from '@/components/shared/navigation/header-desktop'
 import HeaderMobile from '@/components/shared/navigation/header-mobile'
-import SideNav from '@/components/shared/navigation/side-nav'
+import SideNav from '@/components/shared/navigation/top-nav'
 import MarginWidthWrapper from '@/components/shared/layout/margin-width-wrapper'
 import PageWrapper from '@/components/shared/layout/page-wrapper'
-
-
-
-const red_hat_display = Red_Hat_Display({ 
+import TopNav from '@/components/shared/navigation/top-nav'
+const red_hat_display = Red_Hat_Display({
   weight: ['300', '400', '500', '700', '900'],
   subsets: ['latin'],
   variable: '--font-rhd',
 })
-
 export const metadata: Metadata = {
   title: 'Pioneering Smart Living Solutions | OZ SMART HOME',
   description: 'Elevate your lifestyle with our smart home solutions – convenience, security, privacy and energy efficiency at your fingertips.',
-
 }
-
 export default function RootLayout({
   children,
 }: {
@@ -52,18 +47,17 @@ export default function RootLayout({
           red_hat_display.variable
         )}
       >
-        
-                  <div className="flex">
-          <SideNav />
-          <main className="flex-1">
+     
+          
+          <main className="">
+          <TopNav />
             <MarginWidthWrapper>
-              {/* <HeaderDesktop /> */}
+        
               <HeaderMobile />
               <PageWrapper>{children}</PageWrapper>
             </MarginWidthWrapper>
           </main>
-        </div>
-    
+  
       </body>
     </html>
   )

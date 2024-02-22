@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 }
 
-const ServicesPage = async () => {
+const SmartAirConditioningPage = async () => {
   return (
     <ContentWrapper className='px-2  mx-auto  relative flex items-center justify-center h-full z-20'>
       <div className='w-full sm:w-full md:w-8/12 lg:w-6/12 xl:w-6/12 2xl:w-4/12 p-4 lg:p-0 text-white '>
@@ -19,4 +19,4 @@ const ServicesPage = async () => {
   );
 }
 
-export default ServicesPage;
+export default SmartAirConditioningPage;
