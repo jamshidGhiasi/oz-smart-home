@@ -22,7 +22,7 @@ export default function Home() {
           </div>
           <div>
             <span className='text-white'>or </span>
-            <Link className='text-white text-lg inline-flex hover:underline mt-4  items-center  ' href={'/services'}> Find out more <ChevronRight className="h-4 w-4" /></Link>
+            <Link className='text-white text-lg inline-flex hover:underline mt-4  items-center font-bold underline  ' href={'/services'}> Find out more <ChevronRight className="h-4 w-4" /></Link>
           </div>
         </div>
       </div>
