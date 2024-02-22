@@ -80,8 +80,11 @@
   }
 }
 
-h1 {
+span, h1, h2, h3 {
   font-family: var(--font-rhd);
+}
+h1 {
+ 
   font-weight: 900;
   margin-bottom: 1rem;
   margin-top: 2rem;

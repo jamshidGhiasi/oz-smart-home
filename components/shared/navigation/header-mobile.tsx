@@ -32,12 +32,12 @@ const HeaderMobile = () => {
     const { height } = useDimensions(containerRef);
     const [isOpen, toggleOpen] = useCycle(false, true);
     return (
-        <div>
-            <div className={"bg-[hsl(240,3.7%,15.9%)] md:hidden"}>
+        <div className='sticky top-0 z-40'>
+            <div className={"bg-[hsl(240,3.7%,15.9%)]  lg:hidden"}>
                 <div className="flex h-[64px] items-center justify-between ">
                     <Link
                         href="/"
-                        className="flex flex-row space-x-2 px-3 items-center justify-center md:hidden "
+                        className="flex flex-row space-x-2 px-3 items-center justify-center lg:hidden "
                     >
                         <OSHBrand />
                         <OSHCopy className='font-bold text-white' />
@@ -48,7 +48,7 @@ const HeaderMobile = () => {
                 initial={false}
                 animate={isOpen ? 'open' : 'closed'}
                 custom={height}
-                className={`fixed inset-0 z-50 w-full md:hidden ${isOpen ? '' : 'pointer-events-none'
+                className={`fixed inset-0 z-50 w-full lg:hidden ${isOpen ? '' : 'pointer-events-none'
                     }`}
                 ref={containerRef}
             >
@@ -58,7 +58,7 @@ const HeaderMobile = () => {
                 />
                 <motion.ul
                     variants={variants}
-                    className="absolute grid w-full gap-3 px-10 py-16"
+                    className="absolute w-full flex flex-col  px-10 py-16"
                 >
                     {NAV_ITEMS.map((item, idx) => {
                         const isLastItem = idx === NAV_ITEMS.length - 1; // Check if it's the last item
@@ -71,8 +71,7 @@ const HeaderMobile = () => {
                                         <Link
                                             href={item.path}
                                             onClick={() => toggleOpen()}
-                                            className={`flex w-full gap-x-2  text-[hsl(240,5%,64.9%)]  ${item.path === pathname ? 'text-white font-bold' : ''
-                                                }`}
+                                            className={`flex items-center w-full gap-x-2 text-lg my-3 py-0  text-[hsl(240,5%,64.9%)]  ${item.path === pathname ? 'text-white font-bold' : ''}`}
                                         >
                                             {item.icon}
                                             {item.title}
@@ -80,7 +79,7 @@ const HeaderMobile = () => {
                                     </MenuItem>
                                 )}
                                 {!isLastItem && (
-                                    <MenuItem className="my-3 h-px w-full  bg-[hsl(240,5%,64.9%)]" />
+                                    <MenuItem className=" h-px my-1 w-full  bg-[hsl(240,5%,64.9%)]" />
                                 )}
                             </div>
                         );
@@ -153,12 +152,12 @@ const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
         <>
             <MenuItem>
                 <button
-                    className="flex w-full text-lg text-[hsl(240,5%,64.9%)]"
+                    className="flex items-center w-full my-3 text-lg text-[hsl(240,5%,64.9%)]"
                     onClick={() => setSubMenuOpen(!subMenuOpen)}
                 >
-                    <div className="flex flex-row justify-between w-full items-center">
+                    <div className="flex  flex-row justify-between w-full items-center">
                         <span
-                            className={`flex gap-x-2 ${pathname.includes(item.path) ? 'font-bold text-white' : ''}`}
+                            className={`flex items-center gap-x-2 ${pathname.includes(item.path) ? 'font-bold text-white' : ''}`}
                         >
                             {item.icon}
                             {item.title}
@@ -169,16 +168,17 @@ const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
                     </div>
                 </button>
             </MenuItem>
-            <div className="mt-2 ml-2 flex flex-col space-y-2">
+           
                 {subMenuOpen && (
                     <>
+                     <div className="mt-2 ml-2 ">
                         {item.subMenuItems?.map((subItem, subIdx) => {
                             return (
                                 <MenuItem key={subIdx}>
                                     <Link
                                         href={subItem.path}
                                         onClick={() => toggleOpen()}
-                                        className={`text-[hsl(240,5%,64.9%)] ${subItem.path === pathname ? 'text-white font-bold' : ''
+                                        className={`my-2 inline-block text-[hsl(240,5%,64.9%)] ${subItem.path === pathname ? 'text-white font-bold' : ''
                                             }`}
                                     >
                                         {subItem.title}
@@ -186,9 +186,10 @@ const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
                                 </MenuItem>
                             );
                         })}
+                        </div>
                     </>
                 )}
-            </div>
+            
         </>
     );
 };

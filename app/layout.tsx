@@ -9,6 +9,7 @@ import SideNav from '@/components/shared/navigation/top-nav'
 import MarginWidthWrapper from '@/components/shared/layout/margin-width-wrapper'
 import PageWrapper from '@/components/shared/layout/page-wrapper'
 import TopNav from '@/components/shared/navigation/top-nav'
+import Footer from '@/components/shared/layout/footer'
 const red_hat_display = Red_Hat_Display({
   weight: ['300', '400', '500', '700', '900'],
   subsets: ['latin'],
@@ -50,12 +51,13 @@ export default function RootLayout({
      
           
           <main className="">
-          <TopNav />
+            <TopNav />
             <MarginWidthWrapper>
         
               <HeaderMobile />
               <PageWrapper>{children}</PageWrapper>
             </MarginWidthWrapper>
+            <Footer />
           </main>
   
       </body>

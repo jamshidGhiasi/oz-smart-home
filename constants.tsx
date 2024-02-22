@@ -44,7 +44,7 @@ export const NAV_ITEMS: SideNavItem[] = [
         path: '/contact',
         order: 6,
         visibility: true,
-        icon: <Icon icon="lucide:phone" width="16" height="16" />,
+        icon: <Icon icon="lucide:mail" width="16" height="16" />,
     },
 
     {
