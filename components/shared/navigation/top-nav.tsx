@@ -12,7 +12,7 @@ import OSHBrand from './brand';
 const TopNav = () => {
  
   return (
-    <div className=" sticky top-0 w-full bg-[hsl(240,3.7%,15.9%)]/45 hidden lg:block  backdrop-blur-lg   z-40">
+    <div className=" sticky top-0 w-full bg-[hsl(240,3.7%,15.9%)]/65 hidden lg:block  backdrop-blur-md   z-40">
       <div className="flex items-center justify-center  w-full">
         <div className='flex items-center  h-[64px]'>
           <Link
@@ -49,7 +49,7 @@ const MenuItem = ({ item }: { item: SideNavItem }) => {
         <>
           <button
             onClick={toggleSubMenu}
-            className={`  flex flex-row items-center p-2 rounded-lg hover-bg-black  w-full justify-between text-[hsl(240,5%,64.9%)] hover:bg-[#3c3c3f] hover:text-white ${subMenuOpen ? 'bg-[#3c3c3f] rounded-bl-none rounded-br-none' : ''} ${pathname.includes(item.path) ? 'bg-[#3c3c3f] ' : ''
+            className={`  flex flex-row items-center p-2 rounded-lg hover-bg-black  w-full justify-between text-[hsl(0,0%,100%)] hover:bg-[#3c3c3f] hover:text-white ${subMenuOpen ? 'bg-[#3c3c3f] rounded-bl-none rounded-br-none' : ''} ${pathname.includes(item.path) ? 'bg-[#3c3c3f] ' : ''
               }`}
           >
             <div className="flex flex-row space-x-2 items-center">
@@ -85,7 +85,7 @@ const MenuItem = ({ item }: { item: SideNavItem }) => {
         <Link
           href={item.path}
           
-          className={`flex flex-row items-center px-4 py-2 rounded-lg text-[hsl(240,5%,64.9%)] hover:bg-[#3c3c3f] hover:text-white  ${item.path === pathname ? 'text-white bg-[#3c3c3f]' : ''
+          className={`flex flex-row items-center px-4 py-2 rounded-lg text-[hsl(0,0%,100%)] hover:bg-[#3c3c3f] hover:text-white  ${item.path === pathname ? 'text-white bg-[#3c3c3f]' : ''
             }`}
         >
           <span className={` mr-2 ${item.path === pathname ? ' text-[#E9C31E]' : ''
