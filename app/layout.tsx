@@ -3,7 +3,6 @@ import './globals.css'
 import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Red_Hat_Display } from 'next/font/google'
-import HeaderDesktop from '@/components/shared/navigation/header-desktop'
 import HeaderMobile from '@/components/shared/navigation/header-mobile'
 import SideNav from '@/components/shared/navigation/top-nav'
 import MarginWidthWrapper from '@/components/shared/layout/margin-width-wrapper'
@@ -44,7 +43,7 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased  bg-[#171718]",
+          " bg-background font-sans antialiased  bg-[#171718]",
           red_hat_display.variable
         )}
       >
