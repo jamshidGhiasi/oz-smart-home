@@ -7,6 +7,7 @@ import { SideNavItem } from '@/types';
 import { Icon } from '@iconify/react';
 import OSHCopy from '../content/osh-copy';
 import OSHBrand from './brand';
+import { ChevronRight, PhoneOutgoing, Send, PenTool, CheckSquare, Kanban, Headphones, Lightbulb, Blinds, AirVent, DoorOpen, Theater, Wifi, Workflow, Webcam, Cctv } from 'lucide-react'
 
 
 const TopNav = () => {
@@ -53,8 +54,8 @@ const MenuItem = ({ item }: { item: SideNavItem }) => {
               }`}
           >
             <div className="flex flex-row space-x-2 items-center">
-              <span className={`${item.path === pathname ? ' text-[#E9C31E]' : ''
-                }`}>{item.icon}</span>
+              <span className={`  ${item.path === pathname ? 'text-[hsl(49,82%,52%)]' : 'text-[hsl(0,0%,62%)]'
+            }`}>{item.icon}</span>
               <span className={`${pathname.includes(item.path) ? 'bg-[#3c3c3f] text-white' : ''
                 }`}>{item.title}</span>
             </div>
@@ -64,16 +65,17 @@ const MenuItem = ({ item }: { item: SideNavItem }) => {
           </button>
   
           {subMenuOpen && (
-            <div className={ `absolute flex flex-col px-6 py-4 space-y-3 w-[220px] bg-[#3c3c3f] left-0 `}>
+            <div className={ `absolute flex flex-col px-6 py-4 space-y-3 w-[260px] bg-[#3c3c3f] left-0 `}>
               {item.subMenuItems?.map((subItem, idx) => {
                 return (
                   <Link
                     key={idx}
                     href={subItem.path}
-                    className={`text-[hsl(240,5%,64.9%)] hover:text-white ${subItem.path === pathname ? 'text-white' : ''
+                    className={` flex items-center text-[hsl(240,5%,64.9%)] hover:text-white ${subItem.path === pathname ? 'text-white' : ''
                       }`}
                   >
-                    <span className={` ${subItem.path === pathname ? ' text-white' : ''
+                    {subItem.icon && subItem.icon}
+                    <span className={` text-white ${subItem.path === pathname ? ' text-white font-bold' : ''
                       }`}>{subItem.title}</span>
                   </Link>
                 );
@@ -85,12 +87,12 @@ const MenuItem = ({ item }: { item: SideNavItem }) => {
         <Link
           href={item.path}
           
-          className={`flex flex-row items-center px-4 py-2 rounded-lg text-[hsl(0,0%,100%)] hover:bg-[#3c3c3f] hover:text-white  ${item.path === pathname ? 'text-white bg-[#3c3c3f]' : ''
+          className={`flex flex-row items-center px-4 py-2 rounded-lg  hover:bg-[#3c3c3f] hover:text-white  ${item.path === pathname ? 'text-white bg-[#3c3c3f]' : ''
             }`}
         >
-          <span className={` mr-2 ${item.path === pathname ? ' text-[#E9C31E]' : ''
+          <span className={` mr-2 ${item.path === pathname ? 'text-[hsl(49,82%,52%)]' : 'text-[hsl(0,0%,62%)]'
             }`}>{item.icon}</span>
-          <span className={`${item.path === pathname ? 'text-white' : ''
+          <span className={`${item.path === pathname ? 'text-white' : 'text-[hsl(0,0%,82%)]'
             }`}>{item.title}</span>
         </Link>
       )}

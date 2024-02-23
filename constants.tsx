@@ -1,5 +1,6 @@
 import { Icon } from "@iconify/react/dist/iconify.js"
 import { SideNavItem } from "./types"
+import { AirVent, Blinds, Cctv, DoorOpen, Lightbulb, Send, Theater, Wifi, Workflow } from "lucide-react"
 export const NAV_ITEMS: SideNavItem[] = [
 
 
@@ -28,14 +29,14 @@ export const NAV_ITEMS: SideNavItem[] = [
         submenu: true,
         subMenuItems: [
           { title: 'All', path: '/services' },
-          { title: 'Lighting', path: '/services/smart-lighting' },
-          { title: 'Blinds & Curtains', path: '/services/smart-blinds-and-curtains' },
-          { title: 'Air Conditioning', path: '/services/smart-air-conditioning' },
-          { title: 'Access & Intercom', path: '/services/smart-access-and-intercom' },
-          { title: 'CCTV, Security & Alarm', path: '/services/cctv-security-and-alarm' },
-          { title: 'Entertainment & AV', path: '/services/entertainment-and-av' },
-          { title: 'Network', path: '/services/network' },
-          { title: 'Automation', path: '/services/automation' },
+          { title: 'Lighting', path: '/services/smart-lighting', icon: <Lightbulb className="w-4 h-4 mr-2"  /> },
+          { title: 'Blinds & Curtains', path: '/services/smart-blinds-and-curtains', icon:<Blinds className="w-4 h-4 mr-2" />  },
+          { title: 'Air Conditioning', path: '/services/smart-air-conditioning', icon: <AirVent className="w-4 h-4 mr-2"/> },
+          { title: 'Access & Intercom', path: '/services/smart-access-and-intercom', icon: <DoorOpen className="w-4 h-4 mr-2" /> },
+          { title: 'CCTV, Security & Alarm', path: '/services/cctv-security-and-alarm' , icon:<Cctv className="w-4 h-4 mr-2"/> },
+          { title: 'Entertainment & AV', path: '/services/entertainment-and-av', icon:<Theater className="w-4 h-4 mr-2"/>  },
+          { title: 'Network', path: '/services/network', icon:<Wifi className="w-4 h-4 mr-2" />  },
+          { title: 'Automation', path: '/services/automation', icon:<Workflow className="w-4 h-4 mr-2" />  },
         ],
     },
 
