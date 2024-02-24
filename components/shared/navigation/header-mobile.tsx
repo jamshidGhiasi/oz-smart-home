@@ -178,7 +178,7 @@ const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
                                     <Link
                                         href={subItem.path}
                                         onClick={() => toggleOpen()}
-                                        className={`flex items-center my-2 inline-block text-[hsl(240,5%,64.9%)] ${subItem.path === pathname ? 'text-white font-bold' : ''
+                                        className={`flex items-center my-2  text-[hsl(240,5%,64.9%)] ${subItem.path === pathname ? 'text-white font-bold' : ''
                                             }`}
                                     >
                                         {subItem.icon && subItem.icon}
