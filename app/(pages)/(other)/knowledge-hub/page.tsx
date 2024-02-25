@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+
 import OSHCopy from "@/components/shared/content/osh-copy";
 import ContentWrapper from "@/components/shared/layout/content-wrapper";
 import { Metadata } from "next";
