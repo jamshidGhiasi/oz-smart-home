@@ -3,6 +3,7 @@ import ContentWrapper from "@/components/shared/layout/content-wrapper";
 import { Metadata } from "next";
 import Image from "next/image";
 import pic from '@/public/bg-test-1.jpg'
+import ProfileForm from "@/components/shared/content/contact-form";
 
 export const metadata: Metadata = {
   title: 'Contact Oz Smart Home - Get in Touch for Smart Solutions',
@@ -19,12 +20,18 @@ const ContactPage = async () => {
         <span className="mb-4 block text-md font-rhd">See how we can help you</span>
 
       </div>
+      <div className="relative  z-20 text-lg w-full max-w-2xl mx-auto">
+      <ProfileForm />
+      </div>
+      
+
       <div className=" top-0 right-0 w-full h-full overflow-hidden absolute bottom-0">
         <div className='absolute  w-[2013px] left-[50%] -translate-x-[50%] h-full bottom-[-100px] bg-black opacity-35'>
           <Image src={pic} className='absolute bottom-0' objectFit='contain' alt='' />
         </div>
       </div>
       </ContentWrapper>
+      
     </>
   );
 }
