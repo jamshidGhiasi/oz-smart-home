@@ -8,8 +8,8 @@ import Link from 'next/link'
 import { ChevronRight, PhoneOutgoing, Send, PenTool, CheckSquare, Kanban, Headphones, Lightbulb, Blinds, AirVent, DoorOpen, Theater, Wifi, Workflow, Webcam, Cctv } from 'lucide-react'
 import CallToAction from "@/components/shared/content/call-to-action";
 export const metadata: Metadata = {
-  title: 'About <OSHCopy /> - Elevating Your Living Experience',
-  description: `Learn about <OSHCopy /> - pioneers in smart living solutions. Discover how we combine security, privacy, and energy efficiency to enhance your lifestyle.`,
+  title: 'About Os Smart Home - Elevating Your Living Experience',
+  description: `Learn about  Oz Smart Home - pioneers in smart living solutions. Discover how we combine security, privacy, and energy efficiency to enhance your lifestyle.`,
 }
 const AboutPage = async () => {
   return (

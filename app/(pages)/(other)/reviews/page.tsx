@@ -1,13 +1,12 @@
+'use client'
 import OSHCopy from "@/components/shared/content/osh-copy";
 import ContentWrapper from "@/components/shared/layout/content-wrapper";
 import { Metadata } from "next";
 import Image from 'next/image'
 import pic from '@/public/bg-test-1.jpg'
-export const metadata: Metadata = {
-  title: 'Reviews - Hear What Customers Say About Oz Smart Home',
-  description: 'Read reviews and testimonials about Oz Smart Home. Discover why our customers love our smart living solutions for security, privacy, and energy efficiency.',
+import { ElfsightWidget } from 'react-elfsight-widget';
 
-}
+
 
 
 const ReviewsPage = () => {
@@ -22,6 +21,10 @@ const ReviewsPage = () => {
         <div className='absolute  w-[2013px] left-[50%] -translate-x-[50%] h-full bottom-[-100px] bg-black opacity-35'>
           <Image src={pic} className='absolute bottom-0' objectFit='contain' alt='' />
         </div>
+      </div>
+      <div className="relative text-white z-20 text-lg w-full max-w-2xl mx-auto">
+
+      <ElfsightWidget widgetId={'4fa8e754-9b08-4bd8-840b-41458db42c6d'} lazy modern />
       </div>
       </ContentWrapper>
     </>
