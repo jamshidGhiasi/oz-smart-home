@@ -2,7 +2,7 @@
 import ContactFormSchema from "@/lib/form-data-schema"
 import { z } from "zod"
 import { Resend } from "resend";
-
+import OSHContactReceiptEmail from "@/components/email/email-reciept-template";
 
 export default async function sendEmail(formData: z.infer<typeof ContactFormSchema>) {
     const result = ContactFormSchema.safeParse(formData)
@@ -24,7 +24,7 @@ export default async function sendEmail(formData: z.infer<typeof ContactFormSche
                     from: 'info@ozsmarthome.com.au',
                     to: email,
                     subject: 'Thanks for your inquiry.',
-                    html: `Hi ${name} <br/> Thanks for your inquiry. We will process your request and will get back to you as soon as possible. <br/> Thanks <br/> Oz Smart Home`,
+                    react: <OSHContactReceiptEmail username={name} />,
     
                 })
             }
