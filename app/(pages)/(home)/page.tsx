@@ -19,7 +19,7 @@ export default function Home() {
           <div className='mt-5 text-center '>
             <div className='mx-auto'>
               <Link className=' text-md lg:text-lg inline-flex items-center gap-x-2 border py-2 px-4 rounded-xl mr-4 text-black bg-[#E9C31E] border-[#E9C31E] hover:bg-[#fff] hover:border-white hover:text-black transition-all ' href={'/contact'}><Send className='h-4 w-4' /> Get started today</Link>
-              <Link className=' text-md lg:text-lg inline-flex items-center gap-x-2 py-2 px-4 rounded-xl bg-white text-black hover:bg-[#e5e5e5] hover:text-black  transition-all' href={'/contact'}><PhoneOutgoing className='h-4 w-4' /> Call us</Link>
+              <Link className=' text-md lg:text-lg inline-flex items-center gap-x-2 py-2 px-4 rounded-xl bg-white text-black hover:bg-[#e5e5e5] hover:text-black  transition-all' href={'tel:1800865070'}><PhoneOutgoing className='h-4 w-4' /> Call us</Link>
             </div>
             <div>
               <span className='text-white'>or </span>

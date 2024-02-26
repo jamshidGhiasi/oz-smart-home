@@ -24,12 +24,12 @@ import {
     <Html>
       <Head />
       <Preview>
-        A fine-grained personal access token has been added to your account
+        Thanks for your inquiry.
       </Preview>
       <Body style={main}>
         <Container style={container}>
           <Img
-            src={`${baseUrl}/public/apple-touch-icon.png`}
+            src={`/apple-touch-icon.png`}
             width="32"
             height="32"
             alt="Oz Smart Home"
@@ -55,7 +55,7 @@ import {
           </Section>
           <Text style={links}>
             <Link style={link} href={'https://www.ozsmarthome.com.au/services'}>Services</Link> ・{" "}
-            <Link style={link} href={'https://www.ozsmarthome.com.au/project'}>Projects</Link>・{" "}
+            <Link style={link} href={'https://www.ozsmarthome.com.au/projects'}>Projects</Link>・{" "}
             <Link style={link} href={'https://www.ozsmarthome.com.au/knowledge-hub'}>Knowledge Hub</Link>
           </Text>
   
