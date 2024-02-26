@@ -1,3 +1,4 @@
+
 import OSHCopy from "@/components/shared/content/osh-copy";
 import ContentWrapper from "@/components/shared/layout/content-wrapper";
 import { Metadata } from "next";
@@ -11,7 +12,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import { Card, CardContent } from "@/components/ui/card"
-export const metadate: Metadata = {
+export const metadata: Metadata = {
   title: `Projects - See Oz Smart Home's Smart Living Solutions in Action`,
   description: `Explore Oz Smart Home's projects and see our smart living solutions in action. Discover how we transform homes with security, privacy, and efficiency.`,
 }
