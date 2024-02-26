@@ -11,7 +11,6 @@ import {
     Text,
   } from "@react-email/components";
   import * as React from "react";
-  
   interface OSHContactReceiptEmailProps {
     username?: string;
   }
@@ -29,7 +28,7 @@ import {
       <Body style={main}>
         <Container style={container}>
           <Img
-            src={`/apple-touch-icon.png`}
+            src={'https://www.ozsmarthome.com.au/public/apple-touch-icon.png'}
             width="32"
             height="32"
             alt="Oz Smart Home"
