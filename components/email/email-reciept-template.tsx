@@ -15,7 +15,7 @@ import {
     username?: string;
   }
   
-  const baseUrl = 'https://www.ozsmarthome.com.au/public';
+  const baseUrl = 'https://www.ozsmarthome.com.au/';
   
   export const OSHContactReceiptEmail = ({
     username,
@@ -28,7 +28,7 @@ import {
       <Body style={main}>
         <Container style={container}>
           <Img
-            src={'https://www.ozsmarthome.com.au/public/apple-touch-icon.png'}
+            src={'https://www.ozsmarthome.com.au/apple-touch-icon.png'}
             width="32"
             height="32"
             alt="Oz Smart Home"

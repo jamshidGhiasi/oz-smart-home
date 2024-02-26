@@ -36,53 +36,53 @@ export default function Home() {
           <h2 className='text-2xl sm:text-2xl md:text-3xl lg:text-4xl mb-8 mt-0 text-center'> Our Services<span className='sub-heading'>to make your home smart</span></h2>
         </div>
         <div className=' grid grid-cols-1 gap-y-4 md:grid-cols-2 md:gap-4 lg:grid-cols-4 p-4 lg:gap-8 lg:p-0 w-full max-w-7xl mx-auto'>
-          <Link href={'/'} className=' text-white bg-[hsl(0,0%,20%)]  p-6'>
+          <Link href={'/services/smart-lighting'} className=' text-white bg-[hsl(0,0%,20%)]  p-6'>
             <Lightbulb className='w-8 h-8 text-[#E9C31E] mb-2  ' />
             <h3 className='font-bold text-xl mb-3'>Lighting</h3>
             <p className='text-[hsl(240,5%,64.9%)]'>Illuminate with intelligence. Smart lighting adapts to your needs, enhancing ambiance and energy efficiency.</p>
-            <Link className='text-white text-md inline-flex mt-3 font-bold  items-center hover:underline  ' href={'/services'}> Find out more <ChevronRight className="h-4 w-4" /></Link>
+            <Link className='text-white text-md inline-flex mt-3 font-bold  items-center hover:underline  ' href={'/services/smart-lighting'}> Find out more <ChevronRight className="h-4 w-4" /></Link>
           </Link>
-          <Link href={'/'} className='   text-white bg-[hsl(0,0%,20%)]  p-6'>
+          <Link href={'/services/smart-blinds-and-curtains'} className='   text-white bg-[hsl(0,0%,20%)]  p-6'>
             <Blinds className='w-8 h-8 text-[#E9C31E] mb-2  ' />
             <h3 className='font-bold text-xl mb-2'>Blinds and Curtains</h3>
             <p className='text-[hsl(240,5%,64.9%)]'>Control sunlight with a touch. Smart blinds and curtains offer convenience and privacy at your fingertips.</p>
-            <Link className=' text-md inline-flex mt-3 font-bold    items-center hover:underline  ' href={'/services'}> Find out more <ChevronRight className="h-4 w-4" /></Link>
+            <Link className=' text-md inline-flex mt-3 font-bold    items-center hover:underline  ' href={'/services/smart-blinds-and-curtains'}> Find out more <ChevronRight className="h-4 w-4" /></Link>
           </Link>
-          <Link href={'/'} className=' text-white bg-[hsl(0,0%,20%)]  p-6 '>
+          <Link href={'/services/smart-air-conditioning'} className=' text-white bg-[hsl(0,0%,20%)]  p-6 '>
             <AirVent className='w-8 h-8 text-[#E9C31E] mb-2  ' />
             <h3 className='font-bold text-xl mb-3'>Air Conditioning</h3>
             <p className='text-[hsl(240,5%,64.9%)]'>Stay cool, stay efficient. Smart air conditioning adjusts to your preferences, saving energy without sacrificing comfort.</p>
-            <Link className='text-white text-md inline-flex mt-3 font-bold   items-center hover:underline  ' href={'/services'}> Find out more <ChevronRight className="h-4 w-4" /></Link>
+            <Link className='text-white text-md inline-flex mt-3 font-bold   items-center hover:underline  ' href={'/services/smart-air-conditioning'}> Find out more <ChevronRight className="h-4 w-4" /></Link>
           </Link>
-          <Link href={'/'} className='  text-white bg-[hsl(0,0%,20%)]  p-6'>
+          <Link href={'/services/smart-access-and-intercom'} className='  text-white bg-[hsl(0,0%,20%)]  p-6'>
             <DoorOpen className='w-8 h-8 text-[#E9C31E] mb-2  ' />
             <h3 className='font-bold text-xl mb-3'>Access and Intercom</h3>
             <p className='text-[hsl(240,5%,64.9%)]'>Secure, seamless access. Intercom systems and smart locks ensure safety and convenience for your home.</p>
-            <Link className='text-white text-md inline-flex mt-3 font-bold   items-center hover:underline  ' href={'/services'}> Find out more <ChevronRight className="h-4 w-4" /></Link>
+            <Link className='text-white text-md inline-flex mt-3 font-bold   items-center hover:underline  ' href={'/services/smart-access-and-intercom'}> Find out more <ChevronRight className="h-4 w-4" /></Link>
           </Link>
-          <Link href={'/'} className='  text-white bg-[hsl(0,0%,20%)]  p-6'>
+          <Link href={'/services/cctv-security-and-alarm'} className='  text-white bg-[hsl(0,0%,20%)]  p-6'>
             <Cctv className='w-8 h-8 text-[#E9C31E] mb-2  ' />
             <h3 className='font-bold text-xl mb-3'>CCTV, Security & Alarm</h3>
             <p className='text-[hsl(240,5%,64.9%)]'>Watchful eyes, always. Our CCTV and alarm systems provide peace of mind, protecting your home round-the-clock.</p>
-            <Link className='text-white text-md inline-flex mt-3 font-bold   items-center hover:underline  ' href={'/services'}> Find out more <ChevronRight className="h-4 w-4" /></Link>
+            <Link className='text-white text-md inline-flex mt-3 font-bold   items-center hover:underline  ' href={'/services/cctv-security-and-alarm'}> Find out more <ChevronRight className="h-4 w-4" /></Link>
           </Link>
-          <Link href={'/'} className='  text-white bg-[hsl(0,0%,20%)]  p-6'>
+          <Link href={'/services/entertainment-and-av'} className='  text-white bg-[hsl(0,0%,20%)]  p-6'>
             <Theater className='w-8 h-8 text-[#E9C31E] mb-2  ' />
             <h3 className='font-bold text-xl mb-3'>Home Entertainment</h3>
             <p className='text-[hsl(240,5%,64.9%)]'>Immerse yourself in entertainment. From home theaters to audio systems, enjoy a cinematic experience at home.</p>
-            <Link className='text-white text-md inline-flex mt-3 font-bold   items-center hover:underline  ' href={'/services'}> Find out more <ChevronRight className="h-4 w-4" /></Link>
+            <Link className='text-white text-md inline-flex mt-3 font-bold   items-center hover:underline  ' href={'/services/entertainment-and-av'}> Find out more <ChevronRight className="h-4 w-4" /></Link>
           </Link>
-          <Link href={'/'} className='  text-white bg-[hsl(0,0%,20%)]  p-6'>
+          <Link href={'/services/network'} className='  text-white bg-[hsl(0,0%,20%)]  p-6'>
             <Wifi className='w-8 h-8 text-[#E9C31E] mb-2  ' />
             <h3 className='font-bold text-xl mb-3'>Home Network</h3>
             <p className='text-[hsl(240,5%,64.9%)]'>Connectivity without limits. Our home network solutions ensure reliable, high-speed connections for all your devices.</p>
-            <Link className='text-white text-md inline-flex mt-3 font-bold   items-center hover:underline  ' href={'/services'}> Find out more <ChevronRight className="h-4 w-4" /></Link>
+            <Link className='text-white text-md inline-flex mt-3 font-bold   items-center hover:underline  ' href={'/services/network'}> Find out more <ChevronRight className="h-4 w-4" /></Link>
           </Link>
-          <Link href={'/'} className='  text-white bg-[hsl(0,0%,20%)]  p-6'>
+          <Link href={'/services/automation'} className='  text-white bg-[hsl(0,0%,20%)]  p-6'>
             <Workflow className='w-8 h-8 text-[#E9C31E] mb-2  ' />
             <h3 className='font-bold text-xl mb-3'>Automation, Scenes & Routines</h3>
             <p className='text-[hsl(240,5%,64.9%)]'>Effortless living, automated. Automate routines and tasks, making everyday life simpler and more efficient.</p>
-            <Link className='text-white text-md inline-flex mt-3 font-bold   items-center hover:underline  ' href={'/services'}> Find out more <ChevronRight className="h-4 w-4" /></Link>
+            <Link className='text-white text-md inline-flex mt-3 font-bold   items-center hover:underline  ' href={'/services/automation'}> Find out more <ChevronRight className="h-4 w-4" /></Link>
           </Link>
         </div>
       </ContentWrapper>
