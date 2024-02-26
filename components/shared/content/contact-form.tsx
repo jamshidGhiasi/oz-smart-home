@@ -2,146 +2,177 @@
 
 
 import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
+import { useForm, SubmitHandler } from "react-hook-form"
 import { z } from "zod"
 
 import { Button } from "@/components/ui/button"
 import {
-    Form,
-    FormControl,
-    FormDescription,
-    FormField,
-    FormItem,
-    FormLabel,
-    FormMessage,
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Checkbox } from "@/components/ui/checkbox"
+import toast from 'react-hot-toast';
 
 const items = [
-    {
-        id: "recents",
-        label: "Recents",
-    },
-    {
-        id: "home",
-        label: "Home",
-    },
-    {
-        id: "applications",
-        label: "Applications",
-    },
-    {
-        id: "desktop",
-        label: "Desktop",
-    },
-    {
-        id: "downloads",
-        label: "Downloads",
-    },
-    {
-        id: "documents",
-        label: "Documents",
-    },
+  {
+    id: "smart-lighting",
+    label: "Smart Lighting",
+  },
+  {
+    id: "smart-blinds-and-curtains",
+    label: "Smart Blind & Curtains",
+  },
+  {
+    id: "access-and-intercom",
+    label: "Smart Access and Intercom",
+  },
+  {
+    id: "cctv-security-alarm",
+    label: "CCT, Security & Alarm",
+  },
+  {
+    id: "entertainment-and-av",
+    label: "Entertainment & AV",
+  },
+  {
+    id: "network",
+    label: "Network",
+  },
+  {
+    id: "automation",
+    label: "Automation",
+  },
+  {
+    id: "other",
+    label: "Other",
+  },
 ] as const
 
+import { Textarea } from "@/components/ui/textarea"
+import { useFormState, useFormStatus } from "react-dom"
+import sendEmail from "@/app/_actions"
+import ContactFormSchema from "@/lib/form-data-schema"
+import { useState } from "react"
 
-const formSchema = z.object({
-    name: z.string().min(2, {
-        message: "Name must be at least 2 characters.",
-    }),
-    email: z.string().min(6, { message: 'Email must be at least 6 characters'}).email('Email is not valid'),
-    items: z.array(z.string()).refine((value) => value.some((item) => item), {
-        message: "You have to select at least one item.",
-    }),
-})
+
 
 export function ProfileForm() {
-    // 1. Define your form.
-    const form = useForm<z.infer<typeof formSchema>>({
-        resolver: zodResolver(formSchema),
-        defaultValues: {
-            name: "",
-            email: "",
-            items: ["recents", "home"],
 
-        },
-    })
+  const [data, setData] = useState<z.infer<typeof ContactFormSchema>>()
+  const [pending, setPending] = useState(false)
 
-    // 2. Define a submit handler.
-    function onSubmit(values: z.infer<typeof formSchema>) {
 
-        // Do something with the form values.
-        // ✅ This will be type-safe and validated.
-        console.log(values)
+  // 1. Define your form.
+  const form = useForm<z.infer<typeof ContactFormSchema>>({
+    resolver: zodResolver(ContactFormSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      items: [], 
+      message: ""
+
+    },
+  })
+
+  const { formState } = form;
+  const processForm: SubmitHandler<z.infer<typeof ContactFormSchema>> = async data => {
+    setPending(true)
+    const result = await sendEmail(data);
+
+    if (!result) {
+      toast.error('Something went wrong, Please try again!', { duration: 5000});
+      setPending(false)
+      return;
+    }
+    if (result.error) {
+      toast.error(result.error.toString(), { duration: 5000});
+      setPending(false)
+      return;
     }
 
-    return (
-        <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-                <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                        <FormItem>
-                            <FormLabel>Name</FormLabel>
-                            <FormControl>
-                                <Input placeholder="John Smith" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                        </FormItem>
-                    )}
-                />
-                <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                        <FormItem>
-                            <FormLabel>Email</FormLabel>
-                            <FormControl>
-                                <Input type="email" placeholder="abc@xyz.com" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                        </FormItem>
-                    )}
-                />
-                <FormField
+    toast.success('Happy Days', { duration: 5000});
+    form.reset();
+    setPending(false)
+    setData(data);
+  
+  }
+
+
+  return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(processForm)}  className="space-y-8">
+        <FormField
+          control={form.control}
+          name="name"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel className="text-white text-md font-bold">Name</FormLabel>
+              <FormControl>
+                <Input placeholder="John Smith" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="email"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel className="text-white text-md font-bold">Email</FormLabel>
+              <FormControl>
+                <Input type="email" placeholder="abc@xyz.com" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
           control={form.control}
           name="items"
           render={() => (
             <FormItem>
               <div className="mb-4">
-                <FormLabel className="text-base">Sidebar</FormLabel>
+                <FormLabel className="text-white text-md font-bold">Services</FormLabel>
                 <FormDescription>
-                  Select the items you want to display in the sidebar.
+                 Which service you are interested in?
                 </FormDescription>
               </div>
+              <div className="flex flex-col space-y-2 ">
               {items.map((item) => (
                 <FormField
                   key={item.id}
                   control={form.control}
+                  
                   name="items"
                   render={({ field }) => {
                     return (
                       <FormItem
                         key={item.id}
-                        className="flex flex-row items-start space-x-3 space-y-0"
+                        className="flex items-center space-x-2 space-y-0 text-white    "
                       >
-                        <FormControl>
+                        <FormControl className=" ">
                           <Checkbox
+                            className="border-white   data-[state=checked]:bg-white data-[state=checked]:text-black peer "
                             checked={field.value?.includes(item.id)}
                             onCheckedChange={(checked) => {
                               return checked
                                 ? field.onChange([...field.value, item.id])
                                 : field.onChange(
-                                    field.value?.filter(
-                                      (value) => value !== item.id
-                                    )
+                                  field.value?.filter(
+                                    (value) => value !== item.id
                                   )
+                                )
                             }}
                           />
                         </FormControl>
-                        <FormLabel className="text-sm font-normal">
+                        <FormLabel className="text-md font-normal text-[hsl(240,5%,64.9%)] peer-data-[state=checked]:text-white peer-data-[state=checked]:font-bold ">
                           {item.label}
                         </FormLabel>
                       </FormItem>
@@ -149,15 +180,38 @@ export function ProfileForm() {
                   }}
                 />
               ))}
+              </div>
               <FormMessage />
             </FormItem>
           )}
         />
-                <Button type="submit">Submit</Button>
-            </form>
-        </Form>
-    )
+        <FormField
+          control={form.control}
+          name="message"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel className="text-white text-md font-bold">Let us know how we can assist you today</FormLabel>
+              <FormControl>
+                <Textarea
+                  placeholder="Tell us what you need..."
+                  className="resize-none"
+                  {...field}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+       <Button type="submit" className="w-full disabled:cursor-not-allowed" variant="secondary" disabled={pending}  >Submit</Button>
+      </form>
+    </Form>
+  )
 }
-
+function Submit() {
+  const {pending} = useFormStatus();
+  return <Button disabled={pending}>
+    {pending ? " Submitting " : "Submit"}
+  </Button>
+}
 
 export default ProfileForm;
