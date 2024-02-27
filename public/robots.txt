@@ -7,3 +7,4 @@ Host: https://ozsmarthome.com.au
 
 # Sitemaps
 Sitemap: https://ozsmarthome.com.au/sitemap.xml
+Sitemap: https://ozsmarthome.com.au/server-sitemap-index.xml
