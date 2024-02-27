@@ -1,13 +1,14 @@
-// next-sitemap.config.js
-
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: 'https://ozsmarthome.com.au',
-    generateRobotsTxt: true,
-    exclude: ['/server-sitemap-index.xml'], // <= exclude here
+    siteUrl: process.env.SITE_URL || 'http://localhost:3000',
+    generateRobotsTxt: true, // (optional)
     robotsTxtOptions: {
-      additionalSitemaps: [
-        'https://ozsmarthome.com.au/server-sitemap-index.xml', // <==== Add here
-      ],
-    },
+        policies: [
+          {
+            userAgent: '*',
+            allow: '/',
+          },
+        ],
+    }
+    // ...other options
   }
