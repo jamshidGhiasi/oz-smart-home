@@ -7,9 +7,13 @@ import Image from 'next/image'
 import pic from '@/public/bg-test-1.jpg'
 import { ChevronRight, PhoneOutgoing, Send, PenTool, CheckSquare, Kanban, Headphones, Lightbulb, Blinds, AirVent, DoorOpen, Theater, Wifi, Workflow, Webcam, Cctv } from 'lucide-react'
 import CallToAction from '@/components/shared/content/call-to-action'
+
 export default function Home() {
+  
+
   return (
     <div className=' -mt-2 lg:mt-4 lg:mb-14'>
+  
       <ContentWrapper className='   relative  z-20  mx-4 h-[500px] lg:h-[600px]   overflow-hidden'>
         <div className="relative  sm:w-full md:w-8/12 lg:w-6/12 xl:w-6/12 2xl:w-5/12 p-4 lg:p-0 w-full mx-auto h-full  z-10  flex flex-col items-center justify-center ">
           <div className=' text-white    '>

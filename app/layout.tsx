@@ -10,6 +10,19 @@ import PageWrapper from '@/components/shared/layout/page-wrapper'
 import TopNav from '@/components/shared/navigation/top-nav'
 import Footer from '@/components/shared/layout/footer'
 import { Toaster } from 'react-hot-toast';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Oz Smart Home',
+  logo: 'https://www.ozsmarthome.com.au/apple-touch-icon.png',
+  sameAs: [
+    'https://www.youtube.com/channel/UCcbxjhRbel_JTpAiwMiznvQ',
+    'https://www.instagram.com/ozsmarthome/',
+    'https://www.facebook.com/profile.php?id=61556389307850'
+
+  ],
+  url:"https://www.ozsmarthome.com.au/"
+}
 
 const red_hat_display = Red_Hat_Display({
   weight: ['300', '400', '500', '700', '900'],
@@ -42,6 +55,10 @@ export default function RootLayout({
         <meta property="og:title" content="OZ SMART HOME" />
         <meta property="og:description" content="Elevate your lifestyle with our smart home solutions - convenience, security, and energy efficiency at your fingertips." />
         <meta property="og:image" content="https://ozsmarthome.com.au/opengraph-image.jpg" />
+        <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       </head>
       <body
         className={cn(
