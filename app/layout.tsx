@@ -10,6 +10,8 @@ import PageWrapper from '@/components/shared/layout/page-wrapper'
 import TopNav from '@/components/shared/navigation/top-nav'
 import Footer from '@/components/shared/layout/footer'
 import { Toaster } from 'react-hot-toast';
+import { GoogleTagManager } from '@next/third-parties/google'
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
@@ -59,6 +61,7 @@ export default function RootLayout({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      
       </head>
       <body
         className={cn(
@@ -67,7 +70,7 @@ export default function RootLayout({
         )}
       >
      
-          
+     <GoogleTagManager gtmId="GTM-WN5KNKD5" />
           <main className="">
             <TopNav />
             <MarginWidthWrapper>
