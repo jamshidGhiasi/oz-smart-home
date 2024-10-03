@@ -7,7 +7,7 @@ import { SideNavItem, MenuItemWithSubMenuProps } from '@/types';
 import { motion, useCycle } from 'framer-motion';
 import { Icon } from '@iconify/react';
 import OSHBrand from './brand';
-import OSHCopy from '../content/osh-copy';
+import {OSHCopy} from '../content/osh-copy';
 const sidebar = {
     open: (height = 1000) => ({
         clipPath: `circle(${height * 2 + 200}px at 100% 0)`,

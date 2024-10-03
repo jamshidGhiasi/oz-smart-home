@@ -1,11 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
-import OSHCopy from '@/components/shared/content/osh-copy'
+import {OSHCopy} from '@/components/shared/content/osh-copy'
 import ContentWrapper from '@/components/shared/layout/content-wrapper'
 import { Button } from '@/components/shared/ui/button'
 import Link from 'next/link'
-import Image from 'next/image'
-import pic from '@/public/bg-test-1.jpg'
-import { ChevronRight, PhoneOutgoing, Send, PenTool, CheckSquare, Kanban, Headphones, Lightbulb, Blinds, AirVent, DoorOpen, Theater, Wifi, Workflow, Webcam, Cctv } from 'lucide-react'
+
+
+import { ChevronRight, PhoneOutgoing, Send, PenTool, CheckSquare, Kanban, Headphones, Lightbulb, Blinds, AirVent, DoorOpen, Theater, Wifi, Workflow, Webcam, Cctv, Info } from 'lucide-react'
 import CallToAction from '@/components/shared/content/call-to-action'
 
 export default function Home() {
@@ -14,26 +14,26 @@ export default function Home() {
   return (
     <div className=' -mt-2 lg:mt-4 lg:mb-14'>
   
-      <ContentWrapper className='   relative  z-20  mx-4 h-[500px] lg:h-[600px]   overflow-hidden'>
-        <div className="relative  sm:w-full md:w-8/12 lg:w-6/12 xl:w-6/12 2xl:w-5/12 p-4 lg:p-0 w-full mx-auto h-full  z-10  flex flex-col items-center justify-center ">
-          <div className=' text-white    '>
-            <h1 className='text-2xl sm:text-2xl md:text-3xl lg:text-4xl mb-4 mt-0 text-center'> <OSHCopy /><span className='sub-heading'>Pioneering Smart Living Solutions</span></h1>
-            <p className='text-md lg:text-lg text-center w-full max-w-[640px] mx-auto text-[hsl(240,5%,64.9%)]'>We redefine smart living with a focus on security, privacy, and energy efficiency. Our integrated solutions cover it all: from smart lighting and blinds to air conditioning, intercom, locks, CCTV, security, alarms and many more.</p>
+      <ContentWrapper className='   relative  z-20  mx-4 h-[550px] md:h-[500px] lg:h-[700px]   overflow-hidden bg-[#fdfdfb]'>
+        <div className="relative  w-full sm:w-10/12 md:w-10/12  max-w-7xl p-4 lg:p-0 mx-auto h-full  z-10  flex flex-col items-stretch sm:items-start justify-start sm:justify-center pt-20 sm:pt-0 ">
+          <div className=' text-white text-center sm:text-left    '>
+            <h1 className='text-4xl  sm:text-6xl lg:text-6xl mb-4 mt-0 '> <OSHCopy variant={"dark"} >os smart home</OSHCopy><span className='sub-heading text-sm sm:text-2xl md:text-2xl text-zinc-500'>Smart Home and Automation Experts</span></h1>
+            <p className='text-sm lg:text-lg  w-full max-w-[480px] lg:max-w-[540px] mx-auto text-zinc-800'>We offer a variety of smart home solutions to simplify your daily routine. Ready to elevate your home and lifestyle? Live smarter with oz smart home.</p>
           </div>
           <div className='mt-5 text-center '>
             <div className='mx-auto'>
-              <Link className=' text-md lg:text-lg inline-flex items-center gap-x-2 border py-2 px-4 rounded-xl mr-4 text-black bg-[#E9C31E] border-[#E9C31E] hover:bg-[#fff] hover:border-white hover:text-black transition-all ' href={'/contact'}><Send className='h-4 w-4' /> Get started today</Link>
-              <Link className=' text-md lg:text-lg inline-flex items-center gap-x-2 py-2 px-4 rounded-xl bg-white text-black hover:bg-[#e5e5e5] hover:text-black  transition-all' href={'tel:1800865070'}><PhoneOutgoing className='h-4 w-4' /> Call us</Link>
+              <Link className=' text-md w-full sm:w-auto lg:text-lg mb-4 sm:mb-0 inline-flex items-center gap-x-2 py-3 sm:py-2 px-4 mr-4 font-bold rounded-xl text-black  bg-[#E9C31E] border-[#E9C31E] hover:bg-[#fff] hover:border-white hover:text-black transition-all' href={'tel:1800865070'}><PhoneOutgoing className='h-4 w-4' /> Call us for a free quote</Link>
+              <Link className=' text-md w-full sm:w-auto lg:text-lg inline-flex items-center gap-x-2  py-3 sm:py-2 px-4 rounded-xl font-bold   bg-black text-white hover:bg-[#e5e5e5] hover:text-black  transition-all ' href={'/services'}><Info className='h-4 w-4' /> Find out more</Link>
             </div>
-            <div>
-              <span className='text-white'>or </span>
-              <Link className='text-white text-lg inline-flex  mt-4  items-center font-bold hover:underline  ' href={'/services'}> Find out more <ChevronRight className="h-4 w-4" /></Link>
-            </div>
+   
           </div>
         </div>
-        <div className='absolute w-[1200px]  lg:w-[2800px] left-[50%] -translate-x-[50%] h-full bottom-[-30px] lg:bottom-[-100px] bg-black'>
-          <Image src={pic} className='absolute bottom-0' alt='' />
+
+        <div className=' absolute bg-[#fdfdfb] top-0 left-0 h-full w-full overflow-hidden'>
+          <figure className='hero-banner'></figure>
+
         </div>
+     
       </ContentWrapper>
       <ContentWrapper className=' bg-[#f5f6f7] mx-4 my-4 py-12 lg:py-24 '>
         <div className=' text-black    '>

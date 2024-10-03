@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import { NAV_ITEMS } from '@/constants';
 import { SideNavItem } from '@/types';
 import { Icon } from '@iconify/react';
-import OSHCopy from '../content/osh-copy';
+import {OSHCopy} from '../content/osh-copy';
 import OSHBrand from './brand';
 import { ChevronRight, PhoneOutgoing, Send, PenTool, CheckSquare, Kanban, Headphones, Lightbulb, Blinds, AirVent, DoorOpen, Theater, Wifi, Workflow, Webcam, Cctv } from 'lucide-react'
 
