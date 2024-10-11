@@ -10,7 +10,8 @@ import PageWrapper from '@/components/shared/layout/page-wrapper'
 import TopNav from '@/components/shared/navigation/top-nav'
 import Footer from '@/components/shared/layout/footer'
 import { Toaster } from 'react-hot-toast';
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleTagManager, GoogleAnalytics } from '@next/third-parties/google'
+
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -71,6 +72,7 @@ export default function RootLayout({
       >
      
      <GoogleTagManager gtmId="GTM-WN5KNKD5" />
+     <GoogleAnalytics gaId="G-L9580VK4FJ" />
           <main className="">
             <TopNav />
             <MarginWidthWrapper>
