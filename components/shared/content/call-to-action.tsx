@@ -6,7 +6,7 @@ const CallToAction = async () => {
     return (
         <ContentWrapper className=' bg-[#f5f6f7] mx-4 my-4 py-12 lg:py-24 '>
             <div className=' text-black    '>
-                <h2 className='text-2xl sm:text-2xl md:text-3xl lg:text-4xl mb-8 mt-0 text-center'> Feeling Ready<span className='sub-heading'>to elevate your home and lifestyle? </span></h2>
+                <h2 className='text-2xl sm:text-2xl md:text-3xl lg:text-4xl mb-2 mt-0 text-center'>  Ready<span className='sub-heading'>to elevate your home and lifestyle? </span></h2>
             </div>
             <div className='mx-auto flex flex-col items-center  '>
                 <p className='text-center font-b'>Contact us today for a free and obligation-free consultation tailored to your needs.</p>

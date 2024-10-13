@@ -17,7 +17,7 @@ const AboutPage = async () => {
     <ContentWrapper className="relative  bg-black mx-4 my-4 px-8 lg:px-0 py-12 lg:py-16 ">
       
       <div className="relative text-white z-20 text-lg w-full max-w-2xl mx-auto">
-        <h1 className='text-2xl sm:text-2xl md:text-3xl lg:text-4xl mb-1 mt-0 text-left text-white'> <span className='sub-heading'>About us</span></h1>
+      <h1 className='text-2xl sm:text-2xl md:text-3xl lg:text-4xl mb-1 mt-0 text-left text-white'> <span className='sub-heading'>About us</span></h1>
         <span className="mb-4 block text-md font-rhd">Discover Our Story</span>
         <p className="text-[hsl(240,5%,74.9%)]">
           At <OSHCopy />, we are committed to redefining the landscape of smart living solutions. Established in 2020, we've quickly emerged as industry leaders, driven by a passion for innovation, security, and efficiency. Our mission is simple: to provide cutting-edge <Link href={'/services'} className="underline font-bold" >smart home solutions</Link> that prioritize security, privacy, and energy efficiency, all while offering competitive pricing and unmatched flexibility.

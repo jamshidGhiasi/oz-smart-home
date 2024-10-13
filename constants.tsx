@@ -62,4 +62,11 @@ export const NAV_ITEMS: SideNavItem[] = [
         visibility: true,
         icon: <Icon icon="lucide:star" width="16" height="16" />,
     },
+    {
+        title: 'Virtual Smart Home Tour',
+        path: '/virtual-smart-home-tour',
+        order: 7,
+        visibility: true,
+        icon: <Icon icon="lucide:star" width="16" height="16" />,
+    },
 ]
