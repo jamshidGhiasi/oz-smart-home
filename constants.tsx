@@ -43,7 +43,7 @@ export const NAV_ITEMS: SideNavItem[] = [
     {
         title: 'Contact',
         path: '/contact',
-        order: 6,
+        order: 5,
         visibility: true,
         icon: <Icon icon="lucide:mail" width="16" height="16" />,
     },
@@ -51,21 +51,15 @@ export const NAV_ITEMS: SideNavItem[] = [
     {
         title: 'Knowledge Hub',
         path: '/knowledge-hub',
-        order: 5,
+        order: 4,
         visibility: true,
         icon: <Icon icon="lucide:sparkles" width="16" height="16" />,
     },
-    {
-        title: 'Reviews',
-        path: '/reviews',
-        order: 4,
-        visibility: true,
-        icon: <Icon icon="lucide:star" width="16" height="16" />,
-    },
+
     {
         title: 'Virtual Smart Home Tour',
         path: '/virtual-smart-home-tour',
-        order: 7,
+        order: 6,
         visibility: true,
         icon: <Icon icon="lucide:star" width="16" height="16" />,
     },
