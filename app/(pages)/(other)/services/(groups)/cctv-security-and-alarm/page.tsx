@@ -6,8 +6,8 @@ import ServicesNavigation from "@/components/shared/navigation/services-navigati
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: '24/7 Surveillance for Your Home | CCTV Security & Alarm | Oz Smart Home',
-  description: `Protect your home with our comprehensive CCTV and alarm systems. Stay secure and informed, day and night.`,
+  title: 'CCTV & Security Systems | Oz Smart Home',
+  description: `Ensure peace of mind with Oz Smart Home's CCTV and security systems. Protect your home 24/7. Contact us for a free consultation today.`,
 
 }
 

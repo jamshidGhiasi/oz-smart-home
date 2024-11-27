@@ -6,8 +6,8 @@ import ServicesNavigation from "@/components/shared/navigation/services-navigati
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Effortless Living with Home Automation | Oz Smart Home',
-  description: `Simplify your life with automation. Our solutions offer convenience, security, and energy efficiency for your home.`,
+  title: 'Home Automation Solutions | Oz Smart Home',
+  description: `Simplify daily life with home automation from Oz Smart Home. Control your environment easily. Get started with a consultation today.`,
 
 }
 

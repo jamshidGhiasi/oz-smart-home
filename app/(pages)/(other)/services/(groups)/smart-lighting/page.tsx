@@ -5,8 +5,8 @@ import ContentWrapper from "@/components/shared/layout/content-wrapper";
 import ServicesNavigation from "@/components/shared/navigation/services-navigation";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: 'Illuminate Your Space with Smart Lighting | Oz Smart Home',
-  description: `Enhance ambiance and security with our smart lighting solutions. Experience convenience and energy efficiency at your fingertips.`,
+  title: 'Smart Lighting Services | Oz Smart Home',
+  description: `Illuminate your home with Oz Smart Home's smart lighting. Control ambiance and energy use effortlessly. Discover your options now.`,
 }
 const SmartLightingPage = async () => {
   return (

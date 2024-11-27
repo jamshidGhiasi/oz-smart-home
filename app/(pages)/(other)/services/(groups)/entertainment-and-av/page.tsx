@@ -6,8 +6,8 @@ import ServicesNavigation from "@/components/shared/navigation/services-navigati
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Immersive Home Entertainment | Oz Smart Home',
-  description: `Experience cinematic entertainment at home. Our home entertainment solutions offer quality, security, and convenience.`,
+  title: 'Home Entertainment | Sydney | Oz Smart Home',
+  description: `Transform your space with immersive audio and visual experiences. Explore our cinematic home entertainment solutions. Contact us today.`,
 
 }
 

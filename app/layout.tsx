@@ -55,8 +55,8 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <meta property="og:url" content="ozsmarthome.com.au" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="OZ SMART HOME" />
-        <meta property="og:description" content="Elevate your lifestyle with our smart home solutions - convenience, security, and energy efficiency at your fingertips." />
+        <meta property="og:title" content="Smart Home Solutions | Oz Smart Home" />
+        <meta property="og:description" content="Explore innovative smart home solutions at Oz Smart Home. Enhance your lifestyle today with tailored automation and security services." />
         <meta property="og:image" content="https://ozsmarthome.com.au/opengraph-image.jpg" />
         <script
         type="application/ld+json"

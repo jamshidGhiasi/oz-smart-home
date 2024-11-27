@@ -7,6 +7,12 @@ import Link from 'next/link'
 
 import { ChevronRight, PhoneOutgoing, Send, PenTool, CheckSquare, Kanban, Headphones, Lightbulb, Blinds, AirVent, DoorOpen, Theater, Wifi, Workflow, Webcam, Cctv, Info } from 'lucide-react'
 import CallToAction from '@/components/shared/content/call-to-action'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: `Smart Home Solutions | Oz Smart Home`,
+  description: `Explore innovative smart home solutions at Oz Smart Home. Enhance your lifestyle today with tailored automation and security services.`,
+}
 
 export default function Home() {
   

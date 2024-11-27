@@ -6,8 +6,8 @@ import ServicesNavigation from "@/components/shared/navigation/services-navigati
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Control Sunlight and Privacy | Smart Blinds & Curtains | Oz Smart Home',
-  description: `Regulate natural light with ease. Our smart blinds and curtains offer privacy, security, and energy efficiency for your home.`,
+  title: 'Smart Blinds & Curtains | Sydney | Oz Smart Home',
+  description: `Control light, security and privacy effortlessly with smart blinds and curtains. Optimise your space—get started with OZ Smart Home today.`,
 
 }
 

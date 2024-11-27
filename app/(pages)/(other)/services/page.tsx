@@ -7,8 +7,8 @@ import pic from '@/public/bg-test-1.jpg'
 import Link from "next/link";
 import { AirVent, Blinds, Cctv, ChevronRight, DoorOpen, Lightbulb, Theater, Wifi, Workflow } from "lucide-react";
 export const metadata: Metadata = {
-  title: 'Services - Smart Home Solutions by Oz Smart Home',
-  description: `Explore Oz Smart Home's range of services for smart living. From security systems to energy efficiency solutions, we enhance your home with innovation.`,
+  title: 'Smart Home Services | Sydney | Oz Smart Home',
+  description: `Discover comprehensive smart home services for convenience and security. Explore OZ Smart Home solutions to elevate your living experience.`,
 }
 const ServicesPage = async () => {
   return (

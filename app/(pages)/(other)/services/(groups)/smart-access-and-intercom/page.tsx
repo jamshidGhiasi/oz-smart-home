@@ -6,8 +6,8 @@ import ServicesNavigation from "@/components/shared/navigation/services-navigati
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Secure Access Solutions | Access & Intercom | Oz Smart Home',
-  description: `Control entry to your home with ease. Our access and intercom systems prioritize security, privacy, and convenience.`,
+  title: 'Secure Smart Access Solutions | Sydney | Oz Smart Home',
+  description: `Enhance home security with our smart access and intercom systems. Monitor and control entry from anywhere with ease—learn more today.`,
 
 }
 
