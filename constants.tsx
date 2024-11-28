@@ -29,9 +29,9 @@ export const NAV_ITEMS: SideNavItem[] = [
         submenu: true,
         subMenuItems: [
           { title: 'All', path: '/services' },
-          { title: 'Lighting', path: '/services/smart-lighting', icon: <Lightbulb className="w-4 h-4 mr-2"  /> },
-          { title: 'Blinds & Curtains', path: '/services/smart-blinds-and-curtains', icon:<Blinds className="w-4 h-4 mr-2" />  },
-          { title: 'Air Conditioning', path: '/services/smart-air-conditioning', icon: <AirVent className="w-4 h-4 mr-2"/> },
+          { title: 'Smart Lighting', path: '/services/smart-lighting', icon: <Lightbulb className="w-4 h-4 mr-2"  /> },
+          { title: 'Smart Blinds & Curtains', path: '/services/smart-blinds-and-curtains', icon:<Blinds className="w-4 h-4 mr-2" />  },
+          { title: 'Smart Air Conditioning', path: '/services/smart-air-conditioning', icon: <AirVent className="w-4 h-4 mr-2"/> },
           { title: 'Access & Intercom', path: '/services/smart-access-and-intercom', icon: <DoorOpen className="w-4 h-4 mr-2" /> },
           { title: 'CCTV, Security & Alarm', path: '/services/cctv-security-and-alarm' , icon:<Cctv className="w-4 h-4 mr-2"/> },
           { title: 'Entertainment & AV', path: '/services/entertainment-and-av', icon:<Theater className="w-4 h-4 mr-2"/>  },
