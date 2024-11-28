@@ -7,7 +7,7 @@ const CallToAction = async () => {
         <ContentWrapper className=' bg-black mx-4 my-4 py-4 lg:py-24 mb-[56px] lg:mb-auto'>
             <div className=' text-white   p-4 lg:p-0 mb-0 lg:mb-8 '>
                 <h2 className='text-2xl sm:text-2xl md:text-3xl lg:text-4xl mt-0 text-left lg:text-center'> Discover the Possibilities<span className='sub-heading'>of smart living </span></h2>
-                <p className='text-md lg:text-lg  w-full lg:max-w-[760px] xl:max-w-[760px]  2xl:max-w-[760px] mx-auto  text-left lg:text-center text-zinc-50'>At Oz Smart Home, we're committed to providing you with valuable insights, trends, and practical advice about smart living. Whether you're a tech enthusiast or new to smart homes, our goal is to provide the knowledge that makes integrating smart home solutions easy and rewarding.
+                <p className='text-md lg:text-lg  w-full lg:max-w-[760px] xl:max-w-[760px]  2xl:max-w-[760px] mx-auto  text-left lg:text-center text-zinc-50'>At Oz Smart Home, we&apos;re committed to providing you with valuable insights, trends, and practical advice about smart living. Whether you&apos;re a tech enthusiast or new to smart homes, our goal is to provide the knowledge that makes integrating smart home solutions easy and rewarding.
 
                     Get in touch with us today or visit our <Link className="font-bold underline" href={'/knowledge-hub'}>knowledge hub</Link> to learn more about smart home technology.
                 </p>
