@@ -36,7 +36,7 @@ const OSHCopy = React.forwardRef<HTMLButtonElement, OSHCopyProps>(
         ref={ref}
         {...props}
       >
-        oz smart h<span className="text-[#E9C31E]">o</span>me
+        Oz Smart Home
       </Comp>
     )
   }
