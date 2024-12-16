@@ -17,7 +17,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Oz Smart Home',
-  logo: 'https://www.ozsmarthome.com.au/apple-touch-icon.png',
+  logo: 'https://www.ozsmarthome.com.au/oz-smart-home-icon.svg',
   sameAs: [
     'https://www.youtube.com/channel/UCcbxjhRbel_JTpAiwMiznvQ',
     'https://www.instagram.com/ozsmarthome/',
@@ -26,6 +26,7 @@ const jsonLd = {
   ],
   url:"https://www.ozsmarthome.com.au/"
 }
+
 
 const red_hat_display = Red_Hat_Display({
   weight: ['300', '400', '500', '700', '900'],
@@ -62,7 +63,7 @@ export default function RootLayout({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      
+      <meta name="google-site-verification" content="Ck6elDb-LnhUPytJy_BFvOjyUdAEYgH7cdTisovwnHs" />
       </head>
       <body
         className={cn(
