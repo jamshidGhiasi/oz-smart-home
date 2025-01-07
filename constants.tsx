@@ -36,7 +36,7 @@ export const NAV_ITEMS: SideNavItem[] = [
           { title: 'CCTV, Security & Alarm', path: '/services/cctv-security-and-alarm' , icon:<Cctv className="w-4 h-4 mr-2"/> },
           { title: 'Entertainment & AV', path: '/services/entertainment-and-av', icon:<Theater className="w-4 h-4 mr-2"/>  },
           { title: 'Network', path: '/services/network', icon:<Wifi className="w-4 h-4 mr-2" />  },
-          { title: 'Automation', path: '/services/automation', icon:<Workflow className="w-4 h-4 mr-2" />  },
+          { title: 'Home Automation', path: '/services/home-automation', icon:<Workflow className="w-4 h-4 mr-2" />  },
         ],
     },
 

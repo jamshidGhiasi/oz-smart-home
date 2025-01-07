@@ -79,11 +79,11 @@ const ProjectsPage = async () => {
   return (
     <>
       <ContentWrapper className="relative  z-20 bg-black mx-4 my-4 px-8 lg:px-0 py-12 lg:py-16 ">
-        <div className="relative text-white z-20 text-lg w-full max-w-2xl mx-auto">
+        <div className="relative text-white z-20 text-lg w-full max-w-6xl mx-auto">
           <h1 className='text-2xl sm:text-2xl md:text-3xl lg:text-4xl mb-1 mt-0 text-left text-white'> <span className='sub-heading'>Projects</span></h1>
           <span className="mb-4 block text-md font-rhd">View Our Work</span>
         </div>
-        <div className="relative  z-20 text-lg w-full max-w-2xl mx-auto ">
+        <div className="relative  z-20 text-lg w-full max-w-6xl mx-auto ">
           <Carousel
             opts={{
               align: "center",
@@ -93,7 +93,7 @@ const ProjectsPage = async () => {
             <CarouselContent>
               {projects && projects.map((project, index) => {
                 return (
-                  <CarouselItem key={index} className="">
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
                     <div className="p-1">
                       <Card className=" bg-transparent border-none">
                         <CardContent className="flex  items-center justify-center p-6">                          

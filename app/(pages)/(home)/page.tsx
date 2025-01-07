@@ -9,10 +9,79 @@ import { ChevronRight, PhoneOutgoing, Send, PenTool, CheckSquare, Kanban, Headph
 import CallToAction from '@/components/shared/content/call-to-action'
 import { Metadata } from 'next'
 
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+import { Card, CardContent } from "@/components/ui/card"
+import Image from "next/image";
 export const metadata: Metadata = {
   title: `Smart Home Solutions | Oz Smart Home`,
   description: `Explore innovative smart home solutions at Oz Smart Home. Enhance your lifestyle today with tailored automation and security services.`,
 }
+
+const projects = [
+  {
+    image: 'ozsmarthome-google-business-profile-photo-1@2x-100',
+    title: 'Home Network Upgrade',
+    type: 'Residential',
+    suburb: 'Belrose',
+    date: '2023'
+  },
+  {
+    image: 'ozsmarthome-google-business-profile-photo-2@2x-100',
+    title: 'Home Network Upgrade',
+    type: 'Residential',
+    suburb: 'St Ives',
+    date: '2024'
+  },
+  {
+    image: 'ozsmarthome-google-business-profile-photo-3@2x-100',
+    title: 'Home Network Upgrade',
+    type: 'Residential',
+    suburb: 'Belrose',
+    date: '2023'
+  },
+  {
+    image: 'ozsmarthome-google-business-profile-photo-4@2x-100',
+    title: 'Smart Lighting | Apple HomeKit, Google Home',
+    type: 'Residential',
+    suburb: 'St Ives',
+    date: '2021'
+  },
+  {
+    image: 'ozsmarthome-google-business-profile-photo-5@2x-100',
+    title: 'Smart Alarm System | BOSCH 2000',
+    type: 'Residential',
+    suburb: 'St Ives',
+    date: '2023'
+  },
+  {
+    image: 'ozsmarthome-google-business-profile-photo-6@2x-100',
+    title: 'Smart Access and Intercom',
+    type: 'Residential',
+    suburb: 'St Ives',
+    date: '2023'
+  },
+  {
+    image: 'ozsmarthome-google-business-profile-photo-7@2x-100',
+    title: 'Smart Blinds | Apple HomeKit, Google',
+    type: 'Residential',
+    suburb: 'St Ives',
+    date: '2023'
+  },
+  {
+    image: 'ozsmarthome-google-business-profile-photo-8@2x-100',
+    title: 'CCTV | Security Camera',
+    type: 'Residential',
+    suburb: 'St Ives',
+    date: '2020'
+  }
+]
+
 
 export default function Home() {
   
@@ -131,9 +200,52 @@ export default function Home() {
           <p className='text-md lg:text-lg  w-full lg:max-w-[760px] xl:max-w-[760px]  2xl:max-w-[780px] mx-auto  text-left lg:text-center text-zinc-800'>Imagine a home that grows with you—one that adapts to your and your family’s needs, keeps you connected, and simplifies your daily life. With Oz Smart Home, you can make that a reality. Since 2020, we have been providing professional smart home installation services in Sydney and the Northern Beaches, redefining living spaces with greater comfort, convenience, and security. We know every home is unique, and that's why our smart home solutions consultants take the time to understand your lifestyle. Whether it's automating your lighting, boosting security, or creating a next-level entertainment setup, we can design a system that fits your life perfectly.</p>
         <Link className='font-bold hover:underline sm:text-lg inline-flex justify-center items-center text-center mt-4 mx-auto ' href={'/about'}>Learn more about us <ChevronRight className="h-4 w-4"  /></Link>
         </div>
+      </ContentWrapper>
+      <ContentWrapper className=' bg-black mx-4 my-4 pb-1 pt-4 lg:py-24 '>
+        <div className='  text-left lg:text-center  p-4'>
+          <h2 className='text-2xl sm:text-2xl md:text-3xl lg:text-4xl mt-0 text-left lg:text-center text-white'>Previous Projects<span className='sub-heading'>to inspire your project</span></h2>
+          <p className='text-md lg:text-lg  w-full lg:max-w-[760px] xl:max-w-[760px]  2xl:max-w-[780px] mx-auto  text-left lg:text-center text-[hsl(240,5%,64.9%)]'>At Oz Smart Home, we’ve had the privilege of bringing smart home technology to a number of households across Sydney. From cozy apartments to sprawling family homes, our projects showcase our expertise in creating connected spaces tailored to each client’s needs.</p>
+
+          <div className="relative  z-20 text-lg w-full max-w-6xl mx-auto ">
+          <Carousel
+            opts={{
+              align: "center",
+            }}
+            className="w-full"
+          >
+            <CarouselContent>
+              {projects && projects.map((project, index) => {
+                return (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
+                    <div className="p-1">
+                      <Card className="bg-transparent border-none shadow-none">
+                        <CardContent className="flex  items-center justify-center p-6">                          
+                          <Image src={`/projects/${project.image}.jpg`} alt={project.title} width={650} height={650} />
+                        </CardContent>
+                        <CardContent className="flex flex-col justify-start items-start text-white" >
+                          <span className="font-bold">{project.title}</span>
+                          <span>{project.type}</span>
+                          <span className="text-sm">{project.suburb} | {project.date}</span>
+                          <span></span>
+                        </CardContent>
+                        
+                      </Card>
+                    </div>
+                
+                  </CarouselItem>
+                )
+              })}
 
 
 
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </div>
+
+        <Link className='font-bold hover:underline sm:text-lg inline-flex justify-center items-center text-center mt-8 mx-auto text-[#E9C31E] ' href={'/projects'}>More projects <ChevronRight className="h-4 w-4"  /></Link>
+        </div>
       </ContentWrapper>
       <CallToAction/> 
 
