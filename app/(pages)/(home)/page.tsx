@@ -158,7 +158,7 @@ export default function Home() {
             <p className='text-[hsl(240,5%,64.9%)]'>Connectivity without limits. Our home network solutions ensure reliable, high-speed connections for all your devices.</p>
             <Link className='text-white text-md inline-flex mt-3 font-bold   items-center hover:underline  ' href={'/services/network'}> Find out more <ChevronRight className="h-4 w-4" /></Link>
           </Link>
-          <Link href={'/services/automation'} className='  text-white bg-[hsl(0,0%,20%)]  p-6'>
+          <Link href={'/services/home-automation'} className='  text-white bg-[hsl(0,0%,20%)]  p-6'>
             <Workflow className='w-8 h-8 text-[#E9C31E] mb-2  ' />
             <h3 className='font-bold text-xl mb-3'>Automation, Scenes & Routines</h3>
             <p className='text-[hsl(240,5%,64.9%)]'>Effortless living, automated. Automate routines and tasks, making everyday life simpler and more efficient.</p>
