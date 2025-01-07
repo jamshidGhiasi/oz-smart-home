@@ -31,7 +31,11 @@
     "react": "^18",
     "react-dom": "^18",
     "react-elfsight-widget": "^1.1.1",
+<<<<<<< HEAD
     "react-google-recaptcha": "^3.1.0",
+=======
+    "react-google-recaptcha-v3": "^1.10.1",
+>>>>>>> release
     "react-hook-form": "^7.50.1",
     "react-hot-toast": "^2.4.1",
     "react-mail": "^0.0.1",
