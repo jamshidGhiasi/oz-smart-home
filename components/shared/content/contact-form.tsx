@@ -4,7 +4,9 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm, SubmitHandler } from "react-hook-form"
 import { z } from "zod"
-
+import {
+  GoogleReCaptchaProvider, useGoogleReCaptcha
+} from 'react-google-recaptcha-v3';
 import { Button } from "@/components/ui/button"
 import {
   Form,
@@ -105,6 +107,10 @@ export function ProfileForm() {
 
 
   return (
+    <GoogleReCaptchaProvider
+            reCaptchaKey={
+                process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ''
+            }>
     <Form {...form}>
       <form onSubmit={form.handleSubmit(processForm)}  className="space-y-8">
         <FormField
@@ -205,6 +211,7 @@ export function ProfileForm() {
        <Button type="submit" className="w-full disabled:cursor-not-allowed" variant="secondary" disabled={pending}  >Submit</Button>
       </form>
     </Form>
+    </GoogleReCaptchaProvider>
   )
 }
 function Submit() {

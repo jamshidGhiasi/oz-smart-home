@@ -11,6 +11,7 @@ import TopNav from '@/components/shared/navigation/top-nav'
 import Footer from '@/components/shared/layout/footer'
 import { Toaster } from 'react-hot-toast';
 import { GoogleTagManager, GoogleAnalytics } from '@next/third-parties/google'
+import Script from 'next/script'
 
 
 const jsonLd = {
@@ -71,8 +72,7 @@ export default function RootLayout({
           red_hat_display.variable
         )}
       >
-     
-     <GoogleTagManager gtmId="GTM-WN5KNKD5" />
+    <GoogleTagManager gtmId="GTM-WN5KNKD5" />
      <GoogleAnalytics gaId="G-L9580VK4FJ" />
           <main className="">
             <TopNav />
