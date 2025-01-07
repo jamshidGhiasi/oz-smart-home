@@ -15,7 +15,8 @@ export const metadata: Metadata = {
 
 const AutomationPage = async () => {
   return (
-    <ContentWrapper className="relative  z-20 bg-black mx-4 my-4 px-8 lg:px-0 py-12 lg:py-16 ">
+   
+      <>
       <div className="relative text-white z-20 text-lg w-full max-w-4xl mx-auto">
         <h1 className='text-2xl sm:text-2xl md:text-3xl lg:text-4xl mb-1 mt-0 text-left text-white'> <span className='sub-heading'>Smart Home Automation Systems Installation in Sydney and the Northern Beaches</span></h1>
         <span className="mb-4 block text-md font-rhd">Effortless Living, Simplified</span>
@@ -55,7 +56,8 @@ const AutomationPage = async () => {
         <Link className=' text-md lg:text-lg inline-flex items-center gap-x-2 border py-2 px-4 font-bold rounded-xl mt-4 text-black bg-[#E9C31E] border-[#E9C31E] hover:bg-[#e5e5e5] hover:border-white hover:text-black transition-all ' href={'/contact'}><Send className='h-4 w-4' /> Contact us</Link>
       <ServicesNavigation />
       </div>
-    </ContentWrapper>
+      </>
+   
   );
 }
 

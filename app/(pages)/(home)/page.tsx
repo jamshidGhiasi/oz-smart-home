@@ -162,7 +162,7 @@ export default function Home() {
             <Workflow className='w-8 h-8 text-[#E9C31E] mb-2  ' />
             <h3 className='font-bold text-xl mb-3'>Automation, Scenes & Routines</h3>
             <p className='text-[hsl(240,5%,64.9%)]'>Effortless living, automated. Automate routines and tasks, making everyday life simpler and more efficient.</p>
-            <Link className='text-white text-md inline-flex mt-3 font-bold   items-center hover:underline  ' href={'/services/automation'}> Find out more <ChevronRight className="h-4 w-4" /></Link>
+            <Link className='text-white text-md inline-flex mt-3 font-bold   items-center hover:underline  ' href={'/services/home-automation'}> Find out more <ChevronRight className="h-4 w-4" /></Link>
           </Link>
         </div>
       </ContentWrapper>

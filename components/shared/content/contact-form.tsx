@@ -1,10 +1,7 @@
 'use client'
-
-
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm, SubmitHandler } from "react-hook-form"
 import { z } from "zod"
-
 import { Button } from "@/components/ui/button"
 import {
   Form,
@@ -18,7 +15,6 @@ import {
 import { Input } from "@/components/ui/input"
 import { Checkbox } from "@/components/ui/checkbox"
 import toast from 'react-hot-toast';
-
 const items = [
   {
     id: "smart-lighting",
@@ -46,28 +42,22 @@ const items = [
   },
   {
     id: "automation",
-    label: "Automation",
+    label: "Home Automation",
   },
   {
     id: "other",
     label: "Other",
   },
 ] as const
-
 import { Textarea } from "@/components/ui/textarea"
 import { useFormState, useFormStatus } from "react-dom"
 import sendEmail from "@/app/_actions"
 import ContactFormSchema from "@/lib/form-data-schema"
 import { useState } from "react"
-
-
-
+import React from "react";
 export function ProfileForm() {
-
   const [data, setData] = useState<z.infer<typeof ContactFormSchema>>()
   const [pending, setPending] = useState(false)
-
-
   // 1. Define your form.
   const form = useForm<z.infer<typeof ContactFormSchema>>({
     resolver: zodResolver(ContactFormSchema),
@@ -76,15 +66,12 @@ export function ProfileForm() {
       email: "",
       items: [], 
       message: ""
-
     },
   })
-
   const { formState } = form;
   const processForm: SubmitHandler<z.infer<typeof ContactFormSchema>> = async data => {
     setPending(true)
     const result = await sendEmail(data);
-
     if (!result) {
       toast.error('Something went wrong, Please try again!', { duration: 5000});
       setPending(false)
@@ -95,15 +82,11 @@ export function ProfileForm() {
       setPending(false)
       return;
     }
-
     toast.success('Happy Days', { duration: 5000});
     form.reset();
     setPending(false)
     setData(data);
-  
   }
-
-
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(processForm)}  className="space-y-8">
@@ -149,7 +132,6 @@ export function ProfileForm() {
                 <FormField
                   key={item.id}
                   control={form.control}
-                  
                   name="items"
                   render={({ field }) => {
                     return (
@@ -213,5 +195,4 @@ function Submit() {
     {pending ? " Submitting " : "Submit"}
   </Button>
 }
-
 export default ProfileForm;

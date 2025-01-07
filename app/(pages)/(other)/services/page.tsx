@@ -42,7 +42,7 @@ const ServicesPage = async () => {
           <Link className='text-white text-md inline-flex mt-1 font-bold   items-center hover:underline  ' href={'/services/network'}> Find out more <ChevronRight className="h-4 w-4" /></Link>
           <h2 className="sticky md:sticky lg:static top-[64px] bg-black py-2"><Workflow className='w-8 h-8 text-[#E9C31E] mb-2  ' /> Automation</h2>
           <p className='text-[hsl(240,5%,64.9%)]'>Experience the convenience and efficiency of home automation with our tailored solutions. Our Automation systems streamline daily tasks, enhance security, and improve energy efficiency while keeping costs low. From scheduling lights and appliances to integrating with security systems, automation makes life simpler and safer. Smart automation not only provides convenience but also contributes to energy savings by optimizing usage patterns and reducing wastage. With our cost-effective solutions, you can enjoy a smarter, more efficient home without breaking the bank.</p>
-          <Link className='text-white text-md inline-flex mt-1 font-bold   items-center hover:underline  ' href={'/services/automation'}> Find out more <ChevronRight className="h-4 w-4" /></Link>
+          <Link className='text-white text-md inline-flex mt-1 font-bold   items-center hover:underline  ' href={'/services/home-automation'}> Find out more <ChevronRight className="h-4 w-4" /></Link>
         </div>
         <div className=" top-0 right-0 w-full h-full overflow-hidden absolute bottom-0">
           <div className='absolute  w-[2013px] left-[50%] -translate-x-[50%] h-full bottom-[-100px] bg-black opacity-35'>
