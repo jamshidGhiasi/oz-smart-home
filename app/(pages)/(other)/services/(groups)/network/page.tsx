@@ -14,11 +14,11 @@ export const metadata: Metadata = {
 const NetworkPage = async () => {
   return (
     <ContentWrapper className="relative  z-20 bg-black mx-4 my-4 px-8 lg:px-0 py-12 lg:py-16 ">
-      <div className="relative text-white z-20 text-lg w-full max-w-2xl mx-auto">
+      <div className="relative text-white z-20 text-lg w-full max-w-4xl mx-auto">
         <h1 className='text-2xl sm:text-2xl md:text-3xl lg:text-4xl mb-1 mt-0 text-left text-white'> <span className='sub-heading'>Home Network</span></h1>
         <span className="mb-4 block text-md font-rhd">Stay Connected, Seamlessly</span>
       </div>
-      <div className="relative text-white z-20 text-lg w-full max-w-2xl mx-auto ">
+      <div className="relative text-white z-20 text-lg w-full max-w-4xl mx-auto ">
 
 <h2 className="font-bold mb-2 text-white">What is Home Network?</h2>
 <p className="text-[hsl(240,5%,74.9%)]">A home network is the foundation of a smart home, providing connectivity between all your devices. It includes routers, switches, and access points that ensure reliable and secure internet access throughout your home. A robust home network is essential for seamless operation of smart devices and applications.</p>

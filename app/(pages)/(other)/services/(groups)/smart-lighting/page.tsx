@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const SmartLightingPage = async () => {
   return (
     <ContentWrapper className="relative  z-20 bg-black mx-4 my-4 px-8 lg:px-0 py-12 lg:py-16 ">
-      <div className="relative text-white z-20 text-lg w-full max-w-2xl mx-auto">
+      <div className="relative text-white z-20 text-lg w-full max-w-4xl mx-auto">
         <h1 className='text-2xl sm:text-2xl md:text-3xl lg:text-4xl mb-1 mt-0 text-left text-white'> <span className='sub-heading'>Smart Home Lighting Automation in Sydney and the Northern Beaches</span></h1>
         <span className="mb-4 block text-md font-rhd">Illuminate with Intelligence</span>
         <p className="text-white">At Oz Smart Home, we offer lighting systems that seamlessly adapt to your lifestyle. Whether you want to brighten up your living room, set the mood for a relaxing evening, or automate your lights for convenience and security, our smart lighting solutions provide the control and flexibility you need.
@@ -24,7 +24,7 @@ const SmartLightingPage = async () => {
 
 
       </div>
-      <div className="relative text-white z-20 text-lg w-full max-w-2xl mx-auto ">
+      <div className="relative text-white z-20 text-lg w-full max-w-4xl mx-auto ">
         <h2 className="font-bold mb-2 text-white">What is Smart Lighting?</h2>
         <p className="text-[hsl(240,5%,74.9%)]">Smart lighting refers to an innovative system that allows homeowners to control their lights remotely using a smartphone, tablet, or voice commands. These systems often include features such as dimming, color-changing capabilities, scheduling, and integration with other smart devices.
         </p>

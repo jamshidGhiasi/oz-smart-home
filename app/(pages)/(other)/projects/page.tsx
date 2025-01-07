@@ -12,6 +12,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import { Card, CardContent } from "@/components/ui/card"
+import CallToAction from "@/components/shared/content/call-to-action";
 export const metadata: Metadata = {
   title: `Projects - See Oz Smart Home's Smart Living Solutions in Action`,
   description: `Explore Oz Smart Home's projects and see our smart living solutions in action. Discover how we transform homes with security, privacy, and efficiency.`,
@@ -79,11 +80,11 @@ const ProjectsPage = async () => {
   return (
     <>
       <ContentWrapper className="relative  z-20 bg-black mx-4 my-4 px-8 lg:px-0 py-12 lg:py-16 ">
-        <div className="relative text-white z-20 text-lg w-full max-w-6xl mx-auto">
+        <div className="relative text-white z-20 text-lg w-full max-w-4xl mx-auto">
           <h1 className='text-2xl sm:text-2xl md:text-3xl lg:text-4xl mb-1 mt-0 text-left text-white'> <span className='sub-heading'>Projects</span></h1>
           <span className="mb-4 block text-md font-rhd">View Our Work</span>
         </div>
-        <div className="relative  z-20 text-lg w-full max-w-6xl mx-auto ">
+        <div className="relative  z-20 text-lg w-full max-w-4xl mx-auto ">
           <Carousel
             opts={{
               align: "center",
@@ -126,6 +127,7 @@ const ProjectsPage = async () => {
           </div>
         </div>
       </ContentWrapper>
+      <CallToAction/>
     </>
   );
 }

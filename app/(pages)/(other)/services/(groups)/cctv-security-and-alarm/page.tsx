@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const CCTVSecurityAndAlarmPage = async () => {
   return (
     <ContentWrapper className="relative  z-20 bg-black mx-4 my-4 px-8 lg:px-0 py-12 lg:py-16 ">
-      <div className="relative text-white z-20 text-lg w-full max-w-2xl mx-auto">
+      <div className="relative text-white z-20 text-lg w-full max-w-4xl mx-auto">
         <h1 className='text-2xl sm:text-2xl md:text-3xl lg:text-4xl mb-1 mt-0 text-left text-white'> <span className='sub-heading'>CCTV - Security & Alarm System Installation in Sydney and the Northern Beaches</span></h1>
         <span className="mb-4 block text-md font-rhd">24/7 Surveillance, Peace of Mind</span>
         <p className="text-white">At Oz Smart Home, we make home security simple and effective with our advanced CCTV - Security & Alarm systems. Designed for round-the-clock surveillance, our solutions keep your home safe, secure, and protected no matter where you are.
@@ -27,7 +27,7 @@ const CCTVSecurityAndAlarmPage = async () => {
 
 
       </div>
-      <div className="relative text-white z-20 text-lg w-full max-w-2xl mx-auto ">
+      <div className="relative text-white z-20 text-lg w-full max-w-4xl mx-auto ">
 
 
         <h2 className="font-bold mb-2 text-white">What is CCTV - Security & Alarm?</h2>

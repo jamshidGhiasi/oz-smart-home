@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const AutomationPage = async () => {
   return (
     <ContentWrapper className="relative  z-20 bg-black mx-4 my-4 px-8 lg:px-0 py-12 lg:py-16 ">
-      <div className="relative text-white z-20 text-lg w-full max-w-2xl mx-auto">
+      <div className="relative text-white z-20 text-lg w-full max-w-4xl mx-auto">
         <h1 className='text-2xl sm:text-2xl md:text-3xl lg:text-4xl mb-1 mt-0 text-left text-white'> <span className='sub-heading'>Smart Home Automation Systems Installation in Sydney and the Northern Beaches</span></h1>
         <span className="mb-4 block text-md font-rhd">Effortless Living, Simplified</span>
         <p className="text-white">At Oz Smart Home, we bring the future of home living to your doorstep. Specializing in smart home automation systems, we help homeowners in Sydney and the Northern Beaches transform their spaces into seamlessly connected and intuitive environments.
@@ -27,7 +27,7 @@ const AutomationPage = async () => {
 
 
       </div>
-      <div className="relative text-white z-20 text-lg w-full max-w-2xl mx-auto ">
+      <div className="relative text-white z-20 text-lg w-full max-w-4xl mx-auto ">
 
 
         <h2 className="font-bold mb-2 text-white">What is Home Automation?</h2>

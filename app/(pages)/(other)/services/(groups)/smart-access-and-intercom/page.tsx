@@ -14,11 +14,11 @@ export const metadata: Metadata = {
 const SmartAccessAndIntercomPage = async () => {
   return (
     <ContentWrapper className="relative  z-20 bg-black mx-4 my-4 px-8 lg:px-0 py-12 lg:py-16 ">
-      <div className="relative text-white z-20 text-lg w-full max-w-2xl mx-auto">
+      <div className="relative text-white z-20 text-lg w-full max-w-4xl mx-auto">
         <h1 className='text-2xl sm:text-2xl md:text-3xl lg:text-4xl mb-1 mt-0 text-left text-white'> <span className='sub-heading'>Smart Access & Intercom</span></h1>
         <span className="mb-4 block text-md font-rhd">Secure Entry, Seamless Communication</span>
       </div>
-      <div className="relative text-white z-20 text-lg w-full max-w-2xl mx-auto ">
+      <div className="relative text-white z-20 text-lg w-full max-w-4xl mx-auto ">
 
 <h2 className="font-bold mb-2 text-white">What is Access and Intercom?</h2>
 <p className="text-[hsl(240,5%,74.9%)]">Access and intercom systems provide enhanced security and convenience for homeowners by controlling entry access to their property and allowing communication with visitors. These systems often include features such as video monitoring, remote unlocking, and two-way audio communication.</p>

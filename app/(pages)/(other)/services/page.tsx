@@ -14,11 +14,11 @@ const ServicesPage = async () => {
   return (
     <>
       <ContentWrapper className="relative  z-20 bg-black mx-4 my-4 px-8 lg:px-0 py-12 lg:py-16 ">
-        <div className="relative text-white z-20 text-lg w-full max-w-2xl mx-auto">
+        <div className="relative text-white z-20 text-lg w-full max-w-4xl mx-auto">
           <h1 className='text-2xl sm:text-2xl md:text-3xl lg:text-4xl mb-1 mt-0 text-left text-white'> <span className='sub-heading'>Services</span></h1>
           <span className="mb-4 block text-md font-rhd">See our smart home solutions</span>
         </div>
-        <div className="relative text-white z-20 text-lg w-full max-w-2xl mx-auto">
+        <div className="relative text-white z-20 text-lg w-full max-w-4xl mx-auto">
           <h2 className="sticky md:sticky lg:static top-[64px] bg-black py-2"><Lightbulb className='w-8 h-8 text-[#E9C31E] mb-2  ' /> Smart Lighting</h2>
           <p className="text-[hsl(240,5%,64.9%)]"> Revolutionize your home's lighting with our Smart Lighting solutions. Effortlessly control and customize your lights to match your lifestyle, all while enhancing security and energy efficiency. Smart lighting not only provides convenience but also offers added layers of security by allowing you to remotely control your lights, deterring potential intruders. With energy-saving features, you can lower utility costs without compromising on comfort or safety.</p>
           <Link className='text-white text-md inline-flex mt-1 font-bold   items-center hover:underline  ' href={'/services/smart-lighting'}> Find out more <ChevronRight className="h-4 w-4" /></Link>

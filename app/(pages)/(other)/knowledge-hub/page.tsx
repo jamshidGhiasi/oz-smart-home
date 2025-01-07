@@ -17,11 +17,11 @@ const KnowledgeHubPage = () => {
   return (
     <>
       <ContentWrapper className="relative  z-20 bg-black mx-4 my-4 px-8 lg:px-0 py-12 lg:py-16 ">
-        <div className="relative text-white z-20 text-lg w-full max-w-2xl mx-auto">
+        <div className="relative text-white z-20 text-lg w-full max-w-4xl mx-auto">
           <h1 className='text-2xl sm:text-2xl md:text-3xl lg:text-4xl mb-1 mt-0 text-left text-white'> <span className='sub-heading'>Knowledge Hub</span></h1>
           <span className="mb-4 block text-md font-rhd">Stay Informed</span>
         </div>
-        <div className="relative text-white z-20 text-lg w-full max-w-2xl mx-auto ">
+        <div className="relative text-white z-20 text-lg w-full max-w-4xl mx-auto ">
 
           <p>Welcome to Oz Smart Home Knowledge Hub, your go-to source for all things related to smart home technology! We are committed to keeping you informed about the latest trends, innovations, and practical tips for integrating smart technology into your living spaces with a focus on Australian market. Check back weekly as we update this page with valuable insights and exciting developments in the world of smart homes.</p>
 
