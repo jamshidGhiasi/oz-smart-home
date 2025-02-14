@@ -36,7 +36,7 @@ const red_hat_display = Red_Hat_Display({
 })
 export const metadata: Metadata = {
   title: 'Pioneering Smart Living Solutions | OZ SMART HOME',
-  description: 'Elevate your lifestyle with our smart home solutions – convenience, security, privacy and energy efficiency at your fingertips.',
+  description: 'Elevate your lifestyle with our smart home solutions - convenience, security, privacy and energy efficiency at your fingertips.',
 }
 export default function RootLayout({
   children,

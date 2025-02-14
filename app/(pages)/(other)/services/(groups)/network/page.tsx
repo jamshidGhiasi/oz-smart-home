@@ -7,7 +7,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: 'Reliable Home Networking Solutions | Oz Smart Home',
-  description: `Stay connected seamlessly. Our home network solutions prioritize security, speed, and energy efficiency.`,
+  description: `Ensure seamless and cost-friendly connectivity in your home with customised network solutions. Contact Oz Smart Home for expert setup today.`,
 
 }
 

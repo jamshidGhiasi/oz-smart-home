@@ -6,8 +6,8 @@ import ServicesNavigation from "@/components/shared/navigation/services-navigati
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Efficient and Customized Cooling | Smart Air Conditioning | Oz Smart Home',
-  description: `Stay cool and save energy. Smart air conditioning solutions tailored for comfort, security, and cost-effectiveness.`,
+  title: 'Efficient Smart Air Conditioning | Oz Smart Home',
+  description: `Experience efficient and customised cooling tailored to your needs. Upgrade to smart air conditioning with Oz Smart Home. Get in touch today.`,
 
 }
 

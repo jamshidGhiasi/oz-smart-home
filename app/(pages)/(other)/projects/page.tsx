@@ -15,7 +15,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import CallToAction from "@/components/shared/content/call-to-action";
 export const metadata: Metadata = {
   title: `Projects - See Oz Smart Home's Smart Living Solutions in Action`,
-  description: `Explore Oz Smart Home's projects and see our smart living solutions in action. Discover how we transform homes with security, privacy, and efficiency.`,
+  description: `Discover our smart home projects showcasing innovative solutions. Learn how we enhance residential living. View our project portfolio now.`,
 }
 
 const projects = [

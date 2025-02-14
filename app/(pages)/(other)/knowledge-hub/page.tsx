@@ -7,8 +7,8 @@ import Image from 'next/image'
 import pic from '@/public/bg-test-1.jpg'
 
 export const metadata: Metadata = {
-  title: 'Knowledge Hub - Stay Informed with Oz Smart Home',
-  description: 'Explore the Oz Smart Home Knowledge Hub for the latest trends in smart living. Discover tips, guides, and insights to optimize your home.',
+  title: 'Smart Home Insights | Sydney | Oz Smart Hom',
+  description: 'Explore smart home technology insights and trends. Stay informed with tips to enhance your living space. Visit our Knowledge Hub today.',
 
 }
 
