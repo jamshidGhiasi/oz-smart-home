@@ -6,8 +6,8 @@ import pic from '@/public/bg-test-1.jpg'
 import ProfileForm from "@/components/shared/content/contact-form";
 
 export const metadata: Metadata = {
-  title: 'Contact Oz Smart Home - Get in Touch for Smart Solutions',
-  description: 'Contact Oz Smart Home for innovative smart home solutions. Reach out to us for inquiries, consultations, and expert assistance.',
+  title: 'Contact for Smart Solutions | Oz Smart Home',
+  description: 'Get in touch with Oz Smart Home for expert advice on home automation. Call, email, or use our contact form to discuss your smart home needs.',
    alternates: {
     canonical: 'https://www.ozsmarthome.com.au/contact'
   }

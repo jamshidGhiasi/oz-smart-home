@@ -8,8 +8,8 @@ import Link from 'next/link'
 import { ChevronRight, PhoneOutgoing, Send, PenTool, CheckSquare, Kanban, Headphones, Lightbulb, Blinds, AirVent, DoorOpen, Theater, Wifi, Workflow, Webcam, Cctv } from 'lucide-react'
 import CallToAction from "@/components/shared/content/call-to-action";
 export const metadata: Metadata = {
-  title: 'About Os Smart Home - Elevating Your Living Experience',
-  description: `Learn about  Oz Smart Home - pioneers in smart living solutions. Discover how we combine security, privacy, and energy efficiency to enhance your lifestyle.`,
+  title: 'About Us - Elevating Your Living Experience | Oz Smart Home',
+  description: `Learn about Oz Smart Home’s commitment to innovative home automation. Discover our mission, expertise, and how we can enhance your living space.`,
    alternates: {
     canonical: 'https://www.ozsmarthome.com.au/about'
   }
