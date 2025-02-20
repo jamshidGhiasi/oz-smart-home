@@ -10,6 +10,9 @@ import CallToAction from "@/components/shared/content/call-to-action";
 export const metadata: Metadata = {
   title: 'About Os Smart Home - Elevating Your Living Experience',
   description: `Learn about  Oz Smart Home - pioneers in smart living solutions. Discover how we combine security, privacy, and energy efficiency to enhance your lifestyle.`,
+   alternates: {
+    canonical: 'https://www.ozsmarthome.com.au/about'
+  }
 }
 const AboutPage = async () => {
   return (

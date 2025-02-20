@@ -8,8 +8,12 @@ import ProfileForm from "@/components/shared/content/contact-form";
 export const metadata: Metadata = {
   title: 'Contact Oz Smart Home - Get in Touch for Smart Solutions',
   description: 'Contact Oz Smart Home for innovative smart home solutions. Reach out to us for inquiries, consultations, and expert assistance.',
-
+   alternates: {
+    canonical: 'https://www.ozsmarthome.com.au/contact'
+  }
 }
+
+
 
 const ContactPage = async () => {
   return (
