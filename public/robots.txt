@@ -1,9 +1,13 @@
 # *
 User-agent: *
+Disallow: /private/
+
+# *
+User-agent: *
 Allow: /
 
 # Host
-Host: http://localhost:3000
+Host: https://www.ozsmarthome.com.au
 
 # Sitemaps
-Sitemap: http://localhost:3000/sitemap.xml
+Sitemap: https://www.ozsmarthome.com.au/sitemap.xml

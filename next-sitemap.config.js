@@ -1,14 +1,12 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: process.env.SITE_URL || 'http://localhost:3000',
-    generateRobotsTxt: true, // (optional)
-    robotsTxtOptions: {
-        policies: [
-          {
-            userAgent: '*',
-            allow: '/',
-          },
-        ],
-    }
-    // ...other options
-  }
+  siteUrl: "https://www.ozsmarthome.com.au",
+  generateRobotsTxt: true,
+  robotsTxtOptions: {
+    policies: [
+      { userAgent: "*", disallow: "/private/" },
+      { userAgent: "*", allow: "/" },
+    ],
+  },
+  // ...other options
+};
