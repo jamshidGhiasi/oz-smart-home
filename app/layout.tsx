@@ -72,7 +72,7 @@ export default function RootLayout({
           red_hat_display.variable
         )}
       >
-    <GoogleTagManager gtmId="GTM-WN5KNKD5" />
+    <GoogleTagManager gtmId="GTM-TQSQ4PBN" />
      <GoogleAnalytics gaId="G-L9580VK4FJ" />
           <main className="">
             <TopNav />
