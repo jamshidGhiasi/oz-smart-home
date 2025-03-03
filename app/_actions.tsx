@@ -8,7 +8,7 @@ export default async function sendEmail(formData: z.infer<typeof ContactFormSche
     const result = ContactFormSchema.safeParse(formData)
 
     if (result.success) {
-        const { name, email, items, message} = result.data;
+        const { name, email, items, message } = result.data;
         const resend = new Resend(process.env.RESEND_API_KEY);
         try {
             const { data } = await resend.emails.send({
@@ -25,20 +25,20 @@ export default async function sendEmail(formData: z.infer<typeof ContactFormSche
                     to: email,
                     subject: 'Thanks for your inquiry.',
                     react: <OSHContactReceiptEmail username={name} />,
-    
+
                 })
             }
 
-         return { success: true, data: data?.id }
+            return { success: true, data: data?.id }
 
-        }catch(error) {
+        } catch (error) {
             return { success: false, error: error }
         }
-        
+
     }
     if (result.error) {
         console.error(result.error.format())
         return { success: false, error: result.error.format() }
     }
-  
+
 }
