@@ -56,6 +56,7 @@ import sendEmail from "@/app/_actions"
 import ContactFormSchema from "@/lib/form-data-schema"
 import { useState } from "react"
 import React from "react";
+import { Icon } from "@iconify/react/dist/iconify.js"
 export function ProfileForm() {
   const [data, setData] = useState<z.infer<typeof ContactFormSchema>>()
   const [pending, setPending] = useState(false)
@@ -83,7 +84,7 @@ export function ProfileForm() {
       setPending(false)
       return;
     }
-    toast.success('Happy Days', { duration: 5000});
+    toast.success('Thank you for your interest in our services. We have received your inquiry and will get back to you as soon as possible.', { duration: 5000});
     form.reset();
     setPending(false)
     setData(data);
@@ -186,7 +187,7 @@ export function ProfileForm() {
             </FormItem>
           )}
         />
-       <Button type="submit" className="w-full disabled:cursor-not-allowed" variant="secondary" disabled={pending}  >Submit</Button>
+       <Button type="submit" className="text-md w-full sm:w-auto lg:text-lg mb-4 sm:mb-0 inline-flex items-center gap-x-2 py-3 sm:py-2 px-4 mr-4 font-bold rounded-xl text-black  bg-[#E9C31E] border-[#E9C31E] hover:bg-[#e5e5e5] hover:border-white hover:text-black transition-all disabled:cursor-not-allowed" variant="secondary" disabled={pending}  ><Icon icon="lucide:send" width="18" height="18" />Submit</Button>
       </form>
     </Form>
 
