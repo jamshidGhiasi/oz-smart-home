@@ -8,7 +8,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: 'Home Entertainment | Sydney | Oz Smart Home',
   description: `Transform your space with immersive audio and visual experiences. Explore our cinematic home entertainment solutions. Contact us today.`,
-
+  alternates: {
+    canonical: 'https://www.ozsmarthome.com.au/services/entertainment-and-av'
+  }
 }
 
 const EntertainmentAndAVPage = async () => {

@@ -9,6 +9,9 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: 'Smart Lighting Services | Oz Smart Home',
   description: `Illuminate your home with Oz Smart Home's smart lighting. Control ambiance and energy use effortlessly. Discover your options now.`,
+  alternates: {
+    canonical: 'https://www.ozsmarthome.com.au/services/smart-lighting'
+  }
 }
 const SmartLightingPage = async () => {
   return (

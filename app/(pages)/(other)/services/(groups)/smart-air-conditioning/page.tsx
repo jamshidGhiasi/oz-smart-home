@@ -8,7 +8,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: 'Efficient Smart Air Conditioning | Oz Smart Home',
   description: `Experience efficient and customised cooling tailored to your needs. Upgrade to smart air conditioning with Oz Smart Home. Get in touch today.`,
-
+  alternates: {
+    canonical: 'https://www.ozsmarthome.com.au/services/smart-air-conditioning'
+  }
 }
 
 const SmartAirConditioningPage = async () => {

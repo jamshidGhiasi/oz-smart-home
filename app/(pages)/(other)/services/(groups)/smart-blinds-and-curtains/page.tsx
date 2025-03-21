@@ -8,6 +8,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: 'Smart Blinds & Curtains | Sydney | Oz Smart Home',
   description: `Control light, security and privacy effortlessly with smart blinds and curtains. Optimise your space—get started with OZ Smart Home today.`,
+  alternates: {
+    canonical: 'https://www.ozsmarthome.com.au/services/smart-blinds-and-curtains'
+  }
 
 }
 

@@ -8,6 +8,9 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: 'CCTV & Security Systems | Oz Smart Home',
   description: `Ensure peace of mind with Oz Smart Home's CCTV and security systems. Protect your home 24/7. Contact us for a free consultation today.`,
+  alternates: {
+    canonical: 'https://www.ozsmarthome.com.au/services/cctv-security-and-alarm'
+  }
 }
 const CCTVSecurityAndAlarmPage = async () => {
   return (
