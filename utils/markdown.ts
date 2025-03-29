@@ -8,6 +8,8 @@ interface MarkdownPage {
   slug: string;
   title: string;
   subtitle: string;
+  intro?: string;
+  introAction?: string;
   content: ReactNode;
 }
 
@@ -28,6 +30,8 @@ export async function getMarkdownPage(slug: string): Promise<MarkdownPage | null
     slug,
     title: data.title as string,
     subtitle: data.subtitle as string,
+    intro: data.intro as string,
+    introAction: data.introAction as string,
     content: marked.parse(content),
   };
 }
