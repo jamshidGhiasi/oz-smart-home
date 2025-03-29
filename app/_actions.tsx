@@ -21,7 +21,7 @@ export default async function sendEmail(formData: z.infer<typeof ContactFormSche
 
             if (data?.id) {
                 const { data } = await resend.emails.send({
-                    from: 'info@ozsmarthome.com.au',
+                    from: 'OZ SMART HOME <info@ozsmarthome.com.au>',
                     to: email,
                     subject: 'Thanks for your inquiry.',
                     react: <OSHContactReceiptEmail username={name} />,
