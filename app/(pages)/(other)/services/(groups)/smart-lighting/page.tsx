@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: `Illuminate your home with Oz Smart Home's smart lighting. Control ambiance and energy use effortlessly. Discover your options now.`,
 }
 const SmartLightingPage = async () => {
-  const page = await getMarkdownPage('smart-lighting');
+  const page = await getMarkdownPage('services/smart-lighting');
   if (!page) {
     return notFound();
   }

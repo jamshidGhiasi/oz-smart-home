@@ -5,29 +5,37 @@ import { usePathname } from 'next/navigation';
 import { NAV_ITEMS } from '@/constants';
 import { SideNavItem } from '@/types';
 import { Icon } from '@iconify/react';
-import {OSHCopy} from '../content/osh-copy';
+import { OSHCopy } from '../content/osh-copy';
 import OSHBrand from './brand';
-import { ChevronRight, PhoneOutgoing, Send, PenTool, CheckSquare, Kanban, Headphones, Lightbulb, Blinds, AirVent, DoorOpen, Theater, Wifi, Workflow, Webcam, Cctv } from 'lucide-react'
+import { ChevronRight, PhoneOutgoing, Send, PenTool, CheckSquare, Kanban, Headphones, Lightbulb, Blinds, AirVent, DoorOpen, Theater, Wifi, Workflow, Webcam, Cctv, Search } from 'lucide-react'
+import { Button } from '@/components/ui/button';
+import SearchBar from '../search/search-bar';
 
 
 const TopNav = () => {
- 
+
   return (
     <div className=" sticky top-0 w-full bg-[hsl(240,3.7%,15.9%)]/65 hidden lg:block  backdrop-blur-md   z-40">
-      <div className="flex items-center justify-center  w-full">
-        <div className='flex items-center  h-[64px]'>
+
+      <div className="flex items-center justify-between  w-full">
+
+        <div className='flex items-center  h-[64px] '>
           <Link
             href="/"
-            className="flex space-x-2 px-3 mr-4 items-center justify-center "
+            className="flex space-x-2 px-3 items-center justify-center "
           >
             <OSHBrand />
             <OSHCopy className='font-bold text-white' />
           </Link>
         </div>
-        <div className="flex space-x-1  ">
+        <div className="flex space-x-1  mr-auto ">
           {NAV_ITEMS.map((item, idx) => {
             return <MenuItem key={idx} item={item} />;
           })}
+        </div>
+        <div className=''>
+          <SearchBar />
+
         </div>
       </div>
     </div>
@@ -55,7 +63,7 @@ const MenuItem = ({ item }: { item: SideNavItem }) => {
           >
             <div className="flex flex-row space-x-2 items-center">
               <span className={`  ${item.path === pathname ? 'text-[hsl(49,82%,52%)]' : 'text-[hsl(0,0%,62%)]'
-            }`}>{item.icon}</span>
+                }`}>{item.icon}</span>
               <span className={`${pathname.includes(item.path) ? 'bg-[#3c3c3f] text-white' : ''
                 }`}>{item.title}</span>
             </div>
@@ -63,9 +71,9 @@ const MenuItem = ({ item }: { item: SideNavItem }) => {
               <Icon icon="lucide:chevron-down" width="18" height="18" />
             </div>
           </button>
-  
+
           {subMenuOpen && (
-            <div className={ `absolute flex flex-col px-6 py-4 space-y-3 w-[260px] bg-[#3c3c3f] left-0 `}>
+            <div className={`absolute flex flex-col px-6 py-4 space-y-3 w-[260px] bg-[#3c3c3f] left-0 `}>
               {item.subMenuItems?.map((subItem, idx) => {
                 return (
                   <Link
@@ -86,7 +94,7 @@ const MenuItem = ({ item }: { item: SideNavItem }) => {
       ) : (
         <Link
           href={item.path}
-          
+
           className={`flex flex-row items-center px-4 py-2 rounded-lg  hover:bg-[#3c3c3f] hover:text-white  ${item.path === pathname ? 'text-white bg-[#3c3c3f]' : ''
             }`}
         >

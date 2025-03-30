@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: `Ensure seamless and cost-friendly connectivity in your home with customised network solutions. Contact Oz Smart Home for expert setup today.`,
 }
 const NetworkPage = async () => {
-  const page = await getMarkdownPage('network');
+  const page = await getMarkdownPage('services/network');
   if (!page) return notFound();
   return (
     <>

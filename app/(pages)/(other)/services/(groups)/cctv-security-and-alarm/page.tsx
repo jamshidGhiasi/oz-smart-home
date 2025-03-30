@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: `Ensure peace of mind with Oz Smart Home's CCTV and security systems. Protect your home 24/7. Contact us for a free consultation today.`,
 }
 const CCTVSecurityAndAlarmPage = async () => {
-  const page = await getMarkdownPage('cctv-security-and-alarm');
+  const page = await getMarkdownPage('services/cctv-security-and-alarm');
 
   if (!page) return notFound();
 

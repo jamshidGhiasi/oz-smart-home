@@ -7,7 +7,10 @@ import { SideNavItem, MenuItemWithSubMenuProps } from '@/types';
 import { motion, useCycle } from 'framer-motion';
 import { Icon } from '@iconify/react';
 import OSHBrand from './brand';
-import {OSHCopy} from '../content/osh-copy';
+import { OSHCopy } from '../content/osh-copy';
+import { Button } from '@/components/ui/button';
+import { Search } from 'lucide-react';
+import SearchBar from '../search/search-bar';
 const sidebar = {
     open: (height = 1000) => ({
         clipPath: `circle(${height * 2 + 200}px at 100% 0)`,
@@ -32,61 +35,64 @@ const HeaderMobile = () => {
     const { height } = useDimensions(containerRef);
     const [isOpen, toggleOpen] = useCycle(false, true);
     return (
-        <div className='sticky top-0 z-40'>
-            <div className={"bg-[hsl(240,3.7%,15.9%)]  lg:hidden"}>
-                <div className="flex h-[64px] items-center justify-between ">
-                    <Link
-                        href="/"
-                        className="flex flex-row space-x-2 px-3 items-center justify-center lg:hidden "
-                    >
-                        <OSHBrand />
-                        <OSHCopy className='font-bold text-white' />
-                    </Link>
+        <div className='sticky top-0 z-40 '>
+            <div className='flex items-center bg-[hsl(240,3.7%,15.9%)]  lg:hidden'>
+                <div >
+                    <div className="flex h-[64px] items-center justify-between ">
+                        <Link
+                            href="/"
+                            className="flex flex-row space-x-2 px-3 items-center justify-center lg:hidden "
+                        >
+                            <OSHBrand />
+                            <OSHCopy className='font-bold text-white' />
+                        </Link>
+                    </div>
                 </div>
-            </div>
-            <motion.nav
-                initial={false}
-                animate={isOpen ? 'open' : 'closed'}
-                custom={height}
-                className={`fixed inset-0 z-50 w-full lg:hidden ${isOpen ? '' : 'pointer-events-none'
-                    }`}
-                ref={containerRef}
-            >
-                <motion.div
-                    className="absolute inset-0 right-0 w-full bg-[hsl(240,3.7%,15.9%)]"
-                    variants={sidebar}
-                />
-                <motion.ul
-                    variants={variants}
-                    className="absolute w-full flex flex-col  px-10 py-16"
+                <motion.nav
+                    initial={false}
+                    animate={isOpen ? 'open' : 'closed'}
+                    custom={height}
+                    className={`fixed inset-0 z-50 w-full lg:hidden ${isOpen ? '' : 'pointer-events-none'
+                        }`}
+                    ref={containerRef}
                 >
-                    {NAV_ITEMS.map((item, idx) => {
-                        const isLastItem = idx === NAV_ITEMS.length - 1; // Check if it's the last item
-                        return (
-                            <div key={idx}>
-                                {item.submenu ? (
-                                    <MenuItemWithSubMenu item={item} toggleOpen={toggleOpen} />
-                                ) : (
-                                    <MenuItem>
-                                        <Link
-                                            href={item.path}
-                                            onClick={() => toggleOpen()}
-                                            className={`flex items-center w-full gap-x-2 text-lg my-3 py-0  text-[hsl(240,5%,64.9%)]  ${item.path === pathname ? 'text-white font-bold' : ''}`}
-                                        >
-                                            {item.icon}
-                                            {item.title}
-                                        </Link>
-                                    </MenuItem>
-                                )}
-                                {!isLastItem && (
-                                    <MenuItem className=" h-px my-1 w-full  bg-[hsl(240,5%,64.9%)]" />
-                                )}
-                            </div>
-                        );
-                    })}
-                </motion.ul>
-                <MenuToggle toggle={toggleOpen} />
-            </motion.nav>
+                    <motion.div
+                        className="absolute inset-0 right-0 w-full bg-[hsl(240,3.7%,15.9%)]"
+                        variants={sidebar}
+                    />
+                    <motion.ul
+                        variants={variants}
+                        className="absolute w-full flex flex-col  px-10 py-16"
+                    >
+                        {NAV_ITEMS.map((item, idx) => {
+                            const isLastItem = idx === NAV_ITEMS.length - 1; // Check if it's the last item
+                            return (
+                                <div key={idx}>
+                                    {item.submenu ? (
+                                        <MenuItemWithSubMenu item={item} toggleOpen={toggleOpen} />
+                                    ) : (
+                                        <MenuItem>
+                                            <Link
+                                                href={item.path}
+                                                onClick={() => toggleOpen()}
+                                                className={`flex items-center w-full gap-x-2 text-lg my-3 py-0  text-[hsl(240,5%,64.9%)]  ${item.path === pathname ? 'text-white font-bold' : ''}`}
+                                            >
+                                                {item.icon}
+                                                {item.title}
+                                            </Link>
+                                        </MenuItem>
+                                    )}
+                                    {!isLastItem && (
+                                        <MenuItem className=" h-px my-1 w-full  bg-[hsl(240,5%,64.9%)]" />
+                                    )}
+                                </div>
+                            );
+                        })}
+                    </motion.ul>
+                    <MenuToggle toggle={toggleOpen} />
+                </motion.nav>
+                <SearchBar className='ml-auto mr-[64px]' />
+            </div>
         </div>
     );
 };
@@ -168,10 +174,9 @@ const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
                     </div>
                 </button>
             </MenuItem>
-           
-                {subMenuOpen && (
-                    <>
-                     <div className="mt-2 ml-2 ">
+            {subMenuOpen && (
+                <>
+                    <div className="mt-2 ml-2 ">
                         {item.subMenuItems?.map((subItem, subIdx) => {
                             return (
                                 <MenuItem key={subIdx}>
@@ -187,10 +192,9 @@ const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
                                 </MenuItem>
                             );
                         })}
-                        </div>
-                    </>
-                )}
-            
+                    </div>
+                </>
+            )}
         </>
     );
 };

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 }
 
 const EntertainmentAndAVPage = async () => {
-  const page = await getMarkdownPage('entertainment-and-av');
+  const page = await getMarkdownPage('services/entertainment-and-av');
   if (!page) return notFound();
   return (
 

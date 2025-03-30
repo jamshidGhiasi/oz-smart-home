@@ -1,5 +1,6 @@
 ---
 title: Smart Home Automation Systems Installation in Sydney and the Northern Beaches
+shortTitle: Home Automation
 subtitle: Effortless Living, Simplified
 intro: At Oz Smart Home, we bring the future of home living to your doorstep. Specializing in smart home automation systems, we help homeowners in Sydney and the Northern Beaches transform their spaces into seamlessly connected and intuitive environments.
 introAction: Get in touch with us today to learn more about our services or get a quote.

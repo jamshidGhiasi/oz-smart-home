@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 const AutomationPage = async () => {
 
-  const page = await getMarkdownPage('home-automation');
+  const page = await getMarkdownPage('services/home-automation');
   if (!page) return notFound();
 
   return (

@@ -1,5 +1,6 @@
 ---
 title: Smart Home Lighting Automation in Sydney and the Northern Beaches
+shortTitle: Smart Lighting
 subtitle: Illuminate with Intelligence
 intro: At Oz Smart Home, we offer lighting systems that seamlessly adapt to your lifestyle. Whether you want to brighten up your living room, set the mood for a relaxing evening, or automate your lights for convenience and security, our smart lighting solutions provide the control and flexibility you need.
 introAction: Get in touch with us today for a free quote!

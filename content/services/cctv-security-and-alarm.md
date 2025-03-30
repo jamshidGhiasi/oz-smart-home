@@ -1,5 +1,6 @@
 ---
 title: CCTV - Security & Alarm System Installation in Sydney and the Northern Beaches
+shortTitle: CCTV, Security and Alarm
 subtitle: 24/7 Surveillance, Peace of Mind
 intro: At Oz Smart Home, we make home security simple and effective with our advanced CCTV - Security & Alarm systems. Designed for round-the-clock surveillance, our solutions keep your home safe, secure, and protected no matter where you are.
 introAction: Whether you’re upgrading your current CCTV camera system or installing one for the first time, our expert team provides personalized solutions to suit your needs. Get in touch with us today to learn more about our services or get a quote.

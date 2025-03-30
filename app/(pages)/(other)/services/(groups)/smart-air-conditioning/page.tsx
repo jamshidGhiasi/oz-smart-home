@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 }
 
 const SmartAirConditioningPage = async () => {
-  const page = await getMarkdownPage('smart-air-conditioning');
+  const page = await getMarkdownPage('services/smart-air-conditioning');
   if (!page) {
     return notFound();
   }

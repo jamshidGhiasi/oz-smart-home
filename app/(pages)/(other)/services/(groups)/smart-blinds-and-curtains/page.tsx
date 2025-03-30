@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 }
 
 const SmartBlindsAndCurtainsPage = async () => {
-  const page = await getMarkdownPage('smart-blinds-and-curtains');
+  const page = await getMarkdownPage('services/smart-blinds-and-curtains');
 
   if (!page) {
     return notFound();

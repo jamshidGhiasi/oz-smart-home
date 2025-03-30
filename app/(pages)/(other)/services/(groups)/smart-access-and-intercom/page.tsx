@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 const SmartAccessAndIntercomPage = async () => {
 
-  const page = await getMarkdownPage('smart-access-and-intercom');
+  const page = await getMarkdownPage('services/smart-access-and-intercom');
 
   if (!page) {
     return notFound();
