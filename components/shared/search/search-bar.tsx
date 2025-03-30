@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useHotkeys } from 'react-hotkeys-hook'
 import { useCallback, useState } from "react";
 import { useEffect } from "react";
+import { sendGAEvent } from "@next/third-parties/google";
 import {
     Calculator,
     Calendar,
@@ -47,6 +48,7 @@ import { debounce } from '@/utils/debounce';
 import { json } from "stream/consumers";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
+
 interface SearchBarProps {
     className?: string
     props?: any
@@ -84,10 +86,10 @@ const SearchBar: React.FC<SearchBarProps> = ({
 
             setLoading(true);
             try {
-                console.log(value)
+
                 const response = await fetch(`/api/search/pages?q=${encodeURIComponent(value)}`);
                 const results = await response.json();
-                console.log(results)
+                sendGAEvent('event', 'searchResultAppeared', { value: results.length })
                 setSearchResults(results);
             } catch (error) {
                 console.error('Search error:', error);
@@ -104,6 +106,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
             if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
                 e.preventDefault();
                 setOpen((open) => !open);
+                sendGAEvent('event', 'searchTriggered', { value: 'shortcut' })
             }
         };
 
@@ -116,9 +119,14 @@ const SearchBar: React.FC<SearchBarProps> = ({
         setOpen(false);
     };
 
+    const handleSearchButtonClick = () => {
+        setOpen(true)
+        sendGAEvent('event', 'searchTriggered', { value: 'buttonClick' })
+    }
+
     return (
         <>
-            <Button variant="outline" onClick={() => setOpen(true)} className={cn("border-none mr-4 text-xs bg-neutral-800 text-neutral-400 hover:bg-neutral-700 hover:text-white group", className)}>
+            <Button variant="outline" onClick={handleSearchButtonClick} className={cn("border-none mr-4 text-xs bg-neutral-800 text-neutral-400 hover:bg-neutral-700 hover:text-white group", className)}>
                 <Search className="w-4 h-4 xl:mr-2" />
                 <span className="hidden  xl:block" >Search Services...</span>
                 <kbd className="ml-2 pointer-events-none hidden lg:inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100 ">
