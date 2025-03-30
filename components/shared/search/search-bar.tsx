@@ -68,6 +68,19 @@ const SearchBar: React.FC<SearchBarProps> = ({
     const [loading, setLoading] = useState(false);
     const router = useRouter();
 
+    useEffect(() => {
+        const down = (e: KeyboardEvent) => {
+            if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
+                e.preventDefault();
+                setOpen((open) => !open);
+                sendGAEvent('event', 'searchTriggered', { value: 'shortcut' })
+            }
+        };
+
+        document.addEventListener('keydown', down);
+        return () => document.removeEventListener('keydown', down);
+    }, []);
+
     const handleSearch = useCallback(
         debounce(async (value: string) => {
             if (value.trim() === '') {
@@ -92,18 +105,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
         []
     );
 
-    useEffect(() => {
-        const down = (e: KeyboardEvent) => {
-            if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
-                e.preventDefault();
-                setOpen((open) => !open);
-                sendGAEvent('event', 'searchTriggered', { value: 'shortcut' })
-            }
-        };
 
-        document.addEventListener('keydown', down);
-        return () => document.removeEventListener('keydown', down);
-    }, []);
 
     const handleSelect = (slug: string) => {
         router.push(`/${slug}`);
