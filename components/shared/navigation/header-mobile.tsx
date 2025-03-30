@@ -11,6 +11,7 @@ import { OSHCopy } from '../content/osh-copy';
 import { Button } from '@/components/ui/button';
 import { Search } from 'lucide-react';
 import SearchBar from '../search/search-bar';
+import { useMediaQuery } from '@/utils/use-media-query';
 const sidebar = {
     open: (height = 1000) => ({
         clipPath: `circle(${height * 2 + 200}px at 100% 0)`,
@@ -34,6 +35,7 @@ const HeaderMobile = () => {
     const containerRef = useRef(null);
     const { height } = useDimensions(containerRef);
     const [isOpen, toggleOpen] = useCycle(false, true);
+    const isDesktop = useMediaQuery("(min-width: 1024px)")
     return (
         <div className='sticky top-0 z-40 '>
             <div className='flex items-center bg-[hsl(240,3.7%,15.9%)]  lg:hidden'>
@@ -91,7 +93,7 @@ const HeaderMobile = () => {
                     </motion.ul>
                     <MenuToggle toggle={toggleOpen} />
                 </motion.nav>
-                <SearchBar className='ml-auto mr-[64px]' />
+                {!isDesktop && <SearchBar className='ml-auto mr-[64px]' />}
             </div>
         </div>
     );

@@ -10,10 +10,11 @@ import OSHBrand from './brand';
 import { ChevronRight, PhoneOutgoing, Send, PenTool, CheckSquare, Kanban, Headphones, Lightbulb, Blinds, AirVent, DoorOpen, Theater, Wifi, Workflow, Webcam, Cctv, Search } from 'lucide-react'
 import { Button } from '@/components/ui/button';
 import SearchBar from '../search/search-bar';
+import { useMediaQuery } from '@/utils/use-media-query';
 
 
 const TopNav = () => {
-
+  const isDesktop = useMediaQuery("(min-width: 768px)");
   return (
     <div className=" sticky top-0 w-full bg-[hsl(240,3.7%,15.9%)]/65 hidden lg:block  backdrop-blur-md   z-40">
 
@@ -34,7 +35,7 @@ const TopNav = () => {
           })}
         </div>
         <div className=''>
-          <SearchBar />
+          {isDesktop && <SearchBar />}
 
         </div>
       </div>
