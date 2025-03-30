@@ -73,7 +73,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
             if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
                 e.preventDefault();
                 setOpen((open) => !open);
-                sendGAEvent('event', 'searchTriggered', { value: 'shortcut' })
+                sendGAEvent('event', 'search_triggered', { value: 'shortcut' })
             }
         };
 
@@ -93,7 +93,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
 
                 const response = await fetch(`/api/search/pages?q=${encodeURIComponent(value)}`);
                 const results = await response.json();
-                sendGAEvent('event', 'searchResultAppeared', { value: results.length })
+                sendGAEvent('event', 'search_results_appeared', { value: results.length })
                 setSearchResults(results);
             } catch (error) {
                 console.error('Search error:', error);
@@ -114,7 +114,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
 
     const handleSearchButtonClick = () => {
         setOpen(true)
-        sendGAEvent('event', 'searchTriggered', { value: 'buttonClick' })
+        sendGAEvent('event', 'search_triggered', { value: 'buttonClick' })
     }
 
     return (
