@@ -7,8 +7,8 @@
     "postbuild": "next-sitemap --next-sitemap.config.ts",
     "start": "next start",
     "lint": "next lint",
-    "build": "ts-node utils/buildSearchIndex.ts && next build",
-    "buildIndex": "ts-node utils/buildSearchIndex.ts"
+    "build": "tsx utils/buildSearchIndex.ts && next build",
+    "buildIndex": "tsx utils/buildSearchIndex.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
