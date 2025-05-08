@@ -3,9 +3,10 @@ import { OSHCopy } from '@/components/shared/content/osh-copy'
 import ContentWrapper from '@/components/shared/layout/content-wrapper'
 import { Button } from '@/components/shared/ui/button'
 import Link from 'next/link'
+import Video from 'next-video'
+import OSHIntroVide from '@/videos/oz-smart-home-introduction.mp4'
 
-
-import { ChevronRight, PhoneOutgoing, Send, PenTool, CheckSquare, Kanban, Headphones, Lightbulb, Blinds, AirVent, DoorOpen, Theater, Wifi, Workflow, Webcam, Cctv, Info } from 'lucide-react'
+import { ChevronRight, PhoneOutgoing, Send, PenTool, CheckSquare, Kanban, Headphones, Lightbulb, Blinds, AirVent, DoorOpen, Theater, Wifi, Workflow, Webcam, Cctv, Info, Youtube, Instagram } from 'lucide-react'
 import CallToAction from '@/components/shared/content/call-to-action'
 import { Metadata } from 'next'
 
@@ -110,6 +111,7 @@ export default function Home() {
         </div>
 
       </ContentWrapper>
+
       <ContentWrapper className=' bg-black mx-4 my-4 pt-4 pb-1 lg:py-24 '>
         <div className=' text-white   p-4 lg:p-0 mb-0 lg:mb-8'>
           <h2 className='text-2xl sm:text-2xl md:text-3xl lg:text-4xl mt-0 text-left lg:text-center'> Our Services<span className='sub-heading text-1xl md:text-3xl'>to make your home smart</span></h2>
@@ -165,6 +167,19 @@ export default function Home() {
             <Link className='text-white text-md inline-flex mt-3 font-bold   items-center hover:underline  ' href={'/services/home-automation'}> Find out more <ChevronRight className="h-4 w-4" /></Link>
           </Link>
         </div>
+      </ContentWrapper>
+      <ContentWrapper className='bg-[hsl(0,0%,20%)] mx-4 my-4 p-24'>
+        <div className=' text-white   p-4 lg:p-0 mb-0 lg:mb-8'>
+          <h2 className='text-2xl sm:text-2xl md:text-3xl lg:text-4xl mt-0 text-left lg:text-center'> Intorducing<span className='sub-heading'>Oz Smart Home</span></h2>
+          <Video src={OSHIntroVide} style={{ maxWidth: '60rem', margin: 'auto', marginTop: '2rem' }} thumbnailTime={25} />
+          <p className='mx-auto text-center mt-8 max-w-[30rem]'>Follow us on Instagram or subscribe to our YouTube channel for weekly updates on our latest projects, smart home, smart home accessories, home automation and product reviews!</p>
+          <div className='flex gap-x-4 justify-center mt-4'>
+            <Link href={'https://www.instagram.com/ozsmarthome/'} className='flex underline' target='blank'><Instagram className='mr-2' />ozsmarthome</Link>
+            <Link href={'https://www.youtube.com/@oz-smart-home'} className='flex underline ' target='blank'><Youtube className='mr-2' />oz-smart-home</Link>
+          </div>
+
+        </div>
+
       </ContentWrapper>
       <ContentWrapper className=' bg-white mx-4 my-4 pb-1 pt-4 lg:py-24 '>
         <div className=' text-black  p-4 lg:p-0 mb-0 lg:mb-8   '>

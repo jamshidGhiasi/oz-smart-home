@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "tsx utils/buildSearchIndex.ts && next dev",
+    "dev": "tsx utils/buildSearchIndex.ts && next dev & npx next-video sync -w",
     "postbuild": "next-sitemap --next-sitemap.config.ts",
     "start": "next start",
     "lint": "next lint",
@@ -33,6 +33,7 @@
     "next": "^14.2.25",
     "next-sitemap": "^4.2.3",
     "next-themes": "^0.2.1",
+    "next-video": "^2.2.0",
     "npm": "^11.0.0",
     "react": "^18",
     "react-dom": "^18",
