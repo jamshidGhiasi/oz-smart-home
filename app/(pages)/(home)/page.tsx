@@ -168,12 +168,12 @@ export default function Home() {
           </Link>
         </div>
       </ContentWrapper>
-      <ContentWrapper className='bg-[hsl(0,0%,20%)] mx-4 my-4 p-24'>
+      <ContentWrapper className='bg-[hsl(0,0%,20%)] mx-4 my-4 pb-1 pt-4 lg:py-24 lg:p-24'>
         <div className=' text-white   p-4 lg:p-0 mb-0 lg:mb-8'>
           <h2 className='text-2xl sm:text-2xl md:text-3xl lg:text-4xl mt-0 text-left lg:text-center'> Intorducing<span className='sub-heading'>Oz Smart Home</span></h2>
           <Video src={OSHIntroVide} style={{ maxWidth: '60rem', margin: 'auto', marginTop: '2rem' }} thumbnailTime={25} />
-          <p className='mx-auto text-center mt-8 max-w-[30rem]'>Follow us on Instagram or subscribe to our YouTube channel for weekly updates on our latest projects, smart home, smart home accessories, home automation and product reviews!</p>
-          <div className='flex gap-x-4 justify-center mt-4'>
+          <p className='mx-auto lg:text-center mt-8 max-w-[30rem]'>Follow us on Instagram or subscribe to our YouTube channel for weekly updates on our latest projects, smart home, smart home accessories, home automation and product reviews!</p>
+          <div className='flex gap-x-4 lg:justify-center mt-4'>
             <Link href={'https://www.instagram.com/ozsmarthome/'} className='flex underline' target='blank'><Instagram className='mr-2' />ozsmarthome</Link>
             <Link href={'https://www.youtube.com/@oz-smart-home'} className='flex underline ' target='blank'><Youtube className='mr-2' />oz-smart-home</Link>
           </div>
