@@ -9,6 +9,9 @@ import pic from '@/public/bg-test-1.jpg'
 export const metadata: Metadata = {
   title: 'Smart Home Insights | Sydney | Oz Smart Hom',
   description: 'Explore smart home technology insights and trends. Stay informed with tips to enhance your living space. Visit our Knowledge Hub today.',
+  alternates: {
+    canonical: "https://www.ozsmarthome.com.au/knowledge-hub"
+  }
 
 }
 

@@ -10,6 +10,9 @@ import { notFound } from "next/navigation";
 export const metadata: Metadata = {
   title: 'CCTV Security & Alarm Systems | Oz Smart Home',
   description: `Protect your property with Oz Smart Home's advanced CCTV and alarm systems. Enjoy peace of mind with tailored smart security solutions for home or business.`,
+  alternates: {
+    canonical: "https://www.ozsmarthome.com.au/services/cctv-security-and-alarm"
+  }
 }
 const CCTVSecurityAndAlarmPage = async () => {
   const page = await getMarkdownPage('services/cctv-security-and-alarm');

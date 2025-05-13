@@ -10,6 +10,9 @@ import { notFound } from "next/navigation";
 export const metadata: Metadata = {
   title: '	Smart Air Conditioning Systems | Oz Smart Home',
   description: `Control your climate with smart air conditioning by Oz Smart Home. Energy-efficient systems with app control and voice integration for ultimate comfort.`,
+  alternates: {
+    canonical: "https://www.ozsmarthome.com.au/services/smart-air-conditioning"
+  }
 
 }
 

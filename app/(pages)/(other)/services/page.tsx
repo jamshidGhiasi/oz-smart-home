@@ -9,6 +9,9 @@ import { AirVent, Blinds, Cctv, ChevronRight, DoorOpen, Lightbulb, Theater, Wifi
 export const metadata: Metadata = {
   title: 'Smart Home Services | Sydney | Oz Smart Home',
   description: `Discover comprehensive smart home services for convenience and security. Explore OZ Smart Home solutions to elevate your living experience.`,
+  alternates: {
+    canonical: "https://www.ozsmarthome.com.au/services"
+  }
 }
 const ServicesPage = async () => {
   return (

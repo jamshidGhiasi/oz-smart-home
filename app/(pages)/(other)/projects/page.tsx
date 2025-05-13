@@ -16,6 +16,9 @@ import CallToAction from "@/components/shared/content/call-to-action";
 export const metadata: Metadata = {
   title: `Projects - See Oz Smart Home's Smart Living Solutions in Action`,
   description: `Discover our smart home projects showcasing innovative solutions. Learn how we enhance residential living. View our project portfolio now.`,
+  alternates: {
+    canonical: "https://www.ozsmarthome.com.au/projects"
+  }
 }
 
 const projects = [

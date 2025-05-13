@@ -8,6 +8,9 @@ import { notFound } from "next/navigation";
 export const metadata: Metadata = {
   title: 'Reliable Home Networking Solutions | Oz Smart Home',
   description: `Ensure seamless and cost-friendly connectivity in your home with customised network solutions. Contact Oz Smart Home for expert setup today.`,
+  alternates: {
+    canonical: "https://www.ozsmarthome.com.au/services/network"
+  }
 }
 const NetworkPage = async () => {
   const page = await getMarkdownPage('services/network');
