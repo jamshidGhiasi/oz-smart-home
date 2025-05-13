@@ -8,8 +8,8 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 export const metadata: Metadata = {
-  title: 'CCTV & Security Systems | Oz Smart Home',
-  description: `Ensure peace of mind with Oz Smart Home's CCTV and security systems. Protect your home 24/7. Contact us for a free consultation today.`,
+  title: 'CCTV Security & Alarm Systems | Oz Smart Home',
+  description: `Protect your property with Oz Smart Home's advanced CCTV and alarm systems. Enjoy peace of mind with tailored smart security solutions for home or business.`,
 }
 const CCTVSecurityAndAlarmPage = async () => {
   const page = await getMarkdownPage('services/cctv-security-and-alarm');

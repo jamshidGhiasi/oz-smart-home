@@ -8,8 +8,8 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
-  title: 'Efficient Smart Air Conditioning | Oz Smart Home',
-  description: `Experience efficient and customised cooling tailored to your needs. Upgrade to smart air conditioning with Oz Smart Home. Get in touch today.`,
+  title: '	Smart Air Conditioning Systems | Oz Smart Home',
+  description: `Control your climate with smart air conditioning by Oz Smart Home. Energy-efficient systems with app control and voice integration for ultimate comfort.`,
 
 }
 
