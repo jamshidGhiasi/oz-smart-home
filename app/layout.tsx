@@ -12,9 +12,37 @@ import Footer from '@/components/shared/layout/footer'
 import { Toaster } from 'react-hot-toast';
 import { GoogleTagManager, GoogleAnalytics } from '@next/third-parties/google'
 import Script from 'next/script'
-import StructuredDataWrapper from '@/components/shared/seo/structured-data-wrapper'
-import { StructuredOrganisationData } from '@/components/shared/seo/organization-sd-json'
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Oz Smart Home',
+  logo: 'https://www.ozsmarthome.com.au/oz-smart-home-icon.svg',
+  sameAs: [
+    'https://www.youtube.com/channel/UC_tHsMQBR9da556Wh4vUW6w',
+    'https://www.instagram.com/ozsmarthome/',
+    'https://www.facebook.com/profile.php?id=61556389307850'
+
+  ],
+  url:"https://www.ozsmarthome.com.au/",
+  "foundingDate": "2020-01-01",
+  "foundingLocation": "Sydney, Australia",
+  "areaServed": "AU",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+61-1800-865-070",
+    "contactType": "Customer Service",
+    "areaServed": "AU",
+    "availableLanguage": ["English"]
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Sydney",
+    "addressRegion": "NSW",
+    "postalCode": "2075",
+    "addressCountry": "AU"
+  }
+}
 
 const breadcrumbJson = {
   "@context": "https://schema.org/",
@@ -70,11 +98,11 @@ export default function RootLayout({
         <meta property="og:title" content="Smart Home Solutions | Oz Smart Home" />
         <meta property="og:description" content="Explore innovative smart home solutions at Oz Smart Home. Enhance your lifestyle today with tailored automation and security services." />
         <meta property="og:image" content="https://ozsmarthome.com.au/opengraph-image.jpg" />
-        <StructuredOrganisationData />
-            <script
+        <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJson) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, breadcrumbJson]) }}
       />
+
       <meta name="google-site-verification" content="Ck6elDb-LnhUPytJy_BFvOjyUdAEYgH7cdTisovwnHs" />
       </head>
       <body
