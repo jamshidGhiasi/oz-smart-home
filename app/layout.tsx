@@ -20,13 +20,35 @@ const jsonLd = {
   name: 'Oz Smart Home',
   logo: 'https://www.ozsmarthome.com.au/oz-smart-home-icon.svg',
   sameAs: [
-    'https://www.youtube.com/channel/UCcbxjhRbel_JTpAiwMiznvQ',
+    'https://www.youtube.com/channel/UC_tHsMQBR9da556Wh4vUW6w',
     'https://www.instagram.com/ozsmarthome/',
     'https://www.facebook.com/profile.php?id=61556389307850'
 
   ],
   url:"https://www.ozsmarthome.com.au/"
 }
+
+const breadcrumbJson = {
+  "@context": "https://schema.org/",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.ozsmarthome.com.au/" },
+    { "@type": "ListItem", "position": 2, "name": "About", "item": "https://www.ozsmarthome.com.au/about" },
+    { "@type": "ListItem", "position": 3, "name": "Projects", "item": "https://www.ozsmarthome.com.au/projects" },
+    { "@type": "ListItem", "position": 4, "name": "Services", "item": "https://www.ozsmarthome.com.au/services" },
+    { "@type": "ListItem", "position": 5, "name": "Smart Lighting", "item": "https://www.ozsmarthome.com.au/services/smart-lighting" },
+    { "@type": "ListItem", "position": 6, "name": "Smart Blinds & Curtains", "item": "https://www.ozsmarthome.com.au/services/smart-blinds-and-curtains" },
+    { "@type": "ListItem", "position": 7, "name": "Smart Air Conditioning", "item": "https://www.ozsmarthome.com.au/services/smart-air-conditioning" },
+    { "@type": "ListItem", "position": 8, "name": "Access & Intercom", "item": "https://www.ozsmarthome.com.au/services/smart-access-and-intercom" },
+    { "@type": "ListItem", "position": 9, "name": "CCTV, Security & Alarm", "item": "https://www.ozsmarthome.com.au/services/cctv-security-and-alarm" },
+    { "@type": "ListItem", "position": 10, "name": "Entertainment & AV", "item": "https://www.ozsmarthome.com.au/services/entertainment-and-av" },
+    { "@type": "ListItem", "position": 11, "name": "Network", "item": "https://www.ozsmarthome.com.au/services/network" },
+    { "@type": "ListItem", "position": 12, "name": "Home Automation", "item": "https://www.ozsmarthome.com.au/services/home-automation" },
+    { "@type": "ListItem", "position": 13, "name": "Contact", "item": "https://www.ozsmarthome.com.au/contact" },
+    { "@type": "ListItem", "position": 14, "name": "Knowledge Hub", "item": "https://www.ozsmarthome.com.au/knowledge-hub" },
+    { "@type": "ListItem", "position": 15, "name": "Reviews", "item": "https://www.ozsmarthome.com.au/reviews" }
+  ]
+};
 
 
 const red_hat_display = Red_Hat_Display({
@@ -63,6 +85,10 @@ export default function RootLayout({
         <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+            <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJson) }}
       />
       <meta name="google-site-verification" content="Ck6elDb-LnhUPytJy_BFvOjyUdAEYgH7cdTisovwnHs" />
       </head>

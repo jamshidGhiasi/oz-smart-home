@@ -22,6 +22,9 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: `Smart Home Solutions | Oz Smart Home`,
   description: `Explore innovative smart home solutions at Oz Smart Home. Enhance your lifestyle today with tailored automation and security services.`,
+  alternates: {
+    canonical: 'https://www.ozsmarthome.com.au/'
+  }
 }
 
 const projects = [
