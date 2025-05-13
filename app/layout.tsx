@@ -25,7 +25,24 @@ const jsonLd = {
     'https://www.facebook.com/profile.php?id=61556389307850'
 
   ],
-  url:"https://www.ozsmarthome.com.au/"
+  url:"https://www.ozsmarthome.com.au/",
+  "foundingDate": "2020-01-01",
+  "foundingLocation": "Sydney, Australia",
+  "areaServed": "AU",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+61-1800-865-070",
+    "contactType": "Customer Service",
+    "areaServed": "AU",
+    "availableLanguage": ["English"]
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Sydney",
+    "addressRegion": "NSW",
+    "postalCode": "2075",
+    "addressCountry": "AU"
+  }
 }
 
 const breadcrumbJson = {
