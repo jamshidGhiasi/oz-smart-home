@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: 'Book A Free Smart Home Consultation | Oz Smart Home',
     description: 'Book your free smart home consultation in Sydney! Get expert guidance on Home Assistant, Loxone, lighting, security, and automation — all tailored to your home and budget.',
     alternates: {
-        canonical: "https://www.ozsmarthome.com.au/services/free-smart-home-consultation"
+        canonical: "https://www.ozsmarthome.com.au/services/book-a-free-smart-home-consultation"
     }
 }
 const FreeSmartHomeConsultationPage = async () => {
