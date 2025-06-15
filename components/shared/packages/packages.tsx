@@ -573,9 +573,7 @@ const diamondPackage: Package = {
 export default function PackagesPage() {
     const [expanded, setExpanded] = useState<Record<string, boolean>>({});
 
-    const toggle = (key: string) => {
-        setExpanded(prev => ({ ...prev, [key]: !prev[key] }));
-    };
+
 
     const renderPackageCard = (pkg: typeof packages[number]) => (
         <Card key={pkg.name} className="bg-zinc-900 text-white rounded-2xl shadow-md border border-white/10 flex flex-col">
