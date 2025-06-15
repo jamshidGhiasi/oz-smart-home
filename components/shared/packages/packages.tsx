@@ -595,7 +595,7 @@ export default function PackagesPage() {
                         const mainOpen = expanded[mainKey] ?? false;
                         return (
                             <div key={mainKey} className="mb-3 border border-white/10 rounded-xl overflow-hidden">
-                                <div onClick={() => toggle(mainKey)} className="flex items-center justify-between px-3 py-2 cursor-pointer hover:bg-white/5 overflow-hidden">
+                                <div onClick={() => setExpanded(prev => ({ ...prev, [mainKey]: !prev[mainKey] }))} className="flex items-center justify-between px-3 py-2 cursor-pointer hover:bg-white/5 overflow-hidden">
                                     <span className="font-semibold">{mainCategory}</span>
                                     {mainOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                                 </div>
@@ -607,7 +607,7 @@ export default function PackagesPage() {
                                             const Icon = categoryIcons[subCat] || Home;
                                             return (
                                                 <div key={subKey} className="border-t border-white/10">
-                                                    <div onClick={() => toggle(subKey)} className="flex items-center justify-between px-3 py-2 cursor-pointer hover:bg-white/5">
+                                                    <div onClick={() => setExpanded(prev => ({ ...prev, [subKey]: !prev[subKey] }))} className="flex items-center justify-between px-3 py-2 cursor-pointer hover:bg-white/5">
                                                         <div className="flex items-center gap-2">
                                                             <Icon className="w-4 h-4 text-white" />
                                                             <span className="text-sm font-semibold">{subCat}</span>
