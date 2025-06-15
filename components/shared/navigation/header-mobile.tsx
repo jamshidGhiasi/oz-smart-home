@@ -35,15 +35,15 @@ const HeaderMobile = () => {
     const containerRef = useRef(null);
     const { height } = useDimensions(containerRef);
     const [isOpen, toggleOpen] = useCycle(false, true);
-    const isDesktop = useMediaQuery("(min-width: 1024px)")
+    const isDesktop = useMediaQuery("(min-width: 1280px)")
     return (
         <div className='sticky top-0 z-40 '>
-            <div className='flex items-center bg-[hsl(240,3.7%,15.9%)]  lg:hidden'>
+            <div className='flex items-center bg-[hsl(240,3.7%,15.9%)]  xl:hidden'>
                 <div >
                     <div className="flex h-[64px] items-center justify-between ">
                         <Link
                             href="/"
-                            className="flex flex-row space-x-2 px-3 items-center justify-center lg:hidden "
+                            className="flex flex-row space-x-2 px-3 items-center justify-center xl:hidden "
                         >
                             <OSHBrand />
                             <OSHCopy className='font-bold text-white' />
@@ -54,7 +54,7 @@ const HeaderMobile = () => {
                     initial={false}
                     animate={isOpen ? 'open' : 'closed'}
                     custom={height}
-                    className={`fixed inset-0 z-50 w-full lg:hidden ${isOpen ? '' : 'pointer-events-none'
+                    className={`fixed inset-0 z-50 w-full xl:hidden ${isOpen ? '' : 'pointer-events-none'
                         }`}
                     ref={containerRef}
                 >

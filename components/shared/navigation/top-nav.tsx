@@ -14,9 +14,9 @@ import { useMediaQuery } from '@/utils/use-media-query';
 
 
 const TopNav = () => {
-  const isDesktop = useMediaQuery("(min-width: 768px)");
+  const isDesktop = useMediaQuery("(min-width: 1280px)");
   return (
-    <div className=" sticky top-0 w-full bg-[hsl(240,3.7%,15.9%)]/65 hidden lg:block  backdrop-blur-md   z-40">
+    <div className=" sticky top-0 w-full bg-[hsl(240,3.7%,15.9%)]/65 hidden xl:block  backdrop-blur-md   z-40">
 
       <div className="flex items-center justify-between  w-full">
 
@@ -30,7 +30,7 @@ const TopNav = () => {
           </Link>
         </div>
         <div className="flex space-x-1  mr-auto ">
-          {NAV_ITEMS.map((item, idx) => {
+          {NAV_ITEMS.sort((a, b) => (a.order! - b.order!)).map((item, idx) => {
             return <MenuItem key={idx} item={item} />;
           })}
         </div>

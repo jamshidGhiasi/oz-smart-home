@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react/dist/iconify.js"
 import { SideNavItem } from "./types"
-import { AirVent, Blinds, Cctv, DoorOpen, Lightbulb, Send, Theater, Wifi, Workflow, Calendar } from "lucide-react"
+import { AirVent, Blinds, Cctv, DoorOpen, Lightbulb, Send, Theater, Wifi, Workflow, Calendar, Blocks } from "lucide-react"
 export const NAV_ITEMS: SideNavItem[] = [
 
 
@@ -56,10 +56,18 @@ export const NAV_ITEMS: SideNavItem[] = [
         visibility: true,
         icon: <Icon icon="lucide:sparkles" width="16" height="16" />,
     },
+
+    {
+        title: 'Packages',
+        path: '/smart-home-packages',
+        order: 4,
+        visibility: true,
+        icon: <Icon icon="lucide:blocks" width="16" height="16" />,
+    },
     {
         title: 'Reviews',
         path: '/reviews',
-        order: 4,
+        order: 7,
         visibility: true,
         icon: <Icon icon="lucide:star" width="16" height="16" />,
     },
