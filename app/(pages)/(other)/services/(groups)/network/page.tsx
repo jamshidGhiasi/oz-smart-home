@@ -6,8 +6,13 @@ import { getMarkdownPage } from "@/utils/markdown";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 export const metadata: Metadata = {
+
   title: 'Home Network Installation Services | Oz Smart Home',
   description: `Get reliable smart home network solutions with Oz Smart Home. We design and install fast, secure Wi-Fi and wired networks for seamless home connectivity.`,
+  alternates: {
+    canonical: "https://www.ozsmarthome.com.au/services/network"
+  }
+
 }
 const NetworkPage = async () => {
   const page = await getMarkdownPage('services/network');

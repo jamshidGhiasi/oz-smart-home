@@ -9,6 +9,9 @@ import pic from '@/public/bg-test-1.jpg'
 export const metadata: Metadata = {
   title: 'Knowledge Hub | Oz Smart Home',
   description: 'Explore the Oz Smart Home Knowledge Hub for expert advice, how-to guides, and insights on home automation, security, networking, and smart living solutions.',
+  alternates: {
+    canonical: "https://www.ozsmarthome.com.au/knowledge-hub"
+  }
 
 }
 

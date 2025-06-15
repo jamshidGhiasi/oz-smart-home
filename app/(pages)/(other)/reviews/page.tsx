@@ -10,6 +10,9 @@ import GoogleReviews from "@/components/shared/content/google-reviews";
 export const metadata: Metadata = {
   title: 'Reviews - Hear What Customers Say About Oz Smart Home',
   description: 'Read reviews and testimonials about Oz Smart Home. Discover why our customers love our smart living solutions for security, privacy, and energy efficiency.',
+  alternates: {
+    canonical: "	https://www.ozsmarthome.com.au/reviews"
+  }
 
 }
 

@@ -10,6 +10,9 @@ import { notFound } from "next/navigation";
 export const metadata: Metadata = {
   title: 'Secure Smart Access Solutions | Sydney | Oz Smart Home',
   description: `Enhance home security with our smart access and intercom systems. Monitor and control entry from anywhere with ease—learn more today.`,
+  alternates: {
+    canonical: "https://www.ozsmarthome.com.au/services/smart-access-and-intercom"
+  }
 
 }
 

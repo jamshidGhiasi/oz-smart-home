@@ -12,6 +12,9 @@ import { notFound } from "next/navigation";
 export const metadata: Metadata = {
   title: 'Home Automation Solutions | Oz Smart Home',
   description: `Simplify daily life with home automation from Oz Smart Home. Control your environment easily. Get started with a consultation today.`,
+  alternates: {
+    canonical: "https://www.ozsmarthome.com.au/services/home-automation"
+  }
 
 }
 
