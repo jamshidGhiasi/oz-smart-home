@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react/dist/iconify.js"
 import { SideNavItem } from "./types"
-import { AirVent, Blinds, Cctv, DoorOpen, Lightbulb, Send, Theater, Wifi, Workflow } from "lucide-react"
+import { AirVent, Blinds, Cctv, DoorOpen, Lightbulb, Send, Theater, Wifi, Workflow, Calendar } from "lucide-react"
 export const NAV_ITEMS: SideNavItem[] = [
 
 
@@ -17,7 +17,7 @@ export const NAV_ITEMS: SideNavItem[] = [
         order: 3,
         visibility: true,
         icon: <Icon icon="lucide:pencil-ruler" width="16" height="16" />,
-   
+
     },
 
     {
@@ -28,15 +28,16 @@ export const NAV_ITEMS: SideNavItem[] = [
         icon: <Icon icon="lucide:cog" width="16" height="16" />,
         submenu: true,
         subMenuItems: [
-          { title: 'All', path: '/services' },
-          { title: 'Smart Lighting', path: '/services/smart-lighting', icon: <Lightbulb className="w-4 h-4 mr-2"  /> },
-          { title: 'Smart Blinds & Curtains', path: '/services/smart-blinds-and-curtains', icon:<Blinds className="w-4 h-4 mr-2" />  },
-          { title: 'Smart Air Conditioning', path: '/services/smart-air-conditioning', icon: <AirVent className="w-4 h-4 mr-2"/> },
-          { title: 'Access & Intercom', path: '/services/smart-access-and-intercom', icon: <DoorOpen className="w-4 h-4 mr-2" /> },
-          { title: 'CCTV, Security & Alarm', path: '/services/cctv-security-and-alarm' , icon:<Cctv className="w-4 h-4 mr-2"/> },
-          { title: 'Entertainment & AV', path: '/services/entertainment-and-av', icon:<Theater className="w-4 h-4 mr-2"/>  },
-          { title: 'Network', path: '/services/network', icon:<Wifi className="w-4 h-4 mr-2" />  },
-          { title: 'Home Automation', path: '/services/home-automation', icon:<Workflow className="w-4 h-4 mr-2" />  },
+            { title: 'All', path: '/services' },
+            { title: 'Smart Lighting', path: '/services/smart-lighting', icon: <Lightbulb className="w-4 h-4 mr-2" /> },
+            { title: 'Smart Blinds & Curtains', path: '/services/smart-blinds-and-curtains', icon: <Blinds className="w-4 h-4 mr-2" /> },
+            { title: 'Smart Air Conditioning', path: '/services/smart-air-conditioning', icon: <AirVent className="w-4 h-4 mr-2" /> },
+            { title: 'Access & Intercom', path: '/services/smart-access-and-intercom', icon: <DoorOpen className="w-4 h-4 mr-2" /> },
+            { title: 'CCTV, Security & Alarm', path: '/services/cctv-security-and-alarm', icon: <Cctv className="w-4 h-4 mr-2" /> },
+            { title: 'Entertainment & AV', path: '/services/entertainment-and-av', icon: <Theater className="w-4 h-4 mr-2" /> },
+            { title: 'Network', path: '/services/network', icon: <Wifi className="w-4 h-4 mr-2" /> },
+            { title: 'Home Automation', path: '/services/home-automation', icon: <Workflow className="w-4 h-4 mr-2" /> },
+            { title: 'Free Consultation', path: '/services/book-a-free-smart-home-consultation', icon: <Calendar className="w-4 h-4 mr-2" /> },
         ],
     },
 
