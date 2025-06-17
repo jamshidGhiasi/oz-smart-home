@@ -34,3 +34,8 @@ export interface MarkdownPage {
   introAction?: string;
   content: ReactNode;
 }
+export type Message = {
+  role: 'user' | 'assistant';
+  content: string;
+  type?: 'feedback_request'; // optional type for feedback prompts
+};
