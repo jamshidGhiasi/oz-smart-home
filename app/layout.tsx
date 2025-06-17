@@ -12,6 +12,8 @@ import Footer from '@/components/shared/layout/footer'
 import { Toaster } from 'react-hot-toast';
 import { GoogleTagManager, GoogleAnalytics } from '@next/third-parties/google'
 import Script from 'next/script'
+import SmartHomeChatFAB from '@/components/chat/smarthome-chat-fab';
+
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -24,7 +26,7 @@ const jsonLd = {
     'https://www.facebook.com/profile.php?id=61556389307850'
 
   ],
-  url:"https://www.ozsmarthome.com.au/",
+  url: "https://www.ozsmarthome.com.au/",
   "foundingDate": "2020-01-01",
   "foundingLocation": "Sydney, Australia",
   "areaServed": "AU",
@@ -99,11 +101,11 @@ export default function RootLayout({
         <meta property="og:description" content="Explore innovative smart home solutions at Oz Smart Home. Enhance your lifestyle today with tailored automation and security services." />
         <meta property="og:image" content="https://ozsmarthome.com.au/opengraph-image.jpg" />
         <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, breadcrumbJson]) }}
-      />
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, breadcrumbJson]) }}
+        />
 
-      <meta name="google-site-verification" content="Ck6elDb-LnhUPytJy_BFvOjyUdAEYgH7cdTisovwnHs" />
+        <meta name="google-site-verification" content="Ck6elDb-LnhUPytJy_BFvOjyUdAEYgH7cdTisovwnHs" />
       </head>
       <body
         className={cn(
@@ -111,18 +113,19 @@ export default function RootLayout({
           red_hat_display.variable
         )}
       >
-    <GoogleTagManager gtmId="GTM-TQSQ4PBN" />
-     <GoogleAnalytics gaId="G-L9580VK4FJ" />
-          <main className="">
-            <TopNav />
-            <MarginWidthWrapper>
-        
-              <HeaderMobile />
-              <PageWrapper>{children}</PageWrapper>
-            </MarginWidthWrapper>
-            <Footer />
-          </main>
+        <GoogleTagManager gtmId="GTM-TQSQ4PBN" />
+        <GoogleAnalytics gaId="G-L9580VK4FJ" />
+        <main className="">
+          <TopNav />
+          <MarginWidthWrapper>
+
+            <HeaderMobile />
+            <PageWrapper>{children}</PageWrapper>
+          </MarginWidthWrapper>
+          <Footer />
+        </main>
         <Toaster />
+        <SmartHomeChatFAB />
       </body>
     </html>
   )
