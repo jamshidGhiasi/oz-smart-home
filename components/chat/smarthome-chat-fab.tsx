@@ -3,7 +3,7 @@ import { HTMLAttributes, useEffect, useRef, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import 'highlight.js/styles/github-dark.css'; // or atom-one-dark.css
 import hljs from 'highlight.js';
-
+import Image from 'next/image';
 function CopyButton({ code }: { code: string }) {
     const [copied, setCopied] = useState(false);
 
@@ -124,7 +124,7 @@ export default function SmartHomeChatFAB() {
                 className="fixed bottom-6 right-8 bg-black hover:shadow-xl p-1 rounded-full shadow-lg z-50 border border-blue-600"
                 aria-label="Open Smart Home Chat"
             >
-                <img
+                <Image
                     src="/chat-avatar.png" // or /avatar.jpg
                     alt="Jamshid Avatar"
                     className="w-16 h-16 rounded-full object-cover"
