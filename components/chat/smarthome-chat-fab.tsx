@@ -1,8 +1,8 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import 'highlight.js/styles/github-dark.css'; // or atom-one-dark.css
+import hljs from 'highlight.js';
 
 function CopyButton({ code }: { code: string }) {
     const [copied, setCopied] = useState(false);
@@ -29,7 +29,7 @@ export default function SmartHomeChatFAB() {
         {
             role: 'assistant',
             content:
-                "Hi! I'm your smart home assistant. Ask me anything about our services, Home Assistant, or how to get started.",
+                "Hi there! I'm Jimmy, the Oz Smart Home Assistant (v1). I can help you with packages, pricing, and smart home tips. I'll get smarter as you ask more. 💡",
         },
     ]);
     const [input, setInput] = useState('');
@@ -88,16 +88,22 @@ export default function SmartHomeChatFAB() {
             {/* Floating Action Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg z-50"
+                className="fixed bottom-6 right-8 bg-black hover:shadow-xl p-1 rounded-full shadow-lg z-50 border border-blue-600"
                 aria-label="Open Smart Home Chat"
             >
-                💬
+                <img
+                    src="/chat-avatar.png" // or /avatar.jpg
+                    alt="Jamshid Avatar"
+                    className="w-16 h-16 rounded-full object-cover"
+                />
             </button>
+
 
             {/* Dark Chat Window */}
             {isOpen && (
                 <div className="fixed bottom-24 right-6 w-[380px] max-h-[80vh] bg-zinc-900 border border-zinc-800 rounded-2xl shadow-2xl flex flex-col z-50">
-                    <div className="p-4 font-semibold text-white border-b border-zinc-800 bg-zinc-800 rounded-t-2xl flex justify-between items-center">
+                    <div className="p-4 font-semibold text-white border-b border-zinc-800 bg-zinc-800 rounded-t-2xl flex justify-between items-center shadow-md shadow-zinc-950/40">
+
                         <div className="flex items-center gap-2">
                             <img src="https://www.ozsmarthome.com.au/oz-smart-home-icon.svg" alt="OZ Icon" className="w-6 h-6" />
                             <span>Oz Smart Home Assistant</span>
@@ -126,7 +132,7 @@ export default function SmartHomeChatFAB() {
                                 )}
 
                                 <div
-                                    className={`rounded-xl px-4 py-3 max-w-[85%] whitespace-pre-line ${msg.role === 'user'
+                                    className={`rounded-xl px-4 py-3 max-w-[85%] whitespace-normal ${msg.role === 'user'
                                         ? 'bg-blue-700 text-right ml-2'
                                         : 'bg-zinc-800 text-left mr-2'
                                         }`}
@@ -147,10 +153,16 @@ export default function SmartHomeChatFAB() {
                                                     {children}
                                                 </a>
                                             ),
-                                            code(props) {
-                                                const { className, children } = props;
-                                                const match = /language-(\w+)/.exec(className || '');
+                                            code({ className, children }) {
+                                                const codeRef = useRef<HTMLElement>(null);
                                                 const code = String(children).trim();
+
+                                                useEffect(() => {
+                                                    if (codeRef.current) {
+                                                        hljs.highlightElement(codeRef.current);
+                                                    }
+                                                }, []);
+
                                                 const isInline = !className;
 
                                                 if (isInline) {
@@ -158,14 +170,16 @@ export default function SmartHomeChatFAB() {
                                                 }
 
                                                 return (
-                                                    <div className="relative rounded-md overflow-hidden mb-4">
-                                                        <CopyButton code={code} />
-                                                        <SyntaxHighlighter language={match?.[1]} style={oneDark} PreTag="div">
-                                                            {code}
-                                                        </SyntaxHighlighter>
-                                                    </div>
+
+                                                    <code
+                                                        ref={codeRef}
+                                                        className={className || ''}
+                                                    >
+                                                        {code}
+                                                    </code>
+
                                                 );
-                                            },
+                                            }
                                         }}
                                     >
                                         {formatMessage(msg.content)}
