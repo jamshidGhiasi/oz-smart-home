@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { HTMLAttributes, useEffect, useRef, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import 'highlight.js/styles/github-dark.css'; // or atom-one-dark.css
 import hljs from 'highlight.js';
@@ -22,6 +22,39 @@ function CopyButton({ code }: { code: string }) {
         </button>
     );
 }
+
+const CodeBlock = ({
+    className,
+    children,
+    ...props
+}: HTMLAttributes<HTMLElement>) => {
+    const codeRef = useRef<HTMLElement>(null);
+    const code = String(children ?? '').trim();
+
+    useEffect(() => {
+        if (codeRef.current) {
+            hljs.highlightElement(codeRef.current);
+        }
+    }, []);
+
+    const isInline = !className;
+
+    if (isInline) {
+        return (
+            <code className="bg-zinc-800 px-1 rounded text-blue-300" {...props}>
+                {code}
+            </code>
+        );
+    }
+
+    return (
+        <pre className="rounded-xl bg-zinc-900 p-4 overflow-x-auto text-sm mt-2">
+            <code ref={codeRef} className={className} {...props}>
+                {code}
+            </code>
+        </pre>
+    );
+};
 
 export default function SmartHomeChatFAB() {
     const [isOpen, setIsOpen] = useState(false);
@@ -153,33 +186,7 @@ export default function SmartHomeChatFAB() {
                                                     {children}
                                                 </a>
                                             ),
-                                            code({ className, children }) {
-                                                const codeRef = useRef<HTMLElement>(null);
-                                                const code = String(children).trim();
-
-                                                useEffect(() => {
-                                                    if (codeRef.current) {
-                                                        hljs.highlightElement(codeRef.current);
-                                                    }
-                                                }, []);
-
-                                                const isInline = !className;
-
-                                                if (isInline) {
-                                                    return <code className="bg-zinc-800 px-1 rounded text-blue-300">{code}</code>;
-                                                }
-
-                                                return (
-
-                                                    <code
-                                                        ref={codeRef}
-                                                        className={className || ''}
-                                                    >
-                                                        {code}
-                                                    </code>
-
-                                                );
-                                            }
+                                            code: CodeBlock,
                                         }}
                                     >
                                         {formatMessage(msg.content)}
