@@ -5,6 +5,7 @@ import 'highlight.js/styles/github-dark.css';
 import hljs from 'highlight.js';
 import Image from 'next/image';
 import { Message } from '@/types';
+
 function CopyButton({ code }: { code: string }) {
     const [copied, setCopied] = useState(false);
     async function copyToClipboard() {
@@ -15,17 +16,14 @@ function CopyButton({ code }: { code: string }) {
     return (
         <button
             onClick={copyToClipboard}
-            className="absolute top-2 right-2 text-xs bg-gray-700 text-white px-2 py-1 rounded hover:bg-gray-600"
+            className="absolute top-2 right-2 text-xs bg-gray-500 text-white px-2 py-1 rounded hover:bg-gray-400"
         >
             {copied ? 'Copied!' : 'Copy'}
         </button>
     );
 }
-const CodeBlock = ({
-    className,
-    children,
-    ...props
-}: HTMLAttributes<HTMLElement>) => {
+
+const CodeBlock = ({ className, children, ...props }: HTMLAttributes<HTMLElement>) => {
     const codeRef = useRef<HTMLElement>(null);
     const code = String(children ?? '').trim();
     useEffect(() => {
@@ -36,22 +34,23 @@ const CodeBlock = ({
     const isInline = !className;
     if (isInline) {
         return (
-            <code className="bg-zinc-800 px-1 rounded text-blue-300" {...props}>
+            <code className="bg-zinc-200 px-1 rounded text-blue-700" {...props}>
                 {code}
             </code>
         );
     }
     return (
-        <pre className="rounded-xl bg-zinc-900 p-4 overflow-x-auto text-sm mt-2">
+        <pre className="rounded-xl bg-zinc-100 p-4 overflow-x-auto text-sm mt-2">
             <code ref={codeRef} className={className} {...props}>
                 {code}
             </code>
         </pre>
     );
 };
+
 export default function SmartHomeChatFAB() {
     const [isOpen, setIsOpen] = useState(false);
-    const [isMinimized, setIsMinimized] = useState(false); // minimized view
+    const [isMinimized, setIsMinimized] = useState(false);
     const [messages, setMessages] = useState<Message[]>([{
         role: 'assistant',
         content: "Hi there! I'm Jimmy, the Oz Smart Home Assistant (v1). I can help you with packages, pricing, and smart home tips. I'll get smarter as you ask more. 💡"
@@ -61,11 +60,13 @@ export default function SmartHomeChatFAB() {
     const chatRef = useRef<HTMLDivElement>(null);
     const [feedbackSent, setFeedbackSent] = useState(false);
     const [feedbackGivenFor, setFeedbackGivenFor] = useState<number[]>([]);
+
     useEffect(() => {
         if (isOpen && chatRef.current) {
             chatRef.current.scrollTop = chatRef.current.scrollHeight;
         }
     }, [messages, isOpen]);
+
     function formatMessage(msg: string): string {
         const markdownLinkRegex = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
         const protectedLinks: string[] = [];
@@ -76,11 +77,9 @@ export default function SmartHomeChatFAB() {
         });
         const urlRegex = /(https?:\/\/[^\s]+)/g;
         const converted = withPlaceholders.replace(urlRegex, (url) => `[Read more](${url})`);
-        return protectedLinks.reduce(
-            (text, link, index) => text.replace(`__LINK_${index}__`, link),
-            converted
-        );
+        return protectedLinks.reduce((text, link, index) => text.replace(`__LINK_${index}__`, link), converted);
     }
+
     async function sendMessage() {
         if (!input.trim()) return;
         const userMessage: Message = { role: 'user', content: input };
@@ -111,6 +110,7 @@ export default function SmartHomeChatFAB() {
         }
         setLoading(false);
     }
+
     const sendFeedback = async (rating: 'positive' | 'negative', index: number) => {
         const msg = messages[index];
         await fetch('/api/ask/feedback', {
@@ -125,6 +125,7 @@ export default function SmartHomeChatFAB() {
         });
         setFeedbackGivenFor(prev => [...prev, index]);
     };
+
     return (
         <>
             <button
@@ -132,34 +133,33 @@ export default function SmartHomeChatFAB() {
                     setIsOpen(true);
                     setIsMinimized(false);
                 }}
-                className="fixed bottom-4 right-4 bg-black hover:shadow-xl p-1 rounded-full shadow-lg z-50 border border-blue-600"
+                className="fixed bottom-4 right-4 bg-white hover:shadow-xl p-1 rounded-full shadow-lg z-50 border border-blue-600"
                 aria-label="Open Smart Home Chat"
             >
                 <Image
                     width={64}
                     height={64}
-                    src="/chat-avatar.png" // or /avatar.jpg
-                    alt="Jamshid Avatar"
+                    src="/chat-avatar.png"
+                    alt="Chat Avatar"
                     className="w-16 h-16 rounded-full object-cover"
                 />
             </button>
+
             {isOpen && !isMinimized && (
-                <div className="fixed bottom-28 right-6 w-[380px] max-h-[80vh] bg-black border border-zinc-800 rounded-2xl shadow-2xl flex flex-col z-50 overflow-hidden">
-                    <div className="p-4 font-semibold text-white border-b border-zinc-800 bg-zinc-800 rounded-t-2xl flex justify-between items-center shadow-md shadow-zinc-950/40">
+                <div className="fixed bottom-24 right-4 w-[380px] max-h-[70vh] sm:max-h-[80vh] bg-zinc-50 border border-zinc-200 rounded-2xl shadow-2xl flex flex-col z-50 overflow-hidden">
+                    <div className="sticky top-0 z-10 p-4 font-semibold text-zinc-800 bg-zinc-100 border-b border-zinc-200 rounded-t-2xl flex justify-between items-center shadow">
                         <div className="flex items-center gap-2">
                             <img src="/oz-smart-home-icon.svg" alt="OZ Icon" className="w-6 h-6" />
                             <span>Oz Smart Home Assistant</span>
                         </div>
                         <div className="flex items-center gap-2 ml-auto">
-                            {/* Minimize */}
                             <button
                                 onClick={() => setIsMinimized(true)}
                                 title="Minimize"
-                                className="w-9 h-9 flex items-center justify-center rounded-md text-zinc-400 hover:text-white hover:bg-zinc-700 transition"
+                                className="w-9 h-9 flex items-center justify-center rounded-md text-zinc-500 hover:text-zinc-800 hover:bg-zinc-200 transition"
                             >
-                                <span className="text-lg font-bold">–</span>
+                                <span className="text-xl font-bold">–</span>
                             </button>
-                            {/* Close */}
                             <button
                                 onClick={() => {
                                     setIsOpen(false);
@@ -167,30 +167,30 @@ export default function SmartHomeChatFAB() {
                                     setMessages([
                                         {
                                             role: 'assistant',
-                                            content:
-                                                "Hi there! I'm Jimmy, the Oz Smart Home Assistant (v1). I can help you with packages, pricing, and smart home tips. I'll get smarter as you ask more. 💡",
+                                            content: "Hi there! I'm Jimmy, the Oz Smart Home Assistant (v1). I can help you with packages, pricing, and smart home tips. I'll get smarter as you ask more. 💡"
                                         },
                                     ]);
                                 }}
                                 title="Close Chat"
-                                className="w-9 h-9 flex items-center justify-center rounded-md text-zinc-400 hover:text-white hover:bg-red-600 transition"
+                                className="w-9 h-9 flex items-center justify-center rounded-md text-zinc-500 hover:text-white hover:bg-red-600 transition"
                             >
-                                <span className="text-lg font-bold">×</span>
+                                <span className="text-xl font-bold">×</span>
                             </button>
                         </div>
                     </div>
-                    <div ref={chatRef} className="flex-1 overflow-y-auto p-4 space-y-3 text-sm text-white">
+
+                    <div ref={chatRef} className="flex-1 overflow-y-auto p-4 space-y-3 text-sm text-zinc-800">
                         {messages.map((msg, i) => (
                             <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                                 {msg.role === 'assistant' && (
                                     <img src="/chat-avatar.png" alt="OZ Icon" className="w-8 h-8 mr-2 rounded-full p-1" />
                                 )}
                                 {msg.role === 'user' && (
-                                    <div className="w-7 h-7 ml-2 rounded-full bg-blue-700 text-white flex items-center justify-center text-sm font-bold">
+                                    <div className="w-7 h-7 ml-2 rounded-full bg-blue-600 text-white flex items-center justify-center text-sm font-bold">
                                         🧑
                                     </div>
                                 )}
-                                <div className={`rounded-xl px-4 py-3 max-w-[85%] whitespace-normal ${msg.role === 'user' ? 'bg-blue-700 text-right ml-2' : 'bg-zinc-800 text-left mr-2'}`}>
+                                <div className={`rounded-xl px-4 py-3 max-w-[85%] whitespace-normal ${msg.role === 'user' ? 'bg-blue-100 text-blue-800 ml-2' : 'bg-zinc-200 text-zinc-900 mr-2'}`}>
                                     <ReactMarkdown
                                         components={{
                                             p: ({ children }) => <p className="m-0 leading-relaxed">{children}</p>,
@@ -199,7 +199,7 @@ export default function SmartHomeChatFAB() {
                                                     href={href ?? '#'}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="text-blue-400 font-semibold underline hover:text-blue-300"
+                                                    className="text-blue-600 font-medium underline hover:text-blue-500"
                                                     title="Open service page"
                                                 >
                                                     {children}
@@ -213,36 +213,27 @@ export default function SmartHomeChatFAB() {
                                     {msg.type === 'feedback_request' && !feedbackGivenFor.includes(i) && (
                                         <div className="mt-2">
                                             <div className="flex gap-3">
-                                                <button
-                                                    onClick={() => sendFeedback('positive', i)}
-                                                    className="text-green-400 hover:text-green-300 underline"
-                                                >
-                                                    👍 Yes
-                                                </button>
-                                                <button
-                                                    onClick={() => sendFeedback('negative', i)}
-                                                    className="text-red-400 hover:text-red-300 underline"
-                                                >
-                                                    👎 No
-                                                </button>
+                                                <button onClick={() => sendFeedback('positive', i)} className="text-green-600 hover:text-green-500 underline">👍 Yes</button>
+                                                <button onClick={() => sendFeedback('negative', i)} className="text-red-600 hover:text-red-500 underline">👎 No</button>
                                             </div>
                                         </div>
                                     )}
                                     {msg.type === 'feedback_request' && feedbackGivenFor.includes(i) && (
-                                        <p className="text-green-400 text-sm mt-2">Thanks for your feedback!</p>
+                                        <p className="text-green-600 text-sm mt-2">Thanks for your feedback!</p>
                                     )}
                                 </div>
                             </div>
                         ))}
                         {loading && <div className="italic text-zinc-400">Jimmy is typing...</div>}
                     </div>
-                    <div className="p-3 border-t border-zinc-800 bg-zinc-900 flex items-center gap-2">
+
+                    <div className="p-3 border-t border-zinc-200 bg-zinc-100 flex items-center gap-2">
                         <input
                             value={input}
                             onChange={(e) => setInput(e.target.value)}
                             onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
                             placeholder="Ask me something..."
-                            className="flex-1 px-3 py-2 text-sm text-white bg-zinc-800 border border-zinc-700 rounded-lg placeholder-zinc-400 outline-none focus:ring-1 focus:ring-blue-500"
+                            className="flex-1 px-3 py-2 text-sm text-zinc-800 bg-white border border-zinc-300 rounded-lg placeholder-zinc-500 outline-none focus:ring-1 focus:ring-blue-500"
                         />
                         <button
                             onClick={sendMessage}
@@ -252,8 +243,7 @@ export default function SmartHomeChatFAB() {
                         </button>
                     </div>
                 </div>
-            )
-            }
+            )}
         </>
     );
 }
