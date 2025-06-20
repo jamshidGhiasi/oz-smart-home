@@ -5,11 +5,12 @@ import ContentWrapper from "@/components/shared/layout/content-wrapper";
 import ServicesNavigation from "@/components/shared/navigation/services-navigation";
 import { getMarkdownPage } from "@/utils/markdown";
 import { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
   title: 'Secure Smart Access Solutions | Sydney | Oz Smart Home',
-  description: `Enhance home security with our smart access and intercom systems. Monitor and control entry from anywhere with ease—learn more today.`,
+  description: `Discover secure and modern smart access solutions that let you see, speak to, and unlock your doors remotely. Explore intercom and access control with full home automation.`,
   alternates: {
     canonical: "https://www.ozsmarthome.com.au/services/smart-access-and-intercom"
   }
@@ -32,8 +33,10 @@ const SmartAccessAndIntercomPage = async () => {
       <div className="relative text-white z-20 text-lg w-full max-w-4xl mx-auto ">
 
         <div dangerouslySetInnerHTML={{ __html: page.content as string }} />
+        <p><Link className=" font-bold underline" href={'/contact'}>Request a Free Quote</Link> or See It in Action now to experience modern home access done right.</p>
 
         <ServicesNavigation nextService="cctv-security-and-alarm" />
+
       </div>
     </>
   );

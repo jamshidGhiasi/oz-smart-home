@@ -6,6 +6,11 @@ import { ReactNode } from "react";
 import { MarkdownPage } from "@/types";
 const contentDirectory = path.join(process.cwd(), "content");
 
+marked.setOptions({
+  gfm: true,
+  breaks: true,
+});
+
 export async function getMarkdownPage(
   slug: string
 ): Promise<MarkdownPage | null> {

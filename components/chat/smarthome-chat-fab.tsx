@@ -132,7 +132,7 @@ export default function SmartHomeChatFAB() {
                     setIsOpen(true);
                     setIsMinimized(false);
                 }}
-                className="fixed bottom-6 right-8 bg-black hover:shadow-xl p-1 rounded-full shadow-lg z-50 border border-blue-600"
+                className="fixed bottom-4 right-4 bg-black hover:shadow-xl p-1 rounded-full shadow-lg z-50 border border-blue-600"
                 aria-label="Open Smart Home Chat"
             >
                 <Image
