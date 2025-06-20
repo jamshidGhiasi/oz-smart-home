@@ -9,7 +9,7 @@ import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
   title: 'Home Entertainment | Sydney | Oz Smart Home',
-  description: `Transform your space with immersive audio and visual experiences. Explore our cinematic home entertainment solutions. Contact us today.`,
+  description: `Discover premium home entertainment solutions for immersive audio visual setups. Get custom AV design and audio visual home automation tailored to your space.`,
   alternates: {
     canonical: "https://www.ozsmarthome.com.au/services/entertainment-and-av"
   }
