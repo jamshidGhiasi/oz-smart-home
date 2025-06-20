@@ -23,7 +23,7 @@ const Footer = async () => {
                         <h2 className="mt-4 mb-2">Social Media</h2>
                         <div className="flex justify-start gap-2 mt-4">
                             <Link href={'https://www.instagram.com/ozsmarthome/'} rel="noopener noreferrer" target="_blank" aria-label="Visit our Instagram profile" className='flex underline' ><Instagram className='mr-2' /></Link>
-                            <Link href={'https://www.youtube.com/@oz-smart-home'} rel="noopener noreferrer" target="_blank" aria-label="Visit our Facebook profile" className='flex underline ' ><Facebook className='mr-2' /></Link>
+                            <Link href={'https://www.facebook.com/p/OZ-SMART-HOME-61556389307850/'} rel="noopener noreferrer" target="_blank" aria-label="Visit our Facebook profile" className='flex underline ' ><Facebook className='mr-2' /></Link>
                             <Link href={'https://www.youtube.com/@oz-smart-home'} rel="noopener noreferrer" target="_blank" aria-label="Visit our YouTube Channel profile" className='flex underline ' ><Youtube className='mr-2' /></Link>
                             <Link href={'https://www.threads.com/@ozsmarthome'} rel="noopener noreferrer" target="_blank" aria-label="Visit our Threads profile" className='flex underline ' ><AtSign className='mr-2' /></Link>
 
