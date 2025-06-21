@@ -13,7 +13,7 @@ const Footer = async () => {
                         <Link href={'/services'} className="hover:text-white hover:underline mb-2">Services</Link>
                         <Link href={'/projects'} className="hover:text-white hover:underline mb-2">Projects</Link>
                         <Link href={'/smart-home-packages'} className="hover:text-white hover:underline mb-2">Packages</Link>
-                        <Link href={'/book-a-free-smart-home-consultation'} className="hover:text-white hover:underline mb-2">Book a Free Smart Home Consultation</Link>
+                        <Link href={'/services/book-a-free-smart-home-consultation'} className="hover:text-white hover:underline mb-2">Book a Free Smart Home Consultation</Link>
                         <Link href={'/knowledge-hub'} className="hover:text-white hover:underline">Knowledge Hub</Link>
                     </div>
                     <div className="flex flex-col">
