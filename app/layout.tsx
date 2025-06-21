@@ -39,6 +39,7 @@ const jsonLd = {
   },
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "15 Roma Rd",
     "addressLocality": "Sydney",
     "addressRegion": "NSW",
     "postalCode": "2075",
