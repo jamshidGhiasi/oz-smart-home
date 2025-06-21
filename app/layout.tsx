@@ -17,136 +17,34 @@ import SmartHomeChatFAB from '@/components/chat/smarthome-chat-fab';
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'Organization',
-      name: 'Oz Smart Home',
-      logo: 'https://www.ozsmarthome.com.au/oz-smart-home-icon.svg',
-      sameAs: [
-        'https://www.youtube.com/channel/UC_tHsMQBR9da556Wh4vUW6w',
-        'https://www.instagram.com/ozsmarthome/',
-        'https://www.facebook.com/profile.php?id=61556389307850'
-      ],
-      url: 'https://www.ozsmarthome.com.au/',
-      foundingDate: '2020-01-01',
-      foundingLocation: 'Sydney, Australia',
-      areaServed: 'AU',
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: '+61-1800-865-070',
-        contactType: 'Customer Service',
-        areaServed: 'AU',
-        availableLanguage: ['English']
-      },
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Sydney',
-        addressRegion: 'NSW',
-        postalCode: '2075',
-        addressCountry: 'AU'
-      }
-    },
-    {
-      '@type': 'OfferCatalog',
-      name: 'Smart Home Packages',
-      url: 'https://www.ozsmarthome.com.au/smart-home-packages',
-      itemListElement: [
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Product',
-            name: 'Bronze Package',
-            description: 'Entry-level wireless smart home with essential lighting and control.',
-            url: 'https://www.ozsmarthome.com.au/smart-home-packages#bronze'
-          }
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Product',
-            name: 'Silver Package',
-            description: 'Includes lighting, sensors, locks, and mobile app automation.',
-            url: 'https://www.ozsmarthome.com.au/smart-home-packages#silver'
-          }
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Product',
-            name: 'Gold Package',
-            description: 'Advanced package with security, automation, and intercom.',
-            url: 'https://www.ozsmarthome.com.au/smart-home-packages#gold'
-          }
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Product',
-            name: 'Platinum Package',
-            description: 'Premium smart home automation with NVR, comfort controls, and more.',
-            url: 'https://www.ozsmarthome.com.au/smart-home-packages#platinum'
-          }
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Product',
-            name: 'Diamond Wired Package (Loxone)',
-            description: 'Wired Loxone solution with tailored automation and professional setup.',
-            url: 'https://www.ozsmarthome.com.au/smart-home-packages#diamond'
-          }
-        }
-      ]
-    },
-    {
-      '@type': 'Service',
-      serviceType: 'Smart Home Consultation',
-      provider: {
-        '@type': 'Organization',
-        name: 'Oz Smart Home',
-        url: 'https://www.ozsmarthome.com.au'
-      },
-      areaServed: {
-        '@type': 'Place',
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'Sydney',
-          addressRegion: 'NSW',
-          addressCountry: 'AU'
-        }
-      },
-      availableChannel: {
-        '@type': 'ServiceChannel',
-        serviceUrl: 'https://www.ozsmarthome.com.au/services/free-smart-home-consultation',
-        availableLanguage: ['English']
-      },
-      description: 'Free smart home consultation to plan your lighting, automation, and security setup.'
-    },
-    {
-      '@type': 'Service',
-      serviceType: 'Home Assistant Setup & Configuration',
-      provider: {
-        '@type': 'Organization',
-        name: 'Oz Smart Home',
-        url: 'https://www.ozsmarthome.com.au'
-      },
-      areaServed: 'AU',
-      description: 'We help you set up and configure Home Assistant for seamless smart home integration.'
-    },
-    {
-      '@type': 'Service',
-      serviceType: 'Smart Home Installation & Automation',
-      provider: {
-        '@type': 'Organization',
-        name: 'Oz Smart Home',
-        url: 'https://www.ozsmarthome.com.au'
-      },
-      areaServed: 'AU',
-      description: 'Professional installation and automation of smart switches, cameras, intercoms, and more.'
-    }
-  ]
-};
+  '@type': 'Organization',
+  name: 'Oz Smart Home',
+  logo: 'https://www.ozsmarthome.com.au/oz-smart-home-icon.svg',
+  sameAs: [
+    'https://www.youtube.com/channel/UC_tHsMQBR9da556Wh4vUW6w',
+    'https://www.instagram.com/ozsmarthome/',
+    'https://www.facebook.com/profile.php?id=61556389307850'
 
+  ],
+  url: "https://www.ozsmarthome.com.au/",
+  "foundingDate": "2020-01-01",
+  "foundingLocation": "Sydney, Australia",
+  "areaServed": "AU",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+61-1800-865-070",
+    "contactType": "Customer Service",
+    "areaServed": "AU",
+    "availableLanguage": ["English"]
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Sydney",
+    "addressRegion": "NSW",
+    "postalCode": "2075",
+    "addressCountry": "AU"
+  }
+}
 
 const breadcrumbJson = {
   "@context": "https://schema.org/",
