@@ -63,9 +63,11 @@ const breadcrumbJson = {
     { "@type": "ListItem", "position": 10, "name": "Entertainment & AV", "item": "https://www.ozsmarthome.com.au/services/entertainment-and-av" },
     { "@type": "ListItem", "position": 11, "name": "Network", "item": "https://www.ozsmarthome.com.au/services/network" },
     { "@type": "ListItem", "position": 12, "name": "Home Automation", "item": "https://www.ozsmarthome.com.au/services/home-automation" },
-    { "@type": "ListItem", "position": 13, "name": "Contact", "item": "https://www.ozsmarthome.com.au/contact" },
-    { "@type": "ListItem", "position": 14, "name": "Knowledge Hub", "item": "https://www.ozsmarthome.com.au/knowledge-hub" },
-    { "@type": "ListItem", "position": 15, "name": "Reviews", "item": "https://www.ozsmarthome.com.au/reviews" }
+    { "@type": "ListItem", "position": 13, "name": "Home Automation", "item": "https://www.ozsmarthome.com.au/services/book-a-free-smart-home-consultation" },
+    { "@type": "ListItem", "position": 14, "name": "Contact", "item": "https://www.ozsmarthome.com.au/contact" },
+    { "@type": "ListItem", "position": 15, "name": "Knowledge Hub", "item": "https://www.ozsmarthome.com.au/knowledge-hub" },
+    { "@type": "ListItem", "position": 16, "name": "Reviews", "item": "https://www.ozsmarthome.com.au/reviews" },
+    { "@type": "ListItem", "position": 17, "name": "Reviews", "item": "https://www.ozsmarthome.com.au/smart-home-packages" }
   ]
 };
 
@@ -103,8 +105,24 @@ export default function RootLayout({
         <meta property="og:image" content="https://ozsmarthome.com.au/opengraph-image.jpg" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, breadcrumbJson]) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([
+              jsonLd,
+              breadcrumbJson,
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "url": "https://www.ozsmarthome.com.au/",
+                "potentialAction": {
+                  "@type": "SearchAction",
+                  "target": "https://www.ozsmarthome.com.au/search?q={search_term_string}",
+                  "query-input": "required name=search_term_string"
+                }
+              }
+            ])
+          }}
         />
+
 
         <meta name="google-site-verification" content="Ck6elDb-LnhUPytJy_BFvOjyUdAEYgH7cdTisovwnHs" />
       </head>

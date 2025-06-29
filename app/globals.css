@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer base {
   :root {
     --background: #f5f6f7;
@@ -25,6 +26,7 @@
     --ring: 222.2 84% 4.9%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
@@ -47,34 +49,41 @@
     --ring: 212.7 26.8% 83.9%;
   }
 }
+
 @layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
+
 .subHeading,
 h1,
 h2,
 h3 {
   font-family: var(--font-rhd);
 }
+
 h1,
 h2 {
   font-weight: 900;
   margin-bottom: 1rem;
   margin-top: 2rem;
 }
+
 h1 .sub-heading,
 h2 .sub-heading {
   font-weight: 500;
   display: block;
 }
+
 p {
   margin-bottom: 0.5rem;
 }
+
 .hero-banner {
   z-index: 1;
   position: absolute;
@@ -88,6 +97,7 @@ p {
   -webkit-transform: translatex(-50%);
   transform: translatex(-50%);
 }
+
 .hero-banner {
   width: 358px;
   height: 500px;
@@ -95,6 +105,7 @@ p {
   background-repeat: no-repeat;
   background-image: url('.././public/oz-smart-home-hero-sm.jpg');
 }
+
 @media (min-width: 640px) {
   .hero-banner {
     width: 1200px;
@@ -104,6 +115,7 @@ p {
     background-image: url('.././public/oz-smart-home-hero-md.jpg');
   }
 }
+
 @media (min-width: 1024px) {
   .hero-banner {
     width: 1839px;
@@ -112,4 +124,38 @@ p {
     background-repeat: no-repeat;
     background-image: url('.././public/oz-smart-home-hero-lg.jpg');
   }
+}
+
+/* Code block copy button */
+pre {
+  position: relative;
+}
+
+pre::after {
+  content: "Copy";
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  background: #333;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+pre:hover::after {
+  opacity: 1;
+}
+
+.prose a {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.prose ul {
+  list-style-type: disc;
+  padding-left: 1.25rem;
 }

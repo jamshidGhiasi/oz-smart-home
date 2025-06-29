@@ -39,7 +39,7 @@ const HeaderMobile = () => {
     return (
         <div className='sticky top-0 z-40 '>
             <div className='flex items-center bg-[hsl(240,3.7%,15.9%)]  xl:hidden'>
-                <div >
+                <div className='w-full' >
                     <div className="flex h-[64px] items-center justify-between ">
                         <Link
                             href="/"
@@ -48,7 +48,13 @@ const HeaderMobile = () => {
                             <OSHBrand />
                             <OSHCopy className='font-bold text-white' />
                         </Link>
+                        <div className="flex items-center gap-2 justify-end">
+
+                            <MenuToggle toggle={toggleOpen} />
+                            <SearchBar className='mr-20' />
+                        </div>
                     </div>
+
                 </div>
                 <motion.nav
                     initial={false}
@@ -93,7 +99,7 @@ const HeaderMobile = () => {
                     </motion.ul>
                     <MenuToggle toggle={toggleOpen} />
                 </motion.nav>
-                {!isDesktop && <SearchBar className='ml-auto mr-[64px]' />}
+
             </div>
         </div>
     );

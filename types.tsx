@@ -14,16 +14,23 @@ export type MenuItemWithSubMenuProps = {
   toggleOpen: () => void;
 };
 
-export interface PageContent {
+export type PageContent = {
   slug: string;
   title: string;
+  subtitle?: string;
   shortTitle?: string;
-  subtitle: string;
   intro?: string;
   introAction?: string;
+  date?: string;
+  excerpt?: string;
+  coverImage?: string;
+  coverImageMime?: string;
+  tags?: string[];          // ✅ NEW
+  categories?: string[];    // ✅ NEW
   content: string;
+  type: "page" | "blog";
   metadata: Record<string, any>;
-}
+};
 
 export interface MarkdownPage {
   slug: string;

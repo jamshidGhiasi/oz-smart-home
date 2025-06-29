@@ -1,16 +1,24 @@
+// lib/search.ts
 import { PageContent } from "@/types";
-import { marked } from "marked";
+
 export function search(query: string, searchIndex: PageContent[]) {
   const lowercaseQuery = query.toLowerCase();
-  return searchIndex.filter(async (page) => {
-    const titleMatch = page.title.toLowerCase().includes(lowercaseQuery);
-    const subtitleMatch = page.subtitle.toLowerCase().includes(lowercaseQuery);
-    const renderedContent = await marked(page.content);
-    const contentMatch = renderedContent.toLowerCase().includes(lowercaseQuery);
-    const metadataMatch = Object.values(page.metadata).some((value) =>
-      String(value).toLowerCase().includes(lowercaseQuery)
-    );
 
-    return titleMatch;
+  return searchIndex.filter((page) => {
+    const matchText = [
+      page.title,
+      page.subtitle,
+      page.shortTitle,
+      page.intro,
+      page.content,
+      ...(page.tags ?? []),
+      ...(page.categories ?? []),
+      ...Object.values(page.metadata || {}),
+    ]
+      .filter(Boolean) // remove undefined/null
+      .map((v) => String(v).toLowerCase())
+      .join(" ");
+
+    return matchText.includes(lowercaseQuery);
   });
 }

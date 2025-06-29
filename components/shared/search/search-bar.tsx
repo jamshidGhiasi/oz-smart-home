@@ -1,164 +1,105 @@
-import { Copy, Divide, Home, Search, Slash, Users } from "lucide-react";
-import { Button } from "../ui/button";
-import { cn } from "@/lib/utils";
-import { useRouter } from "next/navigation";
-import { useHotkeys } from 'react-hotkeys-hook'
-import { useCallback, useState } from "react";
-import { useEffect } from "react";
-import { sendGAEvent } from "@next/third-parties/google";
-import {
-    Calculator,
-    Calendar,
-    CreditCard,
-    Settings,
-    Smile,
-    User,
-    File,
-    Library
-} from "lucide-react"
+'use client'
 
-import {
-    Command,
-    CommandDialog,
-    CommandEmpty,
-    CommandGroup,
-    CommandInput,
-    CommandItem,
-    CommandList,
-    CommandSeparator,
-    CommandShortcut,
-} from "@/components/ui/command"
+import { Search } from 'lucide-react'
+import { useRouter } from 'next/navigation'
+import { useEffect, useRef, useState, FormEvent } from 'react'
+import { Input } from '@/components/ui/input'
+import { cn } from '@/lib/utils'
+import { sendGAEvent } from '@next/third-parties/google'
+import { useMediaQuery } from '@/utils/use-media-query'
 
+export default function SearchBar({ className }: { className?: string }) {
+    const [query, setQuery] = useState('')
+    const [expanded, setExpanded] = useState(false)
+    const router = useRouter()
 
-import { AirVent, Blinds, Cctv, DoorOpen, Lightbulb, Send, Theater, Wifi, Workflow } from "lucide-react"
+    const isDesktop = useMediaQuery('(min-width: 1280px)')
+    const desktopInputRef = useRef<HTMLInputElement>(null)
+    const mobileInputRef = useRef<HTMLInputElement>(null)
 
-import React from "react";
-import { searchPages } from "@/utils/search-page-content";
-import { PageContent } from "@/types";
-import { debounce } from '@/utils/debounce';
-import { json } from "stream/consumers";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-
-interface SearchBarProps {
-    className?: string
-    props?: any
-}
-
-
-// Object mapping slugs to icons
-const slugIcons: { [key: string]: React.ElementType } = {
-    'about': Library,
-    'services/smart-lighting': Lightbulb,
-    'services/smart-blinds-and-curtains': Blinds,
-    'services/smart-air-conditioning': AirVent,
-    'services/smart-access-and-intercom': DoorOpen,
-    'services/cctv-security-and-alarm': Cctv,
-    'services/entertainment-and-av': Theater,
-    'services/network': Wifi,
-    'services/home-automation': Workflow,
-};
-
-const SearchBar: React.FC<SearchBarProps> = ({
-    className,
-    ...props
-}) => {
-    const [open, setOpen] = useState(false);
-    const [searchResults, setSearchResults] = useState<PageContent[]>([]);
-    const [loading, setLoading] = useState(false);
-    const router = useRouter();
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+        if (query.trim()) {
+            sendGAEvent('event', 'search_triggered', { value: 'header' })
+            router.push(`/search?q=${encodeURIComponent(query.trim())}`)
+            setQuery('')
+            setExpanded(false)
+        }
+    }
 
     useEffect(() => {
         const down = (e: KeyboardEvent) => {
-            if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
-                e.preventDefault();
-                setOpen((open) => !open);
-                sendGAEvent('event', 'search_triggered', { value: 'shortcut' })
+            const isMac = navigator.platform.toUpperCase().includes('MAC')
+            const isShortcut = (isMac && e.metaKey && e.key === 'k') || (!isMac && e.ctrlKey && e.key === 'k')
+
+            if (isShortcut) {
+                e.preventDefault()
+
+                if (isDesktop) {
+                    setExpanded(true)
+                    setTimeout(() => desktopInputRef.current?.focus(), 0)
+                } else {
+                    setExpanded(true)
+                    setTimeout(() => mobileInputRef.current?.focus(), 0)
+                }
             }
-        };
+        }
 
-        document.addEventListener('keydown', down);
-        return () => document.removeEventListener('keydown', down);
-    }, []);
-
-    const handleSearch = useCallback(
-        debounce(async (value: string) => {
-            if (value.trim() === '') {
-                setSearchResults([]);
-                return;
-            }
-
-            setLoading(true);
-            try {
-
-                const response = await fetch(`/api/search/pages?q=${encodeURIComponent(value)}`);
-                const results = await response.json();
-                sendGAEvent('event', 'search_results_appeared', { value: results.length })
-                setSearchResults(results);
-            } catch (error) {
-                console.error('Search error:', error);
-                setSearchResults([]);
-            } finally {
-                setLoading(false);
-            }
-        }, 300),
-        []
-    );
-
-
-
-    const handleSelect = (slug: string) => {
-        router.push(`/${slug}`);
-        setOpen(false);
-    };
-
-    const handleSearchButtonClick = () => {
-        setOpen(true)
-        sendGAEvent('event', 'search_triggered', { value: 'buttonClick' })
-    }
+        document.addEventListener('keydown', down)
+        return () => document.removeEventListener('keydown', down)
+    }, [isDesktop])
 
     return (
-        <>
-            <Button variant="outline" onClick={handleSearchButtonClick} className={cn("border-none mr-4 text-xs bg-neutral-800 text-neutral-400 hover:bg-neutral-700 hover:text-white group", className)}>
-                <Search className="w-4 h-4 xl:mr-2" />
-                <span className="hidden  xl:block" >Search Services...</span>
-                <kbd className="ml-2 pointer-events-none hidden lg:inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100 ">
-                    <span className="text-xs">⌘</span>K
+        <div className={cn('relative', className)}>
+            {/* Desktop Input */}
+            <form
+                onSubmit={handleSubmit}
+                className={cn(
+                    'hidden xl:flex items-center border border-neutral-700 bg-neutral-900 rounded-md px-2 py-1 transition-all w-full max-w-40',
+                    'focus-within:ring-2 focus-within:ring-blue-500'
+                )}
+            >
+                <Search className="w-4 h-4 text-neutral-400 mr-2" />
+                <input
+                    ref={desktopInputRef}
+                    type="text"
+                    value={query}
+                    onChange={(e) => setQuery(e.target.value)}
+                    placeholder="Search..."
+                    className="bg-transparent border-none focus:outline-none text-sm text-white placeholder:text-neutral-500 w-full"
+                />
+                <kbd className="ml-2 hidden lg:inline-flex items-center gap-1 rounded bg-muted px-1.5 font-mono text-[10px] text-muted-foreground">
+                    ⌘K
                 </kbd>
-            </Button>
+            </form>
 
-
-
-            <CommandDialog open={open} onOpenChange={setOpen} >
-
-                <CommandInput placeholder="Type a command or search..." onValueChange={handleSearch} />
-                <Command shouldFilter={false}>
-                    <CommandList>
-
-                        {searchResults.length === 0 && <CommandEmpty>No results found.</CommandEmpty>}
-
-                        {searchResults && searchResults.map((page) => {
-                            const IconComponent = slugIcons[page.slug] || File;
-                            return <CommandItem key={page.slug} onSelect={() => handleSelect(page.slug)}>
-                                <div className="flex items-center justify-start px-4">
-
-
-                                    <IconComponent className="mr-4" />
-                                    {page.shortTitle && <span>{page.shortTitle}</span>}
-                                    {!page.shortTitle && <span>{page.title}</span>}
-                                </div>
-                            </CommandItem>
-                        })}
-
-                    </CommandList>
-                </Command>
-
-
-            </CommandDialog>
-
-
-        </>
-    );
+            {/* Mobile Icon Button */}
+            <div className="xl:hidden">
+                {!expanded ? (
+                    <button
+                        onClick={() => {
+                            setExpanded(true)
+                            setTimeout(() => mobileInputRef.current?.focus(), 0)
+                        }}
+                        className="p-2 text-neutral-400 hover:text-white"
+                        aria-label="Open Search"
+                    >
+                        <Search className="w-5 h-5" />
+                    </button>
+                ) : (
+                    <form onSubmit={handleSubmit} className="w-full">
+                        <Input
+                            ref={mobileInputRef}
+                            autoFocus
+                            value={query}
+                            onChange={(e) => setQuery(e.target.value)}
+                            placeholder="Search..."
+                            className="text-sm bg-neutral-800 text-white w-full"
+                            onBlur={() => setExpanded(false)}
+                        />
+                    </form>
+                )}
+            </div>
+        </div>
+    )
 }
-
-export default SearchBar;
