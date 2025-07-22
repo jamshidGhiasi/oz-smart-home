@@ -8,8 +8,8 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 export const metadata: Metadata = {
-  title: 'CCTV Security & Alarm Systems | Oz Smart Home',
-  description: `Protect your property with Oz Smart Home's advanced CCTV and alarm systems. Enjoy peace of mind with tailored smart security solutions for home or business.`,
+  title: 'Smart CCTV & Alarm Systems | Home Security Solutions | Oz Smart Home',
+  description: `Protect your home with advanced CCTV and smart alarm systems. Oz Smart Home delivers tailored security solutions with remote access and professional setup.`,
   alternates: {
     canonical: "https://www.ozsmarthome.com.au/services/cctv-security-and-alarm"
   }
