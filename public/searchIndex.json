@@ -38,7 +38,7 @@
       ],
       "coverImage": "/images/blogs/home-assistant-green/home-assistant-green-cover.jpg",
       "seo": {
-        "title": "Home Assistant Green: The Simplest Way to Start Your Smart Home",
+        "title": "Home Assistant Green: The Simplest Way to Start Your Smart Home | Oz Smart Home",
         "description": "Discover how Home Assistant and the new Home Assistant Green make smart home automation easy, private, and powerful—perfect for beginners and enthusiasts alike."
       }
     }
@@ -52,7 +52,7 @@
     "introAction": "",
     "date": "2025-06-29T00:00:00.000Z",
     "excerpt": "Discover how Matter and Thread are revolutionizing smart home standards for seamless, secure, and local control.",
-    "coverImage": "/content/knowledge-hub/matter-thread-guide//images/blogs/matter-thread.jpg",
+    "coverImage": "/content/knowledge-hub/matter-thread-guide//images/blogs/matter-thread-guide/matter-thread-guide-cover.jpg",
     "content": "\nSmart homes are evolving — and two new protocols are leading the charge: **Matter** and **Thread**.\n\nTogether, they aim to fix what’s broken with current smart home ecosystems: fragmentation, cloud dependence, and lack of interoperability.\n\n## What is Matter?\n\n**Matter** is a unified open-source standard developed by the **Connectivity Standards Alliance** (formerly Zigbee Alliance). It was launched with backing from tech giants like Apple, Google, Amazon, and Samsung.\n\n### Key Goals of Matter:\n\n- 🔒 **Local and Secure** communication.\n- 🌉 **Cross-Platform Interoperability** (Apple, Google, Alexa, SmartThings, Home Assistant).\n- 🧩 **Simple Setup** with QR-code pairing.\n- 🌎 **Open Ecosystem** that encourages brand collaboration.\n\nMatter supports common device types like:\n\n- Lights\n- Switches\n- Sensors\n- Locks\n- Thermostats\n- TVs and more\n\n## What is Thread?\n\n**Thread** is a low-power wireless mesh protocol that complements Matter.\n\nThink of Thread as the **network** and Matter as the **language** devices speak.\n\n### Why Thread is Important:\n\n- 📡 Mesh networking (each device extends coverage).\n- 🔋 Low power usage (ideal for sensors).\n- 🌐 IPv6-based (future-proof).\n- 🛡️ Self-healing network with no single point of failure.\n\nThread-enabled devices typically need a **Thread Border Router**, like:\n\n- **Apple HomePod Mini**\n- **Google Nest Hub (2nd Gen)**\n- **Amazon Echo (latest)**\n- **Home Assistant Yellow / Home Assistant SkyConnect**\n\n## Matter + Thread in Action\n\nOnce set up, Matter devices using Thread can:\n\n- Work locally without relying on the cloud.\n- Respond faster and more reliably.\n- Be controlled from multiple ecosystems at once.\n\n## Compatible Brands (as of 2025)\n\n- **Apple** – HomePod Mini, Apple TV 4K.\n- **Google Nest** – Hubs and routers.\n- **Amazon** – Echo, eero routers.\n- **Nanoleaf** – Shapes, Essentials bulbs and strips. [View](https://nanoleaf.me/en-AU/)\n- **Eve** – Motion, energy, and door sensors. [View](https://www.jbhifi.com.au/collections/eve)\n- **TP-Link/Kasa** – Upcoming Matter-enabled plugs and switches. [View](https://www.tp-link.com/au/smarthome/)\n- **Aqara** – Matter bridges and sensors. [View](https://www.aqarastore.com.au/)\n\n## Matter & Thread in Home Assistant\n\nHome Assistant now natively supports Matter and Thread through:\n\n- **Home Assistant Green or Yellow**.\n- **SkyConnect USB stick**.\n- **Matter add-on with multiprotocol support**.\n\nThis opens up your smart home to future-proof automation — all running **locally**, securely, and vendor-agnostic.",
     "type": "blog",
     "metadata": {
@@ -64,9 +64,9 @@
         "Thread",
         "smart home protocols"
       ],
-      "coverImage": "/images/blogs/matter-thread.jpg",
+      "coverImage": "/images/blogs/matter-thread-guide/matter-thread-guide-cover.jpg",
       "seo": {
-        "title": "Matter and Thread: Smarter Smart Homes with Interoperability",
+        "title": "Matter and Thread: Smarter Smart Homes with Interoperability | Oz Smart Home",
         "description": "Learn how Matter and Thread enable reliable, secure, and cross-platform smart home automation, with support from Apple, Google, Amazon, and more."
       }
     }
@@ -92,7 +92,34 @@
         "Home Assistant",
         "automation"
       ],
-      "coverImage": "/images/blogs/smart-blinds/smart-blinds-cover.jpg"
+      "coverImage": "/images/blogs/smart-blinds/smart-blinds-cover.jpg",
+      "seo": {
+        "title": "Automating Smart Blinds with Home Assistant: Schedules, Sensors, and Scenes | Oz Smart Home",
+        "description": "A practical guide to automating your smart blinds using Home Assistant. Includes step-by-step YAML examples, recommended sensors, and integration tips."
+      }
+    }
+  },
+  {
+    "slug": "knowledge-hub/smart-lighting-benefits",
+    "title": "Smart Lighting: Enhancing Homes with Convenience and Efficiency",
+    "subtitle": "",
+    "shortTitle": "",
+    "intro": "",
+    "introAction": "",
+    "date": "2025-07-22",
+    "excerpt": "Discover how smart lighting transforms everyday living with convenience, efficiency, and style—ideal for both homeowners and builders.",
+    "coverImage": "/content/knowledge-hub/smart-lighting-benefits//images/blog/smart-lighting-benefits-cover.jpg",
+    "content": "\n## Smart Lighting: Enhancing Homes with Convenience and Efficiency\n\nIn the modern world of connected living, smart lighting has become a foundational component of home automation. Whether you're a homeowner upgrading your space or a builder developing a new project, smart lighting delivers a unique blend of convenience, energy savings, and elevated design.\n\n### What Is Smart Lighting?\n\nSmart lighting refers to lighting systems that can be controlled remotely via smartphone apps, voice assistants (like Alexa, Google Assistant, and Siri), motion sensors, and automation schedules. Unlike traditional switches, smart lighting offers seamless control over brightness, color temperature, and power state—whether you're at home or away.\n\n### Key Benefits for Homeowners\n\n#### 1. **Convenience and Control**\n\nImagine turning off all the lights in your house with a single tap before bed. With smart lighting, you can control your entire home from your phone or voice, set schedules to match your lifestyle, and create scenes like \"Movie Time\" or \"Morning Wake-Up.\"\n\n#### 2. **Energy Efficiency**\n\nSmart LED bulbs use significantly less energy than traditional incandescent lights and can be programmed to turn off when rooms are unoccupied. This reduces electricity bills and supports sustainability.\n\n#### 3. **Enhanced Security**\n\nAutomated lighting can mimic occupancy when you're on holiday, deterring potential intruders. Motion-activated outdoor lights can further enhance your home's safety.\n\n#### 4. **Mood and Wellness**\n\nTunable white lighting allows you to match your home’s ambiance to your mood or circadian rhythm—cool white for focus during the day, and warm tones for relaxing evenings.\n\n### Smart Lighting for Builders and Developers\n\nSmart lighting isn't just a trend—it's an expectation. Including smart lighting in your new builds offers:\n\n- **Increased Property Value**: Smart-enabled homes are more attractive to tech-savvy buyers.\n- **Market Differentiation**: Stand out in competitive developments with integrated smart systems.\n- **Pre-wired Convenience**: Builders can pre-install Zigbee, KNX, or Matter-compatible lighting infrastructure for seamless upgrades.\n\n### Popular Smart Lighting Brands in Australia\n\n- **Philips Hue** – Widely compatible with Home Assistant and Matter.\n- **Zemismart** – Affordable Zigbee smart switches and lights.\n- **LIFX** – High-quality Wi-Fi bulbs with vivid color range.\n- **Mercator Ikuü** – Australian brand with Zigbee support.\n\n### Integration with Smart Home Platforms\n\nAt Oz Smart Home, we ensure your lighting integrates effortlessly with systems like Home Assistant, Apple HomeKit, Google Home, or Alexa. Whether retrofitting or building from scratch, our team of software engineers guarantees reliable, flexible control.\n\n---\n\n### Ready to Upgrade?\n\nIf you're a homeowner looking to modernise or a builder wanting to offer the best to your clients, smart lighting is the perfect place to start.\n\n[Book a Free Consultation](https://www.ozsmarthome.com.au/contact) or [Explore Our Smart Lighting Packages](https://www.ozsmarthome.com.au/services/smart-lighting)",
+    "type": "blog",
+    "metadata": {
+      "title": "Smart Lighting: Enhancing Homes with Convenience and Efficiency",
+      "date": "2025-07-22",
+      "excerpt": "Discover how smart lighting transforms everyday living with convenience, efficiency, and style—ideal for both homeowners and builders.",
+      "coverImage": "/images/blog/smart-lighting-benefits-cover.jpg",
+      "seo": {
+        "title": "Benefits of Smart Lighting for Homes and New Builds | Oz Smart Home",
+        "description": "Explore how smart lighting systems boost convenience, energy efficiency, and modern aesthetics for homeowners and builders alike."
+      }
     }
   },
   {
@@ -104,7 +131,7 @@
     "introAction": "",
     "date": "2025-06-29T00:00:00.000Z",
     "excerpt": "Explore the origins, benefits, and top devices that use Zigbee — one of the most widely adopted smart home communication protocols.",
-    "coverImage": "/content/knowledge-hub/zigbee-guide//images/blogs/zigbee-devices.jpg",
+    "coverImage": "/content/knowledge-hub/zigbee-guide//images/blogs/zigbee-guide/zigbee-guide-cover.jpg",
     "content": "\nZigbee is a low-power, wireless mesh communication protocol used extensively in smart home devices. It enables reliable, local device-to-device communication without relying heavily on Wi-Fi or the cloud.\n\n## A Brief History\n\nZigbee was introduced in the early 2000s and is based on the IEEE 802.15.4 standard. It was designed to provide simple, low-power wireless connectivity for short-range communication — ideal for sensors, lights, and switches.\n\nOver the years, Zigbee has been adopted by hundreds of companies, leading to the creation of the **Zigbee Alliance** (now called the **Connectivity Standards Alliance**, or CSA), which also oversees **Matter**.\n\n## Key Benefits of Zigbee\n\n- 🔋 **Low Power Consumption**: Perfect for battery-powered sensors and devices.\n- 🔁 **Mesh Networking**: Each device strengthens the network by repeating signals.\n- 🌐 **Local Control**: Works even when your internet is down.\n- 🔌 **Interoperability**: Many devices from different brands work together (when certified).\n\n## Popular Zigbee Devices\n\nThese are some of the most reliable Zigbee-compatible products available in Australia:\n\n- **Philips Hue Bulbs** — Renowned for quality smart lighting. [View](https://www.philips-hue.com/en-au/products/smart-light-bulbs)\n- **Aqara Sensors** — Affordable motion, temperature, and contact sensors. [View](https://www.aqarastore.com.au/)\n- **Sonoff Zigbee Switches** — Great for retrofitting light switches. [View](https://sonoff.au/)\n- **IKEA TRÅDFRI** — Budget-friendly Zigbee bulbs, remotes, and plugs. [View](https://www.ikea.com/au/en/cat/tradfri-series-700598/)\n\n## How to Use Zigbee with Home Assistant\n\nZigbee integrates with Home Assistant using:\n\n- **ZHA** (Zigbee Home Automation) — Built-in integration.\n- **Zigbee2MQTT** — Popular for power users wanting greater control.\n\nYou'll need a **Zigbee coordinator** such as:\n\n- 🟢 **Sonoff Zigbee Dongle Plus**\n- 🔵 **ConBee II USB Stick**\n\nOnce configured, Zigbee devices are fast, responsive, and reliable — ideal for critical automations like lights, sensors, and locks.",
     "type": "blog",
     "metadata": {
@@ -116,9 +143,9 @@
         "smart devices",
         "protocols"
       ],
-      "coverImage": "/images/blogs/zigbee-devices.jpg",
+      "coverImage": "/images/blogs/zigbee-guide/zigbee-guide-cover.jpg",
       "seo": {
-        "title": "Zigbee Explained: History, Advantages, and Best Devices for Your Smart Home",
+        "title": "Zigbee Explained: History, Advantages, and Best Devices for Your Smart Home | Oz Smart Home",
         "description": "Learn about the Zigbee protocol, its origins, strengths, and how it powers some of the most popular smart home devices. Includes integration tips and top product picks."
       }
     }
