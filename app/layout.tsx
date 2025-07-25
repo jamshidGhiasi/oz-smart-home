@@ -144,7 +144,7 @@ export default function RootLayout({
           <Footer />
         </main>
         <Toaster />
-        <SmartHomeChatFAB />
+        {/* <SmartHomeChatFAB /> */}
       </body>
     </html>
   )
