@@ -2,7 +2,7 @@ import Link from "next/link"
 import ContentWrapper from "../layout/content-wrapper"
 import { ChevronRight, PhoneOutgoing, Send } from "lucide-react"
 
-const CallToAction = async () => {
+const CallToAction = () => {
     return (
         <ContentWrapper className=' bg-black mx-4 my-4 py-4 lg:py-24 mb-[56px] lg:mb-auto'>
             <div className=' text-white   p-4 lg:p-0 mb-0 lg:mb-8 '>
@@ -17,7 +17,7 @@ const CallToAction = async () => {
                 </div>
             </div>
 
-         
+
         </ContentWrapper>
     )
 }

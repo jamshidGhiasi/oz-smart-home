@@ -108,14 +108,14 @@
     "introAction": "",
     "date": "2025-07-22",
     "excerpt": "Discover how smart lighting transforms everyday living with convenience, efficiency, and style—ideal for both homeowners and builders.",
-    "coverImage": "/content/knowledge-hub/smart-lighting-benefits//images/blog/smart-lighting-benefits-cover.jpg",
-    "content": "\n## Smart Lighting: Enhancing Homes with Convenience and Efficiency\n\nIn the modern world of connected living, smart lighting has become a foundational component of home automation. Whether you're a homeowner upgrading your space or a builder developing a new project, smart lighting delivers a unique blend of convenience, energy savings, and elevated design.\n\n### What Is Smart Lighting?\n\nSmart lighting refers to lighting systems that can be controlled remotely via smartphone apps, voice assistants (like Alexa, Google Assistant, and Siri), motion sensors, and automation schedules. Unlike traditional switches, smart lighting offers seamless control over brightness, color temperature, and power state—whether you're at home or away.\n\n### Key Benefits for Homeowners\n\n#### 1. **Convenience and Control**\n\nImagine turning off all the lights in your house with a single tap before bed. With smart lighting, you can control your entire home from your phone or voice, set schedules to match your lifestyle, and create scenes like \"Movie Time\" or \"Morning Wake-Up.\"\n\n#### 2. **Energy Efficiency**\n\nSmart LED bulbs use significantly less energy than traditional incandescent lights and can be programmed to turn off when rooms are unoccupied. This reduces electricity bills and supports sustainability.\n\n#### 3. **Enhanced Security**\n\nAutomated lighting can mimic occupancy when you're on holiday, deterring potential intruders. Motion-activated outdoor lights can further enhance your home's safety.\n\n#### 4. **Mood and Wellness**\n\nTunable white lighting allows you to match your home’s ambiance to your mood or circadian rhythm—cool white for focus during the day, and warm tones for relaxing evenings.\n\n### Smart Lighting for Builders and Developers\n\nSmart lighting isn't just a trend—it's an expectation. Including smart lighting in your new builds offers:\n\n- **Increased Property Value**: Smart-enabled homes are more attractive to tech-savvy buyers.\n- **Market Differentiation**: Stand out in competitive developments with integrated smart systems.\n- **Pre-wired Convenience**: Builders can pre-install Zigbee, KNX, or Matter-compatible lighting infrastructure for seamless upgrades.\n\n### Popular Smart Lighting Brands in Australia\n\n- **Philips Hue** – Widely compatible with Home Assistant and Matter.\n- **Zemismart** – Affordable Zigbee smart switches and lights.\n- **LIFX** – High-quality Wi-Fi bulbs with vivid color range.\n- **Mercator Ikuü** – Australian brand with Zigbee support.\n\n### Integration with Smart Home Platforms\n\nAt Oz Smart Home, we ensure your lighting integrates effortlessly with systems like Home Assistant, Apple HomeKit, Google Home, or Alexa. Whether retrofitting or building from scratch, our team of software engineers guarantees reliable, flexible control.\n\n---\n\n### Ready to Upgrade?\n\nIf you're a homeowner looking to modernise or a builder wanting to offer the best to your clients, smart lighting is the perfect place to start.\n\n[Book a Free Consultation](https://www.ozsmarthome.com.au/contact) or [Explore Our Smart Lighting Packages](https://www.ozsmarthome.com.au/services/smart-lighting)",
+    "coverImage": "/content/knowledge-hub/smart-lighting-benefits//images/blogs/smart-lighting-benefits/smart-lighting-benefits-cover.jpg",
+    "content": "\n## Smart Lighting: Enhancing Homes with Convenience and Efficiency\n\nIn the modern world of connected living, smart lighting has become a foundational component of home automation. Whether you're a homeowner upgrading your space or a builder developing a new project, smart lighting delivers a unique blend of convenience, energy savings, and elevated design.\n\n### What Is Smart Lighting?\n\nSmart lighting refers to lighting systems that can be controlled remotely via smartphone apps, voice assistants (like Alexa, Google Assistant, and Siri), motion sensors, and automation schedules. Unlike traditional switches, smart lighting offers seamless control over brightness, color temperature, and power state—whether you're at home or away.\n\n### Key Benefits for Homeowners\n\n#### 1. **Convenience and Control**\n\nImagine turning off all the lights in your house with a single tap before bed. With smart lighting, you can control your entire home from your phone or voice, set schedules to match your lifestyle, and create scenes like \"Movie Time\" or \"Morning Wake-Up.\"\n\n#### 2. **Energy Efficiency**\n\nSmart LED bulbs use significantly less energy than traditional incandescent lights and can be programmed to turn off when rooms are unoccupied. This reduces electricity bills and supports sustainability.\n\n#### 3. **Enhanced Security**\n\nAutomated lighting can mimic occupancy when you're on holiday, deterring potential intruders. Motion-activated outdoor lights can further enhance your home's safety.\n\n#### 4. **Mood and Wellness**\n\nTunable white lighting allows you to match your home’s ambiance to your mood or circadian rhythm—cool white for focus during the day, and warm tones for relaxing evenings.\n\n### Smart Lighting for Builders and Developers\n\nSmart lighting isn't just a trend—it's an expectation. Including smart lighting in your new builds offers:\n\n- **Increased Property Value**: Smart-enabled homes are more attractive to tech-savvy buyers.\n- **Market Differentiation**: Stand out in competitive developments with integrated smart systems.\n- **Pre-wired Convenience**: Builders can pre-install Zigbee, KNX, or Matter-compatible lighting infrastructure for seamless upgrades.\n\n### Popular Smart Lighting Brands in Australia\n\n- **Philips Hue** – Widely compatible with Home Assistant and Matter.\n- **Zemismart** – Affordable Zigbee smart switches and lights.\n- **LIFX** – High-quality Wi-Fi bulbs with vivid color range.\n- **Mercator Ikuü** – Australian brand with Zigbee support.\n\n### Integration with Smart Home Platforms\n\nAt Oz Smart Home, we ensure your lighting integrates effortlessly with systems like Home Assistant, Apple HomeKit, Google Home, or Alexa. Whether retrofitting or building from scratch, our team of software engineers guarantees reliable, flexible control.\n\n---\n\n### Ready to Upgrade?\n\nIf you're a homeowner looking to modernise or a builder wanting to offer the best to your clients, smart lighting is the perfect place to start.\n\n[Book a Free Consultation](https://www.ozsmarthome.com.au/services/book-a-free-smart-home-consultation) or [Explore Our Smart Lighting Packages](https://www.ozsmarthome.com.au/services/smart-lighting)",
     "type": "blog",
     "metadata": {
       "title": "Smart Lighting: Enhancing Homes with Convenience and Efficiency",
       "date": "2025-07-22",
       "excerpt": "Discover how smart lighting transforms everyday living with convenience, efficiency, and style—ideal for both homeowners and builders.",
-      "coverImage": "/images/blog/smart-lighting-benefits-cover.jpg",
+      "coverImage": "/images/blogs/smart-lighting-benefits/smart-lighting-benefits-cover.jpg",
       "seo": {
         "title": "Benefits of Smart Lighting for Homes and New Builds | Oz Smart Home",
         "description": "Explore how smart lighting systems boost convenience, energy efficiency, and modern aesthetics for homeowners and builders alike."
@@ -148,6 +148,34 @@
         "title": "Zigbee Explained: History, Advantages, and Best Devices for Your Smart Home | Oz Smart Home",
         "description": "Learn about the Zigbee protocol, its origins, strengths, and how it powers some of the most popular smart home devices. Includes integration tips and top product picks."
       }
+    }
+  },
+  {
+    "slug": "projects/sample-project",
+    "title": "Sample Project: Modern Smart Home",
+    "subtitle": "",
+    "shortTitle": "",
+    "intro": "",
+    "introAction": "",
+    "date": "2024-06-01",
+    "excerpt": "A showcase of a modern smart home installation featuring lighting, security, and automation.",
+    "coverImage": "/content/projects/sample-project//projects/ozsmarthome-google-business-profile-photo-1@2x-100.jpg",
+    "content": "\n## Project Overview\n\nThis sample project demonstrates the capabilities of Oz Smart Home in delivering end-to-end smart home solutions. From consultation to installation and support, we ensure every detail is covered.\n\n### Features\n\n- Smart lighting (indoor & outdoor)\n- CCTV security & alarm\n- Home automation scenes\n- AV & entertainment integration\n\n### Gallery\n\n![Photo 1](/projects/ozsmarthome-google-business-profile-photo-2@2x-100.jpg)\n![Photo 2](/projects/ozsmarthome-google-business-profile-photo-3@2x-100.jpg)\n![Photo 3](/projects/ozsmarthome-google-business-profile-photo-4@2x-100.jpg)\n\n### More Details\n\nFor more information, contact us or explore our other projects.\n",
+    "type": "page",
+    "metadata": {
+      "title": "Sample Project: Modern Smart Home",
+      "date": "2024-06-01",
+      "excerpt": "A showcase of a modern smart home installation featuring lighting, security, and automation.",
+      "coverImage": "/projects/ozsmarthome-google-business-profile-photo-1@2x-100.jpg",
+      "gallery": [
+        "/projects/ozsmarthome-google-business-profile-photo-2@2x-100.jpg",
+        "/projects/ozsmarthome-google-business-profile-photo-3@2x-100.jpg",
+        "/projects/ozsmarthome-google-business-profile-photo-4@2x-100.jpg"
+      ],
+      "type": "Residential",
+      "suburb": "Sydney",
+      "shortDescription": "This project highlights a full smart home retrofit, including lighting, security, and AV integration.",
+      "longDescription": "The Modern Smart Home project involved a comprehensive upgrade of an existing residence with the latest in smart technology. We installed smart lighting throughout, integrated a robust security system, and provided seamless AV solutions. The result is a home that is not only secure and energy-efficient but also a joy to live in, with automation tailored to the client's lifestyle.\n"
     }
   },
   {
