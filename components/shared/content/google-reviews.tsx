@@ -5,7 +5,7 @@ import { ElfsightWidget } from 'react-elfsight-widget';
 
 export const metadata: Metadata = {
   title: 'Customer Reviews | Oz Smart Home',
-  description: 'See what customers say about Oz Smart Home’s automation solutions. Read reviews and share your experience to help others make informed choices.',
+  description: 'See what customers are saying about Oz Smart Home. Read real reviews and testimonials on our smart home automation services and customer satisfaction.',
   alternates: {
     canonical: 'https://www.ozsmarthome.com.au/reviews'
   }

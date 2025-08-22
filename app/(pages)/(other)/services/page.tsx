@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import {OSHCopy} from "@/components/shared/content/osh-copy";
+import { OSHCopy } from "@/components/shared/content/osh-copy";
 import ContentWrapper from "@/components/shared/layout/content-wrapper";
 import { Metadata } from "next";
 import Image from 'next/image'
@@ -7,8 +7,8 @@ import pic from '@/public/bg-test-1.jpg'
 import Link from "next/link";
 import { AirVent, Blinds, Cctv, ChevronRight, DoorOpen, Lightbulb, Theater, Wifi, Workflow } from "lucide-react";
 export const metadata: Metadata = {
-  title: 'Smart Home Services | Sydney | Oz Smart Home',
-  description: `Discover comprehensive smart home services for convenience and security. Explore OZ Smart Home solutions to elevate your living experience.`,
+  title: 'Smart Home Automation Services Sydney | Oz Smart Home',
+  description: `Explore Oz Smart Home's range of services, including smart lighting, security systems, climate control, voice automation, and more. Create your perfect smart home today.`,
   alternates: {
     canonical: "https://www.ozsmarthome.com.au/services"
   }
