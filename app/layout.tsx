@@ -124,7 +124,7 @@ export default function RootLayout({
         />
 
 
-        <meta name="google-site-verification" content="Ck6elDb-LnhUPytJy_BFvOjyUdAEYgH7cdTisovwnHs" />
+       
       </head>
       <body
         className={cn(
